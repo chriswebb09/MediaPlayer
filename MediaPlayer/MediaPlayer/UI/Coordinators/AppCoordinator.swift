@@ -40,12 +40,13 @@ class AppCoordinator: RootViewCoordinator {
     
     // MARK: - Functions
     
-    /// Starts the coordinator
+    // Starts the coordinator
+    
     public func start() {
         self.showSplashViewController()
     }
     
-    /// Creates a new SplashViewController and places it into the navigation controller
+    // Creates a new SplashViewController and places it into the navigation controller
     private func showSplashViewController() {
         let services = Services()
         let splashViewController = SplashViewController(services: services)
@@ -80,7 +81,7 @@ extension AppCoordinator: SplashViewControllerDelegate {
     
 }
 
-// MARK: - NewOrderCoordinatorDelegate
+// MARK: - MediaCoordinatorDelegate
 
 extension AppCoordinator: MediaCoordinatorDelegate {
     func mediCoordinator(didSelectTrackAt index: Int, withPlaylist: Playlist) {

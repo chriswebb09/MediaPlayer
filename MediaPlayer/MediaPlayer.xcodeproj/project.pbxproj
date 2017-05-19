@@ -95,6 +95,7 @@
 		A7A0811E1ECF18DA0035EE1A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0811D1ECF18DA0035EE1A /* UIImage+Extension.swift */; };
 		A7A081201ECF19100035EE1A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0811F1ECF19100035EE1A /* String+Extension.swift */; };
 		A7A081221ECF19790035EE1A /* MediaPlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081211ECF19790035EE1A /* MediaPlaylistViewController.swift */; };
+		A7A081251ECF1AE30035EE1A /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081241ECF1AE30035EE1A /* NavigationCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +201,7 @@
 		A7A0811D1ECF18DA0035EE1A /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		A7A0811F1ECF19100035EE1A /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		A7A081211ECF19790035EE1A /* MediaPlaylistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlaylistViewController.swift; sourceTree = "<group>"; };
+		A7A081241ECF1AE30035EE1A /* NavigationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,7 +229,6 @@
 				A714AD4C1ECF064100C99C55 /* Delegate */,
 				A714AD4E1ECF064F00C99C55 /* View */,
 			);
-			name = Splash;
 			path = Splash;
 			sourceTree = "<group>";
 		};
@@ -238,7 +239,6 @@
 				A714AD4F1ECF065800C99C55 /* Controller */,
 				A714AD501ECF065E00C99C55 /* Delegate */,
 			);
-			name = MediaCollection;
 			path = MediaCollection;
 			sourceTree = "<group>";
 		};
@@ -249,7 +249,6 @@
 				A714AD531ECF067300C99C55 /* Delegate */,
 				A714AD541ECF067B00C99C55 /* View */,
 			);
-			name = Player;
 			path = Player;
 			sourceTree = "<group>";
 		};
@@ -262,8 +261,8 @@
 				A714AD171ECEDF6100C99C55 /* MediaCoordinatorDelegate.swift */,
 				A714AD191ECEDF7E00C99C55 /* MediaCoordinatorPayload.swift */,
 				A714AD261ECEE7A600C99C55 /* TabBarCoordinator.swift */,
+				A7A081241ECF1AE30035EE1A /* NavigationCoordinator.swift */,
 			);
-			name = Coordinators;
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
@@ -273,7 +272,6 @@
 				A714AD3D1ECEECBC00C99C55 /* BaseMediaController.swift */,
 				A714AD3B1ECEECB000C99C55 /* BaseMediaControllerDataSource.swift */,
 			);
-			name = Base;
 			path = Base;
 			sourceTree = "<group>";
 		};
@@ -288,7 +286,6 @@
 				A7A080E91ECF13400035EE1A /* UILabel+Extension.swift */,
 				A714AD671ECF09A200C99C55 /* UIViewController+Extension.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -301,7 +298,6 @@
 				A714AD331ECEEBF500C99C55 /* Resuable.swift */,
 				A714AD5B1ECF070A00C99C55 /* TermSearcher.swift */,
 			);
-			name = Protoccol;
 			path = Protoccol;
 			sourceTree = "<group>";
 		};
@@ -312,7 +308,6 @@
 				A714AD661ECF084100C99C55 /* Playlist */,
 				A7A080F51ECF14CF0035EE1A /* Track */,
 			);
-			name = Models;
 			path = Models;
 			sourceTree = "<group>";
 		};
@@ -323,7 +318,6 @@
 				A7A080EB1ECF14200035EE1A /* Network */,
 				A7A080F31ECF14B80035EE1A /* Store */,
 			);
-			name = Data;
 			path = Data;
 			sourceTree = "<group>";
 		};
@@ -332,7 +326,6 @@
 			children = (
 				A721B2D91ECECC4D003E0D12 /* SplashViewControllerDelegate.swift */,
 			);
-			name = Delegate;
 			path = Delegate;
 			sourceTree = "<group>";
 		};
@@ -341,7 +334,6 @@
 			children = (
 				A721B2DB1ECECC5F003E0D12 /* SplashViewController.swift */,
 			);
-			name = Controller;
 			path = Controller;
 			sourceTree = "<group>";
 		};
@@ -350,7 +342,6 @@
 			children = (
 				A714AD1F1ECEE05A00C99C55 /* SplashView.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -359,7 +350,6 @@
 			children = (
 				A721B2E11ECECE16003E0D12 /* MediaCollectionViewController.swift */,
 			);
-			name = Controller;
 			path = Controller;
 			sourceTree = "<group>";
 		};
@@ -369,7 +359,6 @@
 				A714AD131ECEDF1E00C99C55 /* MediaCollectionControllerDelegate.swift */,
 				A714AD151ECEDF4100C99C55 /* MediaViewControllerDelegate.swift */,
 			);
-			name = Delegate;
 			path = Delegate;
 			sourceTree = "<group>";
 		};
@@ -378,7 +367,6 @@
 			children = (
 				A714AD311ECEEB9200C99C55 /* MediaCell.swift */,
 			);
-			name = Cell;
 			path = Cell;
 			sourceTree = "<group>";
 		};
@@ -387,7 +375,6 @@
 			children = (
 				A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */,
 			);
-			name = Controller;
 			path = Controller;
 			sourceTree = "<group>";
 		};
@@ -396,7 +383,6 @@
 			children = (
 				A714AD111ECEDEFC00C99C55 /* PlayerViewControllerDelegate.swift */,
 			);
-			name = Delegate;
 			path = Delegate;
 			sourceTree = "<group>";
 		};
@@ -405,7 +391,6 @@
 			children = (
 				A714AD2F1ECEEB8500C99C55 /* PlayerView.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -421,7 +406,6 @@
 				A714AD411ECEECD900C99C55 /* Protoccol */,
 				A714AD5E1ECF074C00C99C55 /* Screens */,
 			);
-			name = UI;
 			path = UI;
 			sourceTree = "<group>";
 		};
@@ -437,7 +421,6 @@
 				A714AD211ECEE06000C99C55 /* Splash */,
 				A7A080D51ECF11650035EE1A /* Start */,
 			);
-			name = Screens;
 			path = Screens;
 			sourceTree = "<group>";
 		};
@@ -447,7 +430,6 @@
 				A714AD431ECEECE900C99C55 /* Data */,
 				A7A080F41ECF14BE0035EE1A /* Extensions */,
 			);
-			name = ApplicationServices;
 			path = ApplicationServices;
 			sourceTree = "<group>";
 		};
@@ -459,7 +441,6 @@
 				A721B2BA1ECECB43003E0D12 /* LaunchScreen.storyboard */,
 				A721B2B51ECECB43003E0D12 /* MediaPlayer.xcdatamodeld */,
 			);
-			name = Resources;
 			path = Resources;
 			sourceTree = "<group>";
 		};
@@ -470,7 +451,6 @@
 				A714AD611ECF080D00C99C55 /* DownloadDelegate.swift */,
 				A714AD631ECF082900C99C55 /* DownloadStatus.swift */,
 			);
-			name = Download;
 			path = Download;
 			sourceTree = "<group>";
 		};
@@ -480,7 +460,6 @@
 				A714AD551ECF069500C99C55 /* Playlist.swift */,
 				A714AD571ECF06BB00C99C55 /* PlaylistItem.swift */,
 			);
-			name = Playlist;
 			path = Playlist;
 			sourceTree = "<group>";
 		};
@@ -529,7 +508,6 @@
 				A721B2D71ECECC09003E0D12 /* RootViewController.swift */,
 				A721B2D31ECECB74003E0D12 /* TabBarController.swift */,
 			);
-			name = Controllers;
 			path = Controllers;
 			sourceTree = "<group>";
 		};
@@ -541,7 +519,6 @@
 				A7A080C71ECF0FEB0035EE1A /* Popover */,
 				A7A080C11ECF0F5E0035EE1A /* Textfield */,
 			);
-			name = Elements;
 			path = Elements;
 			sourceTree = "<group>";
 		};
@@ -552,7 +529,6 @@
 				A7A081031ECF166F0035EE1A /* BallAnimation */,
 				A7A080BE1ECF0ED50035EE1A /* IndicatorView.swift */,
 			);
-			name = Animations;
 			path = Animations;
 			sourceTree = "<group>";
 		};
@@ -561,7 +537,6 @@
 			children = (
 				A7A080BB1ECF0EA00035EE1A /* EqualizerAnimation.swift */,
 			);
-			name = AudioEqualizer;
 			path = AudioEqualizer;
 			sourceTree = "<group>";
 		};
@@ -570,7 +545,6 @@
 			children = (
 				A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */,
 			);
-			name = Textfield;
 			path = Textfield;
 			sourceTree = "<group>";
 		};
@@ -579,7 +553,6 @@
 			children = (
 				A7A080C21ECF0F6F0035EE1A /* EmptyView.swift */,
 			);
-			name = EmptyView;
 			path = EmptyView;
 			sourceTree = "<group>";
 		};
@@ -590,7 +563,6 @@
 				A7A080CB1ECF10460035EE1A /* Menu */,
 				A7A0811A1ECF18180035EE1A /* NewPlaylist */,
 			);
-			name = Popover;
 			path = Popover;
 			sourceTree = "<group>";
 		};
@@ -600,7 +572,6 @@
 				A7A080CC1ECF105F0035EE1A /* BasePopView.swift */,
 				A7A080C51ECF0FD90035EE1A /* BasePopoverAlert.swift */,
 			);
-			name = Base;
 			path = Base;
 			sourceTree = "<group>";
 		};
@@ -613,7 +584,6 @@
 				A7A080E31ECF126C0035EE1A /* MenuDelegate.swift */,
 				A7A080DF1ECF123A0035EE1A /* MenuOptionView.swift */,
 			);
-			name = Menu;
 			path = Menu;
 			sourceTree = "<group>";
 		};
@@ -624,7 +594,6 @@
 				A7A080CE1ECF10A00035EE1A /* BasePopoverConstants.swift */,
 				A7A080E51ECF12AC0035EE1A /* EqualizerConstants.swift */,
 			);
-			name = Constants;
 			path = Constants;
 			sourceTree = "<group>";
 		};
@@ -636,7 +605,6 @@
 				A7A0810A1ECF172A0035EE1A /* StartViewControllerDelegate.swift */,
 				A7A080D31ECF11380035EE1A /* StartViewDelegate.swift */,
 			);
-			name = Start;
 			path = Start;
 			sourceTree = "<group>";
 		};
@@ -647,7 +615,6 @@
 				A7A080D61ECF11740035EE1A /* ButtonMaker.swift */,
 				A7A080DB1ECF11B80035EE1A /* LoginButtonFactory.swift */,
 			);
-			name = ButtonFactory;
 			path = ButtonFactory;
 			sourceTree = "<group>";
 		};
@@ -660,7 +627,6 @@
 				A714AD461ECEF15000C99C55 /* URLConstructable.swift */,
 				A714AD481ECEF16900C99C55 /* URLRoutable.swift */,
 			);
-			name = Network;
 			path = Network;
 			sourceTree = "<group>";
 		};
@@ -671,7 +637,6 @@
 				A7A080F81ECF14E60035EE1A /* MediaPlayer */,
 				A7A080F11ECF14A70035EE1A /* Services */,
 			);
-			name = Local;
 			path = Local;
 			sourceTree = "<group>";
 		};
@@ -681,7 +646,6 @@
 				A714AD1B1ECEDFAE00C99C55 /* DataService.swift */,
 				A721B2DF1ECECD98003E0D12 /* Services.swift */,
 			);
-			name = Services;
 			path = Services;
 			sourceTree = "<group>";
 		};
@@ -690,7 +654,6 @@
 			children = (
 				A7A080EE1ECF14760035EE1A /* LocalStorageManager.swift */,
 			);
-			name = LocalStorage;
 			path = LocalStorage;
 			sourceTree = "<group>";
 		};
@@ -699,7 +662,6 @@
 			children = (
 				A714AD281ECEE93800C99C55 /* MediaDataStore.swift */,
 			);
-			name = Store;
 			path = Store;
 			sourceTree = "<group>";
 		};
@@ -710,7 +672,6 @@
 				A7A080EC1ECF14440035EE1A /* NSError+Extension.swift */,
 				A7A080FF1ECF160C0035EE1A /* Notification+Extension.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -720,7 +681,6 @@
 				A714AD1D1ECEDFC700C99C55 /* Track.swift */,
 				A7A080FD1ECF158B0035EE1A /* TrackDelegate.swift */,
 			);
-			name = Track;
 			path = Track;
 			sourceTree = "<group>";
 		};
@@ -729,7 +689,6 @@
 			children = (
 				A7A080F61ECF14E30035EE1A /* MPMediaPlayer.swift */,
 			);
-			name = MediaPlayer;
 			path = MediaPlayer;
 			sourceTree = "<group>";
 		};
@@ -740,7 +699,6 @@
 				A7A081011ECF16670035EE1A /* BallAnimation.swift */,
 				A7A081041ECF16970035EE1A /* BallIndicatorView.swift */,
 			);
-			name = BallAnimation;
 			path = BallAnimation;
 			sourceTree = "<group>";
 		};
@@ -750,7 +708,6 @@
 				A7A0810C1ECF17580035EE1A /* LoginView.swift */,
 				A7A0810F1ECF17750035EE1A /* LoginViewController.swift */,
 			);
-			name = Login;
 			path = Login;
 			sourceTree = "<group>";
 		};
@@ -761,7 +718,6 @@
 				A7A081111ECF178E0035EE1A /* CreateAccountView.swift */,
 				A7A081141ECF17AE0035EE1A /* CreateAccountViewController.swift */,
 			);
-			name = CreateAccount;
 			path = CreateAccount;
 			sourceTree = "<group>";
 		};
@@ -770,7 +726,6 @@
 			children = (
 				A7A081181ECF18140035EE1A /* NewPlaylistView.swift */,
 			);
-			name = NewPlaylist;
 			path = NewPlaylist;
 			sourceTree = "<group>";
 		};
@@ -779,7 +734,6 @@
 			children = (
 				A7A081211ECF19790035EE1A /* MediaPlaylistViewController.swift */,
 			);
-			name = MediaPlaylist;
 			path = MediaPlaylist;
 			sourceTree = "<group>";
 		};
@@ -921,6 +875,7 @@
 				A7A080B91ECF0E580035EE1A /* TextFieldExtension.swift in Sources */,
 				A714AD301ECEEB8600C99C55 /* PlayerView.swift in Sources */,
 				A7A080EF1ECF14760035EE1A /* LocalStorageManager.swift in Sources */,
+				A7A081251ECF1AE30035EE1A /* NavigationCoordinator.swift in Sources */,
 				A721B2DE1ECECC9B003E0D12 /* MediaCoordinator.swift in Sources */,
 				A714AD5C1ECF070A00C99C55 /* TermSearcher.swift in Sources */,
 				A7A081151ECF17AE0035EE1A /* CreateAccountViewController.swift in Sources */,
