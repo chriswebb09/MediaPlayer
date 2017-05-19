@@ -75,10 +75,26 @@
 		A7A080EA1ECF13400035EE1A /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080E91ECF13400035EE1A /* UILabel+Extension.swift */; };
 		A7A080ED1ECF14440035EE1A /* NSError+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080EC1ECF14440035EE1A /* NSError+Extension.swift */; };
 		A7A080EF1ECF14760035EE1A /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080EE1ECF14760035EE1A /* LocalStorageManager.swift */; };
-		A7A080F71ECF14E30035EE1A /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080F61ECF14E30035EE1A /* MediaPlayer.swift */; };
+		A7A080F71ECF14E30035EE1A /* MPMediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080F61ECF14E30035EE1A /* MPMediaPlayer.swift */; };
 		A7A080FA1ECF15120035EE1A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080F91ECF15120035EE1A /* Response.swift */; };
 		A7A080FC1ECF15520035EE1A /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080FB1ECF15520035EE1A /* BaseOperation.swift */; };
 		A7A080FE1ECF158B0035EE1A /* TrackDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080FD1ECF158B0035EE1A /* TrackDelegate.swift */; };
+		A7A081001ECF160C0035EE1A /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080FF1ECF160C0035EE1A /* Notification+Extension.swift */; };
+		A7A081021ECF16670035EE1A /* BallAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081011ECF16670035EE1A /* BallAnimation.swift */; };
+		A7A081051ECF16970035EE1A /* BallIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081041ECF16970035EE1A /* BallIndicatorView.swift */; };
+		A7A081071ECF16AC0035EE1A /* AnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081061ECF16AC0035EE1A /* AnimationDelegate.swift */; };
+		A7A081091ECF16FE0035EE1A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081081ECF16FE0035EE1A /* StartViewController.swift */; };
+		A7A0810B1ECF172A0035EE1A /* StartViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0810A1ECF172A0035EE1A /* StartViewControllerDelegate.swift */; };
+		A7A0810D1ECF17580035EE1A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0810C1ECF17580035EE1A /* LoginView.swift */; };
+		A7A081101ECF17750035EE1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0810F1ECF17750035EE1A /* LoginViewController.swift */; };
+		A7A081121ECF178E0035EE1A /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081111ECF178E0035EE1A /* CreateAccountView.swift */; };
+		A7A081151ECF17AE0035EE1A /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081141ECF17AE0035EE1A /* CreateAccountViewController.swift */; };
+		A7A081171ECF17C10035EE1A /* CreateAccountDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081161ECF17C10035EE1A /* CreateAccountDelegate.swift */; };
+		A7A081191ECF18140035EE1A /* NewPlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081181ECF18140035EE1A /* NewPlaylistView.swift */; };
+		A7A0811C1ECF18AA0035EE1A /* ImageLoadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0811B1ECF18AA0035EE1A /* ImageLoadOperation.swift */; };
+		A7A0811E1ECF18DA0035EE1A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0811D1ECF18DA0035EE1A /* UIImage+Extension.swift */; };
+		A7A081201ECF19100035EE1A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0811F1ECF19100035EE1A /* String+Extension.swift */; };
+		A7A081221ECF19790035EE1A /* MediaPlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081211ECF19790035EE1A /* MediaPlaylistViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,10 +180,26 @@
 		A7A080E91ECF13400035EE1A /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		A7A080EC1ECF14440035EE1A /* NSError+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+Extension.swift"; sourceTree = "<group>"; };
 		A7A080EE1ECF14760035EE1A /* LocalStorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorageManager.swift; sourceTree = "<group>"; };
-		A7A080F61ECF14E30035EE1A /* MediaPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
+		A7A080F61ECF14E30035EE1A /* MPMediaPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPMediaPlayer.swift; sourceTree = "<group>"; };
 		A7A080F91ECF15120035EE1A /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		A7A080FB1ECF15520035EE1A /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
 		A7A080FD1ECF158B0035EE1A /* TrackDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDelegate.swift; sourceTree = "<group>"; };
+		A7A080FF1ECF160C0035EE1A /* Notification+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		A7A081011ECF16670035EE1A /* BallAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallAnimation.swift; sourceTree = "<group>"; };
+		A7A081041ECF16970035EE1A /* BallIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallIndicatorView.swift; sourceTree = "<group>"; };
+		A7A081061ECF16AC0035EE1A /* AnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDelegate.swift; sourceTree = "<group>"; };
+		A7A081081ECF16FE0035EE1A /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		A7A0810A1ECF172A0035EE1A /* StartViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewControllerDelegate.swift; sourceTree = "<group>"; };
+		A7A0810C1ECF17580035EE1A /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A7A0810F1ECF17750035EE1A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A7A081111ECF178E0035EE1A /* CreateAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		A7A081141ECF17AE0035EE1A /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		A7A081161ECF17C10035EE1A /* CreateAccountDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountDelegate.swift; sourceTree = "<group>"; };
+		A7A081181ECF18140035EE1A /* NewPlaylistView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlaylistView.swift; sourceTree = "<group>"; };
+		A7A0811B1ECF18AA0035EE1A /* ImageLoadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoadOperation.swift; sourceTree = "<group>"; };
+		A7A0811D1ECF18DA0035EE1A /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		A7A0811F1ECF19100035EE1A /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		A7A081211ECF19790035EE1A /* MediaPlaylistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlaylistViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +280,8 @@
 				A714AD441ECEEE0B00C99C55 /* CALayer+Extension.swift */,
 				A714AD671ECF09A200C99C55 /* UIViewController+Extension.swift */,
 				A7A080E91ECF13400035EE1A /* UILabel+Extension.swift */,
+				A7A0811D1ECF18DA0035EE1A /* UIImage+Extension.swift */,
+				A7A0811F1ECF19100035EE1A /* String+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -380,6 +414,9 @@
 				A714AD221ECEE06E00C99C55 /* MediaCollection */,
 				A714AD211ECEE06000C99C55 /* Splash */,
 				A7A080D51ECF11650035EE1A /* Start */,
+				A7A0810E1ECF17680035EE1A /* Login */,
+				A7A081131ECF179D0035EE1A /* CreateAccount */,
+				A7A081231ECF197E0035EE1A /* MediaPlaylist */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -487,6 +524,7 @@
 			children = (
 				A7A080C01ECF0F140035EE1A /* AudioEqualizer */,
 				A7A080BE1ECF0ED50035EE1A /* IndicatorView.swift */,
+				A7A081031ECF166F0035EE1A /* BallAnimation */,
 			);
 			name = Animations;
 			sourceTree = "<group>";
@@ -520,6 +558,7 @@
 			children = (
 				A7A080C81ECF0FF80035EE1A /* Base */,
 				A7A080CB1ECF10460035EE1A /* Menu */,
+				A7A0811A1ECF18180035EE1A /* NewPlaylist */,
 			);
 			name = Popover;
 			sourceTree = "<group>";
@@ -560,6 +599,8 @@
 			children = (
 				A7A080D11ECF11200035EE1A /* StartView.swift */,
 				A7A080D31ECF11380035EE1A /* StartViewDelegate.swift */,
+				A7A081081ECF16FE0035EE1A /* StartViewController.swift */,
+				A7A0810A1ECF172A0035EE1A /* StartViewControllerDelegate.swift */,
 			);
 			name = Start;
 			sourceTree = "<group>";
@@ -581,6 +622,7 @@
 				A714AD461ECEF15000C99C55 /* URLConstructable.swift */,
 				A714AD481ECEF16900C99C55 /* URLRoutable.swift */,
 				A7A080F91ECF15120035EE1A /* Response.swift */,
+				A7A0811B1ECF18AA0035EE1A /* ImageLoadOperation.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -625,6 +667,7 @@
 			children = (
 				A7A080EC1ECF14440035EE1A /* NSError+Extension.swift */,
 				A7A080FB1ECF15520035EE1A /* BaseOperation.swift */,
+				A7A080FF1ECF160C0035EE1A /* Notification+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -641,9 +684,54 @@
 		A7A080F81ECF14E60035EE1A /* MediaPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				A7A080F61ECF14E30035EE1A /* MediaPlayer.swift */,
+				A7A080F61ECF14E30035EE1A /* MPMediaPlayer.swift */,
 			);
 			name = MediaPlayer;
+			sourceTree = "<group>";
+		};
+		A7A081031ECF166F0035EE1A /* BallAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				A7A081011ECF16670035EE1A /* BallAnimation.swift */,
+				A7A081041ECF16970035EE1A /* BallIndicatorView.swift */,
+				A7A081061ECF16AC0035EE1A /* AnimationDelegate.swift */,
+			);
+			name = BallAnimation;
+			sourceTree = "<group>";
+		};
+		A7A0810E1ECF17680035EE1A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A7A0810C1ECF17580035EE1A /* LoginView.swift */,
+				A7A0810F1ECF17750035EE1A /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		A7A081131ECF179D0035EE1A /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				A7A081111ECF178E0035EE1A /* CreateAccountView.swift */,
+				A7A081141ECF17AE0035EE1A /* CreateAccountViewController.swift */,
+				A7A081161ECF17C10035EE1A /* CreateAccountDelegate.swift */,
+			);
+			name = CreateAccount;
+			sourceTree = "<group>";
+		};
+		A7A0811A1ECF18180035EE1A /* NewPlaylist */ = {
+			isa = PBXGroup;
+			children = (
+				A7A081181ECF18140035EE1A /* NewPlaylistView.swift */,
+			);
+			name = NewPlaylist;
+			sourceTree = "<group>";
+		};
+		A7A081231ECF197E0035EE1A /* MediaPlaylist */ = {
+			isa = PBXGroup;
+			children = (
+				A7A081211ECF19790035EE1A /* MediaPlaylistViewController.swift */,
+			);
+			name = MediaPlaylist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -752,10 +840,12 @@
 			files = (
 				A7A080CF1ECF10A00035EE1A /* BasePopoverConstants.swift in Sources */,
 				A714AD3A1ECEEC7600C99C55 /* UIImageView+Extension.swift in Sources */,
+				A7A081171ECF17C10035EE1A /* CreateAccountDelegate.swift in Sources */,
 				A7A080E81ECF12DF0035EE1A /* BasePopConstant.swift in Sources */,
 				A721B2D21ECECB67003E0D12 /* AppCoordinator.swift in Sources */,
 				A714AD561ECF069500C99C55 /* Playlist.swift in Sources */,
 				A7A080ED1ECF14440035EE1A /* NSError+Extension.swift in Sources */,
+				A7A081121ECF178E0035EE1A /* CreateAccountView.swift in Sources */,
 				A714AD181ECEDF6100C99C55 /* MediaCoordinatorDelegate.swift in Sources */,
 				A7A080E61ECF12AC0035EE1A /* EqualizerConstants.swift in Sources */,
 				A7A080DA1ECF11970035EE1A /* BasicButtonFactory.swift in Sources */,
@@ -768,9 +858,12 @@
 				A721B2DA1ECECC4D003E0D12 /* SplashViewControllerDelegate.swift in Sources */,
 				A714AD3C1ECEECB000C99C55 /* BaseMediaControllerDataSource.swift in Sources */,
 				A721B2E01ECECD98003E0D12 /* Services.swift in Sources */,
+				A7A081001ECF160C0035EE1A /* Notification+Extension.swift in Sources */,
 				A7A080EA1ECF13400035EE1A /* UILabel+Extension.swift in Sources */,
 				A7A080FA1ECF15120035EE1A /* Response.swift in Sources */,
+				A7A081101ECF17750035EE1A /* LoginViewController.swift in Sources */,
 				A7A080CD1ECF105F0035EE1A /* BasePopView.swift in Sources */,
+				A7A0811E1ECF18DA0035EE1A /* UIImage+Extension.swift in Sources */,
 				A714AD471ECEF15000C99C55 /* URLConstructable.swift in Sources */,
 				A714AD271ECEE7A600C99C55 /* TabBarCoordinator.swift in Sources */,
 				A7A080C61ECF0FD90035EE1A /* BasePopoverAlert.swift in Sources */,
@@ -781,27 +874,36 @@
 				A7A080EF1ECF14760035EE1A /* LocalStorageManager.swift in Sources */,
 				A721B2DE1ECECC9B003E0D12 /* MediaCoordinator.swift in Sources */,
 				A714AD5C1ECF070A00C99C55 /* TermSearcher.swift in Sources */,
+				A7A081151ECF17AE0035EE1A /* CreateAccountViewController.swift in Sources */,
 				A714AD2E1ECEEA8700C99C55 /* Download.swift in Sources */,
 				A721B2E21ECECE16003E0D12 /* MediaCollectionViewController.swift in Sources */,
 				A714AD341ECEEBF500C99C55 /* Resuable.swift in Sources */,
 				A714AD121ECEDEFC00C99C55 /* PlayerViewControllerDelegate.swift in Sources */,
+				A7A081221ECF19790035EE1A /* MediaPlaylistViewController.swift in Sources */,
 				A7A080E41ECF126C0035EE1A /* MenuDelegate.swift in Sources */,
 				A721B2DC1ECECC60003E0D12 /* SplashViewController.swift in Sources */,
 				A714AD1E1ECEDFC700C99C55 /* Track.swift in Sources */,
+				A7A0810B1ECF172A0035EE1A /* StartViewControllerDelegate.swift in Sources */,
 				A714AD3E1ECEECBC00C99C55 /* BaseMediaController.swift in Sources */,
 				A7A080DC1ECF11B80035EE1A /* LoginButtonFactory.swift in Sources */,
 				A7A080D41ECF11380035EE1A /* StartViewDelegate.swift in Sources */,
+				A7A081021ECF16670035EE1A /* BallAnimation.swift in Sources */,
 				A7A080DE1ECF11FA0035EE1A /* BottomMenuPopover.swift in Sources */,
-				A7A080F71ECF14E30035EE1A /* MediaPlayer.swift in Sources */,
+				A7A080F71ECF14E30035EE1A /* MPMediaPlayer.swift in Sources */,
+				A7A081051ECF16970035EE1A /* BallIndicatorView.swift in Sources */,
 				A7A080D21ECF11200035EE1A /* StartView.swift in Sources */,
 				A714AD451ECEEE0B00C99C55 /* CALayer+Extension.swift in Sources */,
 				A7A080BC1ECF0EA00035EE1A /* EqualizerAnimation.swift in Sources */,
 				A7A080BF1ECF0ED50035EE1A /* IndicatorView.swift in Sources */,
 				A721B2E41ECECE3D003E0D12 /* PlayerViewController.swift in Sources */,
+				A7A081091ECF16FE0035EE1A /* StartViewController.swift in Sources */,
 				A721B2D61ECECBC6003E0D12 /* Coordinator.swift in Sources */,
+				A7A0810D1ECF17580035EE1A /* LoginView.swift in Sources */,
 				A714AD381ECEEC4400C99C55 /* UICollectionView+Extension.swift in Sources */,
 				A7A080E21ECF12560035EE1A /* MenuActive.swift in Sources */,
 				A714AD581ECF06BB00C99C55 /* PlaylistItem.swift in Sources */,
+				A7A081071ECF16AC0035EE1A /* AnimationDelegate.swift in Sources */,
+				A7A081201ECF19100035EE1A /* String+Extension.swift in Sources */,
 				A714AD621ECF080D00C99C55 /* DownloadDelegate.swift in Sources */,
 				A7A080CA1ECF10360035EE1A /* BaseMenuPopover.swift in Sources */,
 				A714AD2C1ECEEA7800C99C55 /* MediaAPIClient.swift in Sources */,
@@ -809,6 +911,8 @@
 				A721B2D81ECECC09003E0D12 /* RootViewController.swift in Sources */,
 				A714AD1A1ECEDF7E00C99C55 /* MediaCoordinatorPayload.swift in Sources */,
 				A714AD291ECEE93800C99C55 /* MediaDataStore.swift in Sources */,
+				A7A081191ECF18140035EE1A /* NewPlaylistView.swift in Sources */,
+				A7A0811C1ECF18AA0035EE1A /* ImageLoadOperation.swift in Sources */,
 				A7A080FC1ECF15520035EE1A /* BaseOperation.swift in Sources */,
 				A7A080D71ECF11740035EE1A /* ButtonMaker.swift in Sources */,
 				A7A080E01ECF123A0035EE1A /* MenuOptionView.swift in Sources */,
