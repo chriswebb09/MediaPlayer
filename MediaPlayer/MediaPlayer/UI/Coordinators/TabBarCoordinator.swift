@@ -3,25 +3,25 @@ import UIKit
 class TabbarCoordinator: BaseCoordinator {
     
     private let tabbarView: TabbarView
-    private let coordinatorFactory: CoordinatorFactory
+  //  private let coordinatorFactory: CoordinatorFactory
     
-    init(tabbarView: TabbarView, coordinatorFactory: CoordinatorFactory) {
+    init(tabbarView: TabbarView) {
         self.tabbarView = tabbarView
-        self.coordinatorFactory = coordinatorFactory
+       // self.coordinatorFactory = coordinatorFactory
     }
     
     override func start() {
-        tabbarView.onViewDidLoad = runItemFlow()
-        tabbarView.onItemFlowSelect = runItemFlow()
-        tabbarView.onSettingsFlowSelect = runSettingsFlow()
+        //tabbarView.onViewDidLoad = runItemFlow()
+       // tabbarView.onItemFlowSelect = runItemFlow()
+       // tabbarView.onSettingsFlowSelect = runSettingsFlow()
     }
     
-    private func runItemFlow() -> ((UINavigationController) -> ()) {
+    private func runMediaCollectionFlow() -> ((UINavigationController) -> ()) {
         return { navController in
             if navController.viewControllers.isEmpty == true {
-                let itemCoordinator = self.coordinatorFactory.makeItemCoordinator(navController: navController)
+               // let itemCoordinator = self.coordinatorFactory.makeItemCoordinator(navController: navController)
                // itemCoordinator.start()
-                self.addDependency(itemCoordinator)
+                //self.addDependency(itemCoordinator)
             }
         }
     }
@@ -29,17 +29,10 @@ class TabbarCoordinator: BaseCoordinator {
     private func runSettingsFlow() -> ((UINavigationController) -> ()) {
         return { navController in
             if navController.viewControllers.isEmpty == true {
-                let settingsCoordinator = self.coordinatorFactory.makeSettingsCoordinator(navController: navController)
+                //let settingsCoordinator = self.coordinatorFactory.makeSettingsCoordinator(navController: navController)
                 //settingsCoordinator.start()
-                self.addDependency(settingsCoordinator)
+               // self.addDependency(settingsCoordinator)
             }
         }
     }
 }
-
-
-//protocol TabBarCoordinator: Coordinator {
-//    var tabBarController: UITabBarController { get set }
-//    var childCoordinators: [NavigationCoordinator] { get set }
-//    init(tabBarController: UITabBarController)
-//}

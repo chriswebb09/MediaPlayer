@@ -9,6 +9,7 @@ class BaseCoordinator: Coordinator {
     }
     
     // add only unique object
+    
     func addDependency(_ coordinator: Coordinator) {
         for element in childCoordinators {
             if element === coordinator { return }

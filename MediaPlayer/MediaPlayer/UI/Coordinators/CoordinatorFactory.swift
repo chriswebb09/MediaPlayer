@@ -1,20 +1,33 @@
+//
+//  CoordinatorFactory.swift
+//  MediaPlayer
+//
+//  Created by Christopher Webb-Orenstein on 5/19/17.
+//  Copyright © 2017 Christopher Webb-Orenstein. All rights reserved.
+//
+
 import UIKit
 
 protocol CoordinatorFactory {
-    
     func makeTabbarCoordinator() -> (configurator: Coordinator, toPresent: Presentable?)
-    // func makeAuthCoordinatorBox(router: Router) -> Coordinator & AuthCoordinatorOutput
-    
-    // func makeOnboardingCoordinator(router: Router) -> Coordinator & OnboardingCoordinatorOutput
-    
-    func makeItemCoordinator(navController: UINavigationController?) -> Coordinator
-    func makeItemCoordinator() -> Coordinator
-    
-    func makeSettingsCoordinator() -> Coordinator
-    func makeSettingsCoordinator(navController: UINavigationController?) -> Coordinator
-    
-    //func makeItemCreationCoordinatorBox() -> (configurator: Coordinator & ItemCreateCoordinatorOutput, toPresent: Presentable?)
-    
-    //func makeItemCreationCoordinatorBox(navController: UINavigationController?) -> (configurator: Coordinator & ItemCreateCoordinatorOutput, toPresent: Presentable?)
+    func makePlayerCoordinator() -> Coordinator
+    func makePlayerCoordinator(navController: UINavigationController?) -> Coordinator
 }
 
+
+final class CoordinatorBuilder: CoordinatorFactory {
+    func makePlayerCoordinator(navController: UINavigationController?) -> Coordinator {
+        let coordinator  = MediaCoordinator(services: Services(), dataSource: BaseMediaControllerDataSource(store: MediaDataStore(client: MediaAPIClient())))
+        return coordinator
+    }
+    
+    func makePlayerCoordinator() -> Coordinator {
+        return makePlayerCoordinator(navController: nil)
+    }
+    
+    func makeTabbarCoordinator() -> (configurator: Coordinator, toPresent: Presentable?) {
+        let controller = TabbarController()
+        let coordinator = TabbarCoordinator(tabbarView: controller)
+        return (coordinator, controller)
+    }
+}

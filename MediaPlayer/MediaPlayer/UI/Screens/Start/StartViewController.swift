@@ -8,6 +8,7 @@ class StartViewController: UIViewController, StartViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = []
         startView.frame = UIScreen.main.bounds
         view.addSubview(startView)
         startView.layoutSubviews()

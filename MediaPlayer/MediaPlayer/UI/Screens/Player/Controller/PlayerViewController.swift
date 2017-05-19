@@ -16,5 +16,10 @@ public class PlayerViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = []
+        playerView.frame = UIScreen.main.bounds
+        var model = PlayerViewModel(title: "Test", imageUrl: "Test 2")
+        playerView.configure(with: model)
+        view.addSubview(playerView)
     }
 }
