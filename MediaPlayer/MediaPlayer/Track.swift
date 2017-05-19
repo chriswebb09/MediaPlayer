@@ -1,18 +1,4 @@
-//
-//  Track.swift
-//  MediaPlayer
-//
-//  Created by Christopher Webb-Orenstein on 5/19/17.
-//  Copyright © 2017 Christopher Webb-Orenstein. All rights reserved.
-//
-
 import Foundation
-
-import Foundation
-
-protocol TrackDelegate: class {
-    func downloadIsComplete(downloaded: Bool)
-}
 
 public struct Track {
     
@@ -56,6 +42,7 @@ public struct Track {
 }
 
 // MARK: - Hashable
+
 extension Track: Hashable {
     
     public var hashValue: Int {
