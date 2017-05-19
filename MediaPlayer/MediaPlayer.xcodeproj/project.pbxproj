@@ -96,6 +96,7 @@
 		A7A081201ECF19100035EE1A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0811F1ECF19100035EE1A /* String+Extension.swift */; };
 		A7A081221ECF19790035EE1A /* MediaPlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081211ECF19790035EE1A /* MediaPlaylistViewController.swift */; };
 		A7A081251ECF1AE30035EE1A /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081241ECF1AE30035EE1A /* NavigationCoordinator.swift */; };
+		A7A081271ECF1BE40035EE1A /* CALayer+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081261ECF1BE40035EE1A /* CALayer+Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +203,7 @@
 		A7A0811F1ECF19100035EE1A /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		A7A081211ECF19790035EE1A /* MediaPlaylistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlaylistViewController.swift; sourceTree = "<group>"; };
 		A7A081241ECF1AE30035EE1A /* NavigationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		A7A081261ECF1BE40035EE1A /* CALayer+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Constants.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -593,6 +595,7 @@
 				A7A080E71ECF12DF0035EE1A /* BasePopConstant.swift */,
 				A7A080CE1ECF10A00035EE1A /* BasePopoverConstants.swift */,
 				A7A080E51ECF12AC0035EE1A /* EqualizerConstants.swift */,
+				A7A081261ECF1BE40035EE1A /* CALayer+Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -870,6 +873,7 @@
 				A714AD471ECEF15000C99C55 /* URLConstructable.swift in Sources */,
 				A714AD271ECEE7A600C99C55 /* TabBarCoordinator.swift in Sources */,
 				A7A080C61ECF0FD90035EE1A /* BasePopoverAlert.swift in Sources */,
+				A7A081271ECF1BE40035EE1A /* CALayer+Constants.swift in Sources */,
 				A714AD1C1ECEDFAE00C99C55 /* DataService.swift in Sources */,
 				A714AD681ECF09A200C99C55 /* UIViewController+Extension.swift in Sources */,
 				A7A080B91ECF0E580035EE1A /* TextFieldExtension.swift in Sources */,
