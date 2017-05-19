@@ -43,7 +43,6 @@ public class MediaCollectionViewController: BaseMediaViewController {
 
 extension MediaCollectionViewController: UISearchControllerDelegate {
     
-    
     override public func viewDidLoad() {
         super.viewDidLoad()
         searchController.delegate = self

@@ -53,6 +53,26 @@
 		A721B2E01ECECD98003E0D12 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2DF1ECECD98003E0D12 /* Services.swift */; };
 		A721B2E21ECECE16003E0D12 /* MediaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2E11ECECE16003E0D12 /* MediaCollectionViewController.swift */; };
 		A721B2E41ECECE3D003E0D12 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */; };
+		A7A080B91ECF0E580035EE1A /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */; };
+		A7A080BC1ECF0EA00035EE1A /* EqualizerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080BB1ECF0EA00035EE1A /* EqualizerAnimation.swift */; };
+		A7A080BF1ECF0ED50035EE1A /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080BE1ECF0ED50035EE1A /* IndicatorView.swift */; };
+		A7A080C31ECF0F6F0035EE1A /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080C21ECF0F6F0035EE1A /* EmptyView.swift */; };
+		A7A080C61ECF0FD90035EE1A /* BasePopoverAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080C51ECF0FD90035EE1A /* BasePopoverAlert.swift */; };
+		A7A080CA1ECF10360035EE1A /* BaseMenuPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080C91ECF10360035EE1A /* BaseMenuPopover.swift */; };
+		A7A080CD1ECF105F0035EE1A /* BasePopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080CC1ECF105F0035EE1A /* BasePopView.swift */; };
+		A7A080CF1ECF10A00035EE1A /* BasePopoverConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080CE1ECF10A00035EE1A /* BasePopoverConstants.swift */; };
+		A7A080D21ECF11200035EE1A /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080D11ECF11200035EE1A /* StartView.swift */; };
+		A7A080D41ECF11380035EE1A /* StartViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080D31ECF11380035EE1A /* StartViewDelegate.swift */; };
+		A7A080D71ECF11740035EE1A /* ButtonMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080D61ECF11740035EE1A /* ButtonMaker.swift */; };
+		A7A080DA1ECF11970035EE1A /* BasicButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080D91ECF11970035EE1A /* BasicButtonFactory.swift */; };
+		A7A080DC1ECF11B80035EE1A /* LoginButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080DB1ECF11B80035EE1A /* LoginButtonFactory.swift */; };
+		A7A080DE1ECF11FA0035EE1A /* BottomMenuPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080DD1ECF11FA0035EE1A /* BottomMenuPopover.swift */; };
+		A7A080E01ECF123A0035EE1A /* MenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080DF1ECF123A0035EE1A /* MenuOptionView.swift */; };
+		A7A080E21ECF12560035EE1A /* MenuActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080E11ECF12560035EE1A /* MenuActive.swift */; };
+		A7A080E41ECF126C0035EE1A /* MenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080E31ECF126C0035EE1A /* MenuDelegate.swift */; };
+		A7A080E61ECF12AC0035EE1A /* EqualizerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080E51ECF12AC0035EE1A /* EqualizerConstants.swift */; };
+		A7A080E81ECF12DF0035EE1A /* BasePopConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080E71ECF12DF0035EE1A /* BasePopConstant.swift */; };
+		A7A080EA1ECF13400035EE1A /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080E91ECF13400035EE1A /* UILabel+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +136,26 @@
 		A721B2DF1ECECD98003E0D12 /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		A721B2E11ECECE16003E0D12 /* MediaCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewController.swift; sourceTree = "<group>"; };
 		A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		A7A080BB1ECF0EA00035EE1A /* EqualizerAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualizerAnimation.swift; sourceTree = "<group>"; };
+		A7A080BE1ECF0ED50035EE1A /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		A7A080C21ECF0F6F0035EE1A /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		A7A080C51ECF0FD90035EE1A /* BasePopoverAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePopoverAlert.swift; sourceTree = "<group>"; };
+		A7A080C91ECF10360035EE1A /* BaseMenuPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMenuPopover.swift; sourceTree = "<group>"; };
+		A7A080CC1ECF105F0035EE1A /* BasePopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePopView.swift; sourceTree = "<group>"; };
+		A7A080CE1ECF10A00035EE1A /* BasePopoverConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePopoverConstants.swift; sourceTree = "<group>"; };
+		A7A080D11ECF11200035EE1A /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		A7A080D31ECF11380035EE1A /* StartViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewDelegate.swift; sourceTree = "<group>"; };
+		A7A080D61ECF11740035EE1A /* ButtonMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonMaker.swift; sourceTree = "<group>"; };
+		A7A080D91ECF11970035EE1A /* BasicButtonFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicButtonFactory.swift; sourceTree = "<group>"; };
+		A7A080DB1ECF11B80035EE1A /* LoginButtonFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButtonFactory.swift; sourceTree = "<group>"; };
+		A7A080DD1ECF11FA0035EE1A /* BottomMenuPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomMenuPopover.swift; sourceTree = "<group>"; };
+		A7A080DF1ECF123A0035EE1A /* MenuOptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuOptionView.swift; sourceTree = "<group>"; };
+		A7A080E11ECF12560035EE1A /* MenuActive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuActive.swift; sourceTree = "<group>"; };
+		A7A080E31ECF126C0035EE1A /* MenuDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDelegate.swift; sourceTree = "<group>"; };
+		A7A080E51ECF12AC0035EE1A /* EqualizerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualizerConstants.swift; sourceTree = "<group>"; };
+		A7A080E71ECF12DF0035EE1A /* BasePopConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePopConstant.swift; sourceTree = "<group>"; };
+		A7A080E91ECF13400035EE1A /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +189,6 @@
 		A714AD221ECEE06E00C99C55 /* MediaCollection */ = {
 			isa = PBXGroup;
 			children = (
-				A714AD251ECEE50400C99C55 /* Coordinator */,
 				A714AD4F1ECF065800C99C55 /* Controller */,
 				A714AD501ECF065E00C99C55 /* Delegate */,
 				A714AD511ECF066700C99C55 /* Cell */,
@@ -177,24 +216,17 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
-		A714AD251ECEE50400C99C55 /* Coordinator */ = {
+		A714AD2A1ECEEA3400C99C55 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
 				A714AD191ECEDF7E00C99C55 /* MediaCoordinatorPayload.swift */,
 				A714AD171ECEDF6100C99C55 /* MediaCoordinatorDelegate.swift */,
-			);
-			name = Coordinator;
-			sourceTree = "<group>";
-		};
-		A714AD2A1ECEEA3400C99C55 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
 				A721B2DD1ECECC9B003E0D12 /* MediaCoordinator.swift */,
 				A721B2D11ECECB67003E0D12 /* AppCoordinator.swift */,
 				A714AD261ECEE7A600C99C55 /* TabBarCoordinator.swift */,
 				A721B2D51ECECBC6003E0D12 /* Coordinator.swift */,
 			);
-			name = Coordinator;
+			name = Coordinators;
 			sourceTree = "<group>";
 		};
 		A714AD3F1ECEECCC00C99C55 /* Base */ = {
@@ -213,6 +245,7 @@
 				A714AD391ECEEC7600C99C55 /* UIImageView+Extension.swift */,
 				A714AD441ECEEE0B00C99C55 /* CALayer+Extension.swift */,
 				A714AD671ECF09A200C99C55 /* UIViewController+Extension.swift */,
+				A7A080E91ECF13400035EE1A /* UILabel+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -325,12 +358,14 @@
 		A714AD5D1ECF073300C99C55 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				A721B2D71ECECC09003E0D12 /* RootViewController.swift */,
-				A721B2D31ECECB74003E0D12 /* TabBarController.swift */,
-				A714AD2A1ECEEA3400C99C55 /* Coordinator */,
+				A7A080D01ECF10A70035EE1A /* Constants */,
+				A7A080B51ECF0E180035EE1A /* Controllers */,
+				A714AD2A1ECEEA3400C99C55 /* Coordinators */,
 				A714AD411ECEECD900C99C55 /* Protoccol */,
 				A714AD401ECEECD200C99C55 /* Extensions */,
 				A714AD5E1ECF074C00C99C55 /* Screens */,
+				A7A080BA1ECF0E8A0035EE1A /* Elements */,
+				A7A080BD1ECF0EA40035EE1A /* Animations */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -342,6 +377,7 @@
 				A714AD231ECEE08600C99C55 /* Player */,
 				A714AD221ECEE06E00C99C55 /* MediaCollection */,
 				A714AD211ECEE06000C99C55 /* Splash */,
+				A7A080D51ECF11650035EE1A /* Start */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -422,6 +458,118 @@
 				A721B2C81ECECB43003E0D12 /* Info.plist */,
 			);
 			path = MediaPlayerTests;
+			sourceTree = "<group>";
+		};
+		A7A080B51ECF0E180035EE1A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A721B2D71ECECC09003E0D12 /* RootViewController.swift */,
+				A721B2D31ECECB74003E0D12 /* TabBarController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A7A080BA1ECF0E8A0035EE1A /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				A7A080C11ECF0F5E0035EE1A /* Textfield */,
+				A7A080C41ECF0FC70035EE1A /* EmptyView */,
+				A7A080C71ECF0FEB0035EE1A /* Popover */,
+				A7A080D81ECF11830035EE1A /* ButtonFactory */,
+			);
+			name = Elements;
+			sourceTree = "<group>";
+		};
+		A7A080BD1ECF0EA40035EE1A /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				A7A080C01ECF0F140035EE1A /* AudioEqualizer */,
+				A7A080BE1ECF0ED50035EE1A /* IndicatorView.swift */,
+			);
+			name = Animations;
+			sourceTree = "<group>";
+		};
+		A7A080C01ECF0F140035EE1A /* AudioEqualizer */ = {
+			isa = PBXGroup;
+			children = (
+				A7A080BB1ECF0EA00035EE1A /* EqualizerAnimation.swift */,
+			);
+			name = AudioEqualizer;
+			sourceTree = "<group>";
+		};
+		A7A080C11ECF0F5E0035EE1A /* Textfield */ = {
+			isa = PBXGroup;
+			children = (
+				A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */,
+			);
+			name = Textfield;
+			sourceTree = "<group>";
+		};
+		A7A080C41ECF0FC70035EE1A /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				A7A080C21ECF0F6F0035EE1A /* EmptyView.swift */,
+			);
+			name = EmptyView;
+			sourceTree = "<group>";
+		};
+		A7A080C71ECF0FEB0035EE1A /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				A7A080C81ECF0FF80035EE1A /* Base */,
+				A7A080CB1ECF10460035EE1A /* Menu */,
+			);
+			name = Popover;
+			sourceTree = "<group>";
+		};
+		A7A080C81ECF0FF80035EE1A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A7A080C51ECF0FD90035EE1A /* BasePopoverAlert.swift */,
+				A7A080CC1ECF105F0035EE1A /* BasePopView.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		A7A080CB1ECF10460035EE1A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				A7A080C91ECF10360035EE1A /* BaseMenuPopover.swift */,
+				A7A080DD1ECF11FA0035EE1A /* BottomMenuPopover.swift */,
+				A7A080DF1ECF123A0035EE1A /* MenuOptionView.swift */,
+				A7A080E11ECF12560035EE1A /* MenuActive.swift */,
+				A7A080E31ECF126C0035EE1A /* MenuDelegate.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		A7A080D01ECF10A70035EE1A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A7A080CE1ECF10A00035EE1A /* BasePopoverConstants.swift */,
+				A7A080E51ECF12AC0035EE1A /* EqualizerConstants.swift */,
+				A7A080E71ECF12DF0035EE1A /* BasePopConstant.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		A7A080D51ECF11650035EE1A /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				A7A080D11ECF11200035EE1A /* StartView.swift */,
+				A7A080D31ECF11380035EE1A /* StartViewDelegate.swift */,
+			);
+			name = Start;
+			sourceTree = "<group>";
+		};
+		A7A080D81ECF11830035EE1A /* ButtonFactory */ = {
+			isa = PBXGroup;
+			children = (
+				A7A080D61ECF11740035EE1A /* ButtonMaker.swift */,
+				A7A080D91ECF11970035EE1A /* BasicButtonFactory.swift */,
+				A7A080DB1ECF11B80035EE1A /* LoginButtonFactory.swift */,
+			);
+			name = ButtonFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,10 +676,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7A080CF1ECF10A00035EE1A /* BasePopoverConstants.swift in Sources */,
 				A714AD3A1ECEEC7600C99C55 /* UIImageView+Extension.swift in Sources */,
+				A7A080E81ECF12DF0035EE1A /* BasePopConstant.swift in Sources */,
 				A721B2D21ECECB67003E0D12 /* AppCoordinator.swift in Sources */,
 				A714AD561ECF069500C99C55 /* Playlist.swift in Sources */,
 				A714AD181ECEDF6100C99C55 /* MediaCoordinatorDelegate.swift in Sources */,
+				A7A080E61ECF12AC0035EE1A /* EqualizerConstants.swift in Sources */,
+				A7A080DA1ECF11970035EE1A /* BasicButtonFactory.swift in Sources */,
 				A714AD491ECEF16900C99C55 /* URLRoutable.swift in Sources */,
 				A714AD321ECEEB9200C99C55 /* MediaCell.swift in Sources */,
 				A721B2B71ECECB43003E0D12 /* MediaPlayer.xcdatamodeld in Sources */,
@@ -541,10 +693,14 @@
 				A721B2DA1ECECC4D003E0D12 /* SplashViewControllerDelegate.swift in Sources */,
 				A714AD3C1ECEECB000C99C55 /* BaseMediaControllerDataSource.swift in Sources */,
 				A721B2E01ECECD98003E0D12 /* Services.swift in Sources */,
+				A7A080EA1ECF13400035EE1A /* UILabel+Extension.swift in Sources */,
+				A7A080CD1ECF105F0035EE1A /* BasePopView.swift in Sources */,
 				A714AD471ECEF15000C99C55 /* URLConstructable.swift in Sources */,
 				A714AD271ECEE7A600C99C55 /* TabBarCoordinator.swift in Sources */,
+				A7A080C61ECF0FD90035EE1A /* BasePopoverAlert.swift in Sources */,
 				A714AD1C1ECEDFAE00C99C55 /* DataService.swift in Sources */,
 				A714AD681ECF09A200C99C55 /* UIViewController+Extension.swift in Sources */,
+				A7A080B91ECF0E580035EE1A /* TextFieldExtension.swift in Sources */,
 				A714AD301ECEEB8600C99C55 /* PlayerView.swift in Sources */,
 				A721B2DE1ECECC9B003E0D12 /* MediaCoordinator.swift in Sources */,
 				A714AD5C1ECF070A00C99C55 /* TermSearcher.swift in Sources */,
@@ -552,25 +708,37 @@
 				A721B2E21ECECE16003E0D12 /* MediaCollectionViewController.swift in Sources */,
 				A714AD341ECEEBF500C99C55 /* Resuable.swift in Sources */,
 				A714AD121ECEDEFC00C99C55 /* PlayerViewControllerDelegate.swift in Sources */,
+				A7A080E41ECF126C0035EE1A /* MenuDelegate.swift in Sources */,
 				A721B2DC1ECECC60003E0D12 /* SplashViewController.swift in Sources */,
 				A714AD1E1ECEDFC700C99C55 /* Track.swift in Sources */,
 				A714AD3E1ECEECBC00C99C55 /* BaseMediaController.swift in Sources */,
+				A7A080DC1ECF11B80035EE1A /* LoginButtonFactory.swift in Sources */,
+				A7A080D41ECF11380035EE1A /* StartViewDelegate.swift in Sources */,
+				A7A080DE1ECF11FA0035EE1A /* BottomMenuPopover.swift in Sources */,
+				A7A080D21ECF11200035EE1A /* StartView.swift in Sources */,
 				A714AD451ECEEE0B00C99C55 /* CALayer+Extension.swift in Sources */,
+				A7A080BC1ECF0EA00035EE1A /* EqualizerAnimation.swift in Sources */,
+				A7A080BF1ECF0ED50035EE1A /* IndicatorView.swift in Sources */,
 				A721B2E41ECECE3D003E0D12 /* PlayerViewController.swift in Sources */,
 				A721B2D61ECECBC6003E0D12 /* Coordinator.swift in Sources */,
 				A714AD381ECEEC4400C99C55 /* UICollectionView+Extension.swift in Sources */,
+				A7A080E21ECF12560035EE1A /* MenuActive.swift in Sources */,
 				A714AD581ECF06BB00C99C55 /* PlaylistItem.swift in Sources */,
 				A714AD621ECF080D00C99C55 /* DownloadDelegate.swift in Sources */,
+				A7A080CA1ECF10360035EE1A /* BaseMenuPopover.swift in Sources */,
 				A714AD2C1ECEEA7800C99C55 /* MediaAPIClient.swift in Sources */,
 				A721B2D81ECECC09003E0D12 /* RootViewController.swift in Sources */,
 				A714AD1A1ECEDF7E00C99C55 /* MediaCoordinatorPayload.swift in Sources */,
 				A714AD291ECEE93800C99C55 /* MediaDataStore.swift in Sources */,
+				A7A080D71ECF11740035EE1A /* ButtonMaker.swift in Sources */,
+				A7A080E01ECF123A0035EE1A /* MenuOptionView.swift in Sources */,
 				A714AD141ECEDF1E00C99C55 /* MediaCollectionControllerDelegate.swift in Sources */,
 				A721B2D41ECECB74003E0D12 /* TabBarController.swift in Sources */,
 				A721B2AF1ECECB43003E0D12 /* AppDelegate.swift in Sources */,
 				A714AD361ECEEC0C00C99C55 /* CellRepresentable.swift in Sources */,
 				A714AD201ECEE05A00C99C55 /* SplashView.swift in Sources */,
 				A714AD641ECF082900C99C55 /* DownloadStatus.swift in Sources */,
+				A7A080C31ECF0F6F0035EE1A /* EmptyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
