@@ -1,11 +1,3 @@
-//
-//  AppCoordinator.swift
-//  MediaPlayer
-//
-//  Created by Christopher Webb-Orenstein on 5/19/17.
-//  Copyright © 2017 Christopher Webb-Orenstein. All rights reserved.
-//
-
 import UIKit
 
 class AppCoordinator: RootViewCoordinator {
@@ -15,6 +7,7 @@ class AppCoordinator: RootViewCoordinator {
     var store = MediaDataStore(client: MediaAPIClient())
     
     let services: Services
+    
     var childCoordinators: [Coordinator] = []
     
     var rootViewController: UIViewController {
@@ -47,6 +40,7 @@ class AppCoordinator: RootViewCoordinator {
     }
     
     // Creates a new SplashViewController and places it into the navigation controller
+    
     private func showSplashViewController() {
         let services = Services()
         let splashViewController = SplashViewController(services: services)
@@ -68,7 +62,7 @@ extension AppCoordinator: SplashViewControllerDelegate {
         addChildCoordinator(mediaCoordinator)
         rootViewController.present(mediaCoordinator.rootViewController, animated: false, completion: nil)
     }
-
+    
     
     func splashViewControllerDidTapNewOrder(splashViewController: SplashViewController) {
         let dataSource = BaseMediaControllerDataSource(store: store)
@@ -84,6 +78,7 @@ extension AppCoordinator: SplashViewControllerDelegate {
 // MARK: - MediaCoordinatorDelegate
 
 extension AppCoordinator: MediaCoordinatorDelegate {
+    
     func mediCoordinator(didSelectTrackAt index: Int, withPlaylist: Playlist) {
         let dataSource = BaseMediaControllerDataSource(store: store)
         let mediaCoordinator = MediaCoordinator(services: self.services, dataSource: dataSource)
@@ -92,8 +87,8 @@ extension AppCoordinator: MediaCoordinatorDelegate {
         addChildCoordinator(mediaCoordinator)
         rootViewController.present(mediaCoordinator.rootViewController, animated: false, completion: nil)
     }
-
-
+    
+    
     func mediaCoordinatorDidRequestCancel(newMediaCoordinator mediaCoordinator: MediaCoordinator) {
         mediaCoordinator.rootViewController.dismiss(animated: true)
         self.removeChildCoordinator(mediaCoordinator)

@@ -29,17 +29,8 @@ final class TabBarController: UITabBarController {
     }
     
     private func setupControllers() {
-        //let mediaCollectionController = MediaCollectionViewController()
         let playerViewController = PlayerViewController()
         let controllers = [playerViewController]
-//        UITabBar.appearance().tintColor = UIColor.orange
-//        let dataSource = ListControllerDataSource(store: store!)
-//        let tracksController = TracksViewController(dataSource: dataSource)
-//        let playlistController = PlaylistsViewController()
-//        let searchTab = setupSearchTab(tracksViewController: tracksController)
-//        let playlistTab = setupPlaylistTab(playlistViewController: playlistController)
-//        let controllers = [searchTab, playlistTab]
-//        setTabTitles(controllers: controllers)
     }
     
     private func setTabTitles(controllers: [UINavigationController]) {
@@ -50,11 +41,6 @@ final class TabBarController: UITabBarController {
     }
     
     private func setupMediaTab(mediaCollectionViewController: MediaCollectionViewController) -> UINavigationController {
-       // let dataSource = ListControllerDataSource(store: store!)
-        //dataSource.store = self.store!
-      //  tracksViewController.dataSource = dataSource
-     //   tracksViewController.tabBarItem = UITabBarItem(title: nil, image: normalImage.withRenderingMode(.alwaysOriginal), selectedImage: selectedImage.withRenderingMode(.alwaysTemplate))
-        
         let tracksTab = UINavigationController(rootViewController: mediaCollectionViewController)
         return tracksTab
     }

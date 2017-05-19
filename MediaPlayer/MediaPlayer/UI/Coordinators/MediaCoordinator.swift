@@ -11,6 +11,7 @@ import UIKit
 class MediaCoordinator: RootViewCoordinator {
     
     let services: Services
+    
     var childCoordinators: [Coordinator] = []
     
     var rootViewController: UIViewController {
@@ -38,12 +39,8 @@ class MediaCoordinator: RootViewCoordinator {
     // MARK: - Functions
     
     func start() {
-    
         let mediaViewController = MediaCollectionViewController(dataSource: dataSource)
-        mediaViewController.delegate = self as! MediaViewControllerDelegate
-      //  let client = MediaAPIClient()
-       // let store = MediaDataStore(client: client)
-       // mediaViewController.inject(handler: store)
+        mediaViewController.delegate = self as MediaViewControllerDelegate
         self.navigationController.viewControllers = [mediaViewController]
     }
     
@@ -79,7 +76,6 @@ extension MediaCoordinator: MediaViewControllerDelegate {
     func didSelectPlaylistItem(at index: Int, for list: Playlist) {
         showPlayerViewController()
     }
-
     
     func didTapClose(mediaViewController: MediaCollectionViewController) {
         self.delegate?.mediaCoordinatorDidRequestCancel(newMediaCoordinator: self)
