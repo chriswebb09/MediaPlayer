@@ -1,0 +1,804 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A714AD121ECEDEFC00C99C55 /* PlayerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD111ECEDEFC00C99C55 /* PlayerViewControllerDelegate.swift */; };
+		A714AD141ECEDF1E00C99C55 /* MediaCollectionControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD131ECEDF1E00C99C55 /* MediaCollectionControllerDelegate.swift */; };
+		A714AD161ECEDF4100C99C55 /* MediaViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD151ECEDF4100C99C55 /* MediaViewControllerDelegate.swift */; };
+		A714AD181ECEDF6100C99C55 /* MediaCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD171ECEDF6100C99C55 /* MediaCoordinatorDelegate.swift */; };
+		A714AD1A1ECEDF7E00C99C55 /* MediaCoordinatorPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD191ECEDF7E00C99C55 /* MediaCoordinatorPayload.swift */; };
+		A714AD1C1ECEDFAE00C99C55 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD1B1ECEDFAE00C99C55 /* DataService.swift */; };
+		A714AD1E1ECEDFC700C99C55 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD1D1ECEDFC700C99C55 /* Track.swift */; };
+		A714AD201ECEE05A00C99C55 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD1F1ECEE05A00C99C55 /* SplashView.swift */; };
+		A714AD271ECEE7A600C99C55 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD261ECEE7A600C99C55 /* TabBarCoordinator.swift */; };
+		A714AD291ECEE93800C99C55 /* MediaDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD281ECEE93800C99C55 /* MediaDataStore.swift */; };
+		A714AD2C1ECEEA7800C99C55 /* MediaAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD2B1ECEEA7800C99C55 /* MediaAPIClient.swift */; };
+		A714AD2E1ECEEA8700C99C55 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD2D1ECEEA8700C99C55 /* Download.swift */; };
+		A714AD301ECEEB8600C99C55 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD2F1ECEEB8500C99C55 /* PlayerView.swift */; };
+		A714AD321ECEEB9200C99C55 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD311ECEEB9200C99C55 /* MediaCell.swift */; };
+		A714AD341ECEEBF500C99C55 /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD331ECEEBF500C99C55 /* Resuable.swift */; };
+		A714AD361ECEEC0C00C99C55 /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD351ECEEC0C00C99C55 /* CellRepresentable.swift */; };
+		A714AD381ECEEC4400C99C55 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD371ECEEC4400C99C55 /* UICollectionView+Extension.swift */; };
+		A714AD3A1ECEEC7600C99C55 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD391ECEEC7600C99C55 /* UIImageView+Extension.swift */; };
+		A714AD3C1ECEECB000C99C55 /* BaseMediaControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD3B1ECEECB000C99C55 /* BaseMediaControllerDataSource.swift */; };
+		A714AD3E1ECEECBC00C99C55 /* BaseMediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD3D1ECEECBC00C99C55 /* BaseMediaController.swift */; };
+		A714AD451ECEEE0B00C99C55 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD441ECEEE0B00C99C55 /* CALayer+Extension.swift */; };
+		A714AD471ECEF15000C99C55 /* URLConstructable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD461ECEF15000C99C55 /* URLConstructable.swift */; };
+		A714AD491ECEF16900C99C55 /* URLRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD481ECEF16900C99C55 /* URLRoutable.swift */; };
+		A714AD4B1ECF062600C99C55 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD4A1ECF062600C99C55 /* Configurable.swift */; };
+		A714AD561ECF069500C99C55 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD551ECF069500C99C55 /* Playlist.swift */; };
+		A714AD581ECF06BB00C99C55 /* PlaylistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD571ECF06BB00C99C55 /* PlaylistItem.swift */; };
+		A714AD5A1ECF06FC00C99C55 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD591ECF06FC00C99C55 /* Downloader.swift */; };
+		A714AD5C1ECF070A00C99C55 /* TermSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD5B1ECF070A00C99C55 /* TermSearcher.swift */; };
+		A714AD621ECF080D00C99C55 /* DownloadDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD611ECF080D00C99C55 /* DownloadDelegate.swift */; };
+		A714AD641ECF082900C99C55 /* DownloadStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD631ECF082900C99C55 /* DownloadStatus.swift */; };
+		A714AD681ECF09A200C99C55 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD671ECF09A200C99C55 /* UIViewController+Extension.swift */; };
+		A721B2AF1ECECB43003E0D12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2AE1ECECB43003E0D12 /* AppDelegate.swift */; };
+		A721B2B71ECECB43003E0D12 /* MediaPlayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A721B2B51ECECB43003E0D12 /* MediaPlayer.xcdatamodeld */; };
+		A721B2B91ECECB43003E0D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A721B2B81ECECB43003E0D12 /* Assets.xcassets */; };
+		A721B2BC1ECECB43003E0D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A721B2BA1ECECB43003E0D12 /* LaunchScreen.storyboard */; };
+		A721B2C71ECECB43003E0D12 /* MediaPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2C61ECECB43003E0D12 /* MediaPlayerTests.swift */; };
+		A721B2D21ECECB67003E0D12 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2D11ECECB67003E0D12 /* AppCoordinator.swift */; };
+		A721B2D41ECECB74003E0D12 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2D31ECECB74003E0D12 /* TabBarController.swift */; };
+		A721B2D61ECECBC6003E0D12 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2D51ECECBC6003E0D12 /* Coordinator.swift */; };
+		A721B2D81ECECC09003E0D12 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2D71ECECC09003E0D12 /* RootViewController.swift */; };
+		A721B2DA1ECECC4D003E0D12 /* SplashViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2D91ECECC4D003E0D12 /* SplashViewControllerDelegate.swift */; };
+		A721B2DC1ECECC60003E0D12 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2DB1ECECC5F003E0D12 /* SplashViewController.swift */; };
+		A721B2DE1ECECC9B003E0D12 /* MediaCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2DD1ECECC9B003E0D12 /* MediaCoordinator.swift */; };
+		A721B2E01ECECD98003E0D12 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2DF1ECECD98003E0D12 /* Services.swift */; };
+		A721B2E21ECECE16003E0D12 /* MediaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2E11ECECE16003E0D12 /* MediaCollectionViewController.swift */; };
+		A721B2E41ECECE3D003E0D12 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A721B2C31ECECB43003E0D12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A721B2A31ECECB43003E0D12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A721B2AA1ECECB43003E0D12;
+			remoteInfo = MediaPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A714AD111ECEDEFC00C99C55 /* PlayerViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewControllerDelegate.swift; sourceTree = "<group>"; };
+		A714AD131ECEDF1E00C99C55 /* MediaCollectionControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCollectionControllerDelegate.swift; sourceTree = "<group>"; };
+		A714AD151ECEDF4100C99C55 /* MediaViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewControllerDelegate.swift; sourceTree = "<group>"; };
+		A714AD171ECEDF6100C99C55 /* MediaCoordinatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		A714AD191ECEDF7E00C99C55 /* MediaCoordinatorPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCoordinatorPayload.swift; sourceTree = "<group>"; };
+		A714AD1B1ECEDFAE00C99C55 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		A714AD1D1ECEDFC700C99C55 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		A714AD1F1ECEE05A00C99C55 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		A714AD261ECEE7A600C99C55 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		A714AD281ECEE93800C99C55 /* MediaDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaDataStore.swift; sourceTree = "<group>"; };
+		A714AD2B1ECEEA7800C99C55 /* MediaAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaAPIClient.swift; sourceTree = "<group>"; };
+		A714AD2D1ECEEA8700C99C55 /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		A714AD2F1ECEEB8500C99C55 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		A714AD311ECEEB9200C99C55 /* MediaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
+		A714AD331ECEEBF500C99C55 /* Resuable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resuable.swift; sourceTree = "<group>"; };
+		A714AD351ECEEC0C00C99C55 /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellRepresentable.swift; sourceTree = "<group>"; };
+		A714AD371ECEEC4400C99C55 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		A714AD391ECEEC7600C99C55 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		A714AD3B1ECEECB000C99C55 /* BaseMediaControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMediaControllerDataSource.swift; sourceTree = "<group>"; };
+		A714AD3D1ECEECBC00C99C55 /* BaseMediaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMediaController.swift; sourceTree = "<group>"; };
+		A714AD441ECEEE0B00C99C55 /* CALayer+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		A714AD461ECEF15000C99C55 /* URLConstructable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConstructable.swift; sourceTree = "<group>"; };
+		A714AD481ECEF16900C99C55 /* URLRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRoutable.swift; sourceTree = "<group>"; };
+		A714AD4A1ECF062600C99C55 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		A714AD551ECF069500C99C55 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		A714AD571ECF06BB00C99C55 /* PlaylistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistItem.swift; sourceTree = "<group>"; };
+		A714AD591ECF06FC00C99C55 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		A714AD5B1ECF070A00C99C55 /* TermSearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermSearcher.swift; sourceTree = "<group>"; };
+		A714AD611ECF080D00C99C55 /* DownloadDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadDelegate.swift; sourceTree = "<group>"; };
+		A714AD631ECF082900C99C55 /* DownloadStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadStatus.swift; sourceTree = "<group>"; };
+		A714AD671ECF09A200C99C55 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		A721B2AB1ECECB43003E0D12 /* MediaPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A721B2AE1ECECB43003E0D12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A721B2B61ECECB43003E0D12 /* MediaPlayer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MediaPlayer.xcdatamodel; sourceTree = "<group>"; };
+		A721B2B81ECECB43003E0D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A721B2BB1ECECB43003E0D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A721B2BD1ECECB43003E0D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A721B2C21ECECB43003E0D12 /* MediaPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A721B2C61ECECB43003E0D12 /* MediaPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerTests.swift; sourceTree = "<group>"; };
+		A721B2C81ECECB43003E0D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A721B2D11ECECB67003E0D12 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A721B2D31ECECB74003E0D12 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A721B2D51ECECBC6003E0D12 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A721B2D71ECECC09003E0D12 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		A721B2D91ECECC4D003E0D12 /* SplashViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewControllerDelegate.swift; sourceTree = "<group>"; };
+		A721B2DB1ECECC5F003E0D12 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		A721B2DD1ECECC9B003E0D12 /* MediaCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCoordinator.swift; sourceTree = "<group>"; };
+		A721B2DF1ECECD98003E0D12 /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		A721B2E11ECECE16003E0D12 /* MediaCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewController.swift; sourceTree = "<group>"; };
+		A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A721B2A81ECECB43003E0D12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A721B2BF1ECECB43003E0D12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A714AD211ECEE06000C99C55 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD4C1ECF064100C99C55 /* Delegate */,
+				A714AD4D1ECF064A00C99C55 /* Controller */,
+				A714AD4E1ECF064F00C99C55 /* View */,
+			);
+			name = Splash;
+			sourceTree = "<group>";
+		};
+		A714AD221ECEE06E00C99C55 /* MediaCollection */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD251ECEE50400C99C55 /* Coordinator */,
+				A714AD4F1ECF065800C99C55 /* Controller */,
+				A714AD501ECF065E00C99C55 /* Delegate */,
+				A714AD511ECF066700C99C55 /* Cell */,
+			);
+			name = MediaCollection;
+			sourceTree = "<group>";
+		};
+		A714AD231ECEE08600C99C55 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD521ECF066E00C99C55 /* Controller */,
+				A714AD531ECF067300C99C55 /* Delegate */,
+				A714AD541ECF067B00C99C55 /* View */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		A714AD241ECEE0A800C99C55 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A721B2DF1ECECD98003E0D12 /* Services.swift */,
+				A714AD1D1ECEDFC700C99C55 /* Track.swift */,
+				A714AD1B1ECEDFAE00C99C55 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		A714AD251ECEE50400C99C55 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD191ECEDF7E00C99C55 /* MediaCoordinatorPayload.swift */,
+				A714AD171ECEDF6100C99C55 /* MediaCoordinatorDelegate.swift */,
+			);
+			name = Coordinator;
+			sourceTree = "<group>";
+		};
+		A714AD2A1ECEEA3400C99C55 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A721B2DD1ECECC9B003E0D12 /* MediaCoordinator.swift */,
+				A721B2D11ECECB67003E0D12 /* AppCoordinator.swift */,
+				A714AD261ECEE7A600C99C55 /* TabBarCoordinator.swift */,
+				A721B2D51ECECBC6003E0D12 /* Coordinator.swift */,
+			);
+			name = Coordinator;
+			sourceTree = "<group>";
+		};
+		A714AD3F1ECEECCC00C99C55 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD3B1ECEECB000C99C55 /* BaseMediaControllerDataSource.swift */,
+				A714AD3D1ECEECBC00C99C55 /* BaseMediaController.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		A714AD401ECEECD200C99C55 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD371ECEEC4400C99C55 /* UICollectionView+Extension.swift */,
+				A714AD391ECEEC7600C99C55 /* UIImageView+Extension.swift */,
+				A714AD441ECEEE0B00C99C55 /* CALayer+Extension.swift */,
+				A714AD671ECF09A200C99C55 /* UIViewController+Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		A714AD411ECEECD900C99C55 /* Protoccol */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD331ECEEBF500C99C55 /* Resuable.swift */,
+				A714AD351ECEEC0C00C99C55 /* CellRepresentable.swift */,
+				A714AD4A1ECF062600C99C55 /* Configurable.swift */,
+				A714AD591ECF06FC00C99C55 /* Downloader.swift */,
+				A714AD5B1ECF070A00C99C55 /* TermSearcher.swift */,
+			);
+			name = Protoccol;
+			sourceTree = "<group>";
+		};
+		A714AD421ECEECDE00C99C55 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD661ECF084100C99C55 /* Playlist */,
+				A714AD651ECF083500C99C55 /* Download */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A714AD431ECEECE900C99C55 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD281ECEE93800C99C55 /* MediaDataStore.swift */,
+				A714AD2B1ECEEA7800C99C55 /* MediaAPIClient.swift */,
+				A714AD461ECEF15000C99C55 /* URLConstructable.swift */,
+				A714AD481ECEF16900C99C55 /* URLRoutable.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		A714AD4C1ECF064100C99C55 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A721B2D91ECECC4D003E0D12 /* SplashViewControllerDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		A714AD4D1ECF064A00C99C55 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A721B2DB1ECECC5F003E0D12 /* SplashViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A714AD4E1ECF064F00C99C55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD1F1ECEE05A00C99C55 /* SplashView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A714AD4F1ECF065800C99C55 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A721B2E11ECECE16003E0D12 /* MediaCollectionViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A714AD501ECF065E00C99C55 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD131ECEDF1E00C99C55 /* MediaCollectionControllerDelegate.swift */,
+				A714AD151ECEDF4100C99C55 /* MediaViewControllerDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		A714AD511ECF066700C99C55 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD311ECEEB9200C99C55 /* MediaCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		A714AD521ECF066E00C99C55 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A714AD531ECF067300C99C55 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD111ECEDEFC00C99C55 /* PlayerViewControllerDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		A714AD541ECF067B00C99C55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD2F1ECEEB8500C99C55 /* PlayerView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A714AD5D1ECF073300C99C55 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A721B2D71ECECC09003E0D12 /* RootViewController.swift */,
+				A721B2D31ECECB74003E0D12 /* TabBarController.swift */,
+				A714AD2A1ECEEA3400C99C55 /* Coordinator */,
+				A714AD411ECEECD900C99C55 /* Protoccol */,
+				A714AD401ECEECD200C99C55 /* Extensions */,
+				A714AD5E1ECF074C00C99C55 /* Screens */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		A714AD5E1ECF074C00C99C55 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD3F1ECEECCC00C99C55 /* Base */,
+				A714AD231ECEE08600C99C55 /* Player */,
+				A714AD221ECEE06E00C99C55 /* MediaCollection */,
+				A714AD211ECEE06000C99C55 /* Splash */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
+		A714AD5F1ECF076D00C99C55 /* ApplicationServices */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD241ECEE0A800C99C55 /* Services */,
+				A714AD431ECEECE900C99C55 /* Data */,
+			);
+			name = ApplicationServices;
+			sourceTree = "<group>";
+		};
+		A714AD601ECF078000C99C55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A721B2B81ECECB43003E0D12 /* Assets.xcassets */,
+				A721B2BA1ECECB43003E0D12 /* LaunchScreen.storyboard */,
+				A721B2BD1ECECB43003E0D12 /* Info.plist */,
+				A721B2B51ECECB43003E0D12 /* MediaPlayer.xcdatamodeld */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A714AD651ECF083500C99C55 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD2D1ECEEA8700C99C55 /* Download.swift */,
+				A714AD611ECF080D00C99C55 /* DownloadDelegate.swift */,
+				A714AD631ECF082900C99C55 /* DownloadStatus.swift */,
+			);
+			name = Download;
+			sourceTree = "<group>";
+		};
+		A714AD661ECF084100C99C55 /* Playlist */ = {
+			isa = PBXGroup;
+			children = (
+				A714AD551ECF069500C99C55 /* Playlist.swift */,
+				A714AD571ECF06BB00C99C55 /* PlaylistItem.swift */,
+			);
+			name = Playlist;
+			sourceTree = "<group>";
+		};
+		A721B2A21ECECB43003E0D12 = {
+			isa = PBXGroup;
+			children = (
+				A721B2AD1ECECB43003E0D12 /* MediaPlayer */,
+				A721B2C51ECECB43003E0D12 /* MediaPlayerTests */,
+				A721B2AC1ECECB43003E0D12 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A721B2AC1ECECB43003E0D12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A721B2AB1ECECB43003E0D12 /* MediaPlayer.app */,
+				A721B2C21ECECB43003E0D12 /* MediaPlayerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A721B2AD1ECECB43003E0D12 /* MediaPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				A721B2AE1ECECB43003E0D12 /* AppDelegate.swift */,
+				A714AD601ECF078000C99C55 /* Resources */,
+				A714AD5D1ECF073300C99C55 /* UI */,
+				A714AD421ECEECDE00C99C55 /* Models */,
+				A714AD5F1ECF076D00C99C55 /* ApplicationServices */,
+			);
+			path = MediaPlayer;
+			sourceTree = "<group>";
+		};
+		A721B2C51ECECB43003E0D12 /* MediaPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A721B2C61ECECB43003E0D12 /* MediaPlayerTests.swift */,
+				A721B2C81ECECB43003E0D12 /* Info.plist */,
+			);
+			path = MediaPlayerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A721B2AA1ECECB43003E0D12 /* MediaPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A721B2CB1ECECB43003E0D12 /* Build configuration list for PBXNativeTarget "MediaPlayer" */;
+			buildPhases = (
+				A721B2A71ECECB43003E0D12 /* Sources */,
+				A721B2A81ECECB43003E0D12 /* Frameworks */,
+				A721B2A91ECECB43003E0D12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediaPlayer;
+			productName = MediaPlayer;
+			productReference = A721B2AB1ECECB43003E0D12 /* MediaPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A721B2C11ECECB43003E0D12 /* MediaPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A721B2CE1ECECB43003E0D12 /* Build configuration list for PBXNativeTarget "MediaPlayerTests" */;
+			buildPhases = (
+				A721B2BE1ECECB43003E0D12 /* Sources */,
+				A721B2BF1ECECB43003E0D12 /* Frameworks */,
+				A721B2C01ECECB43003E0D12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A721B2C41ECECB43003E0D12 /* PBXTargetDependency */,
+			);
+			name = MediaPlayerTests;
+			productName = MediaPlayerTests;
+			productReference = A721B2C21ECECB43003E0D12 /* MediaPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A721B2A31ECECB43003E0D12 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Christopher Webb-Orenstein";
+				TargetAttributes = {
+					A721B2AA1ECECB43003E0D12 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 4SZP4Q326F;
+						ProvisioningStyle = Automatic;
+					};
+					A721B2C11ECECB43003E0D12 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 4SZP4Q326F;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A721B2AA1ECECB43003E0D12;
+					};
+				};
+			};
+			buildConfigurationList = A721B2A61ECECB43003E0D12 /* Build configuration list for PBXProject "MediaPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A721B2A21ECECB43003E0D12;
+			productRefGroup = A721B2AC1ECECB43003E0D12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A721B2AA1ECECB43003E0D12 /* MediaPlayer */,
+				A721B2C11ECECB43003E0D12 /* MediaPlayerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A721B2A91ECECB43003E0D12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A721B2BC1ECECB43003E0D12 /* LaunchScreen.storyboard in Resources */,
+				A721B2B91ECECB43003E0D12 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A721B2C01ECECB43003E0D12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A721B2A71ECECB43003E0D12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A714AD3A1ECEEC7600C99C55 /* UIImageView+Extension.swift in Sources */,
+				A721B2D21ECECB67003E0D12 /* AppCoordinator.swift in Sources */,
+				A714AD561ECF069500C99C55 /* Playlist.swift in Sources */,
+				A714AD181ECEDF6100C99C55 /* MediaCoordinatorDelegate.swift in Sources */,
+				A714AD491ECEF16900C99C55 /* URLRoutable.swift in Sources */,
+				A714AD321ECEEB9200C99C55 /* MediaCell.swift in Sources */,
+				A721B2B71ECECB43003E0D12 /* MediaPlayer.xcdatamodeld in Sources */,
+				A714AD4B1ECF062600C99C55 /* Configurable.swift in Sources */,
+				A714AD5A1ECF06FC00C99C55 /* Downloader.swift in Sources */,
+				A714AD161ECEDF4100C99C55 /* MediaViewControllerDelegate.swift in Sources */,
+				A721B2DA1ECECC4D003E0D12 /* SplashViewControllerDelegate.swift in Sources */,
+				A714AD3C1ECEECB000C99C55 /* BaseMediaControllerDataSource.swift in Sources */,
+				A721B2E01ECECD98003E0D12 /* Services.swift in Sources */,
+				A714AD471ECEF15000C99C55 /* URLConstructable.swift in Sources */,
+				A714AD271ECEE7A600C99C55 /* TabBarCoordinator.swift in Sources */,
+				A714AD1C1ECEDFAE00C99C55 /* DataService.swift in Sources */,
+				A714AD681ECF09A200C99C55 /* UIViewController+Extension.swift in Sources */,
+				A714AD301ECEEB8600C99C55 /* PlayerView.swift in Sources */,
+				A721B2DE1ECECC9B003E0D12 /* MediaCoordinator.swift in Sources */,
+				A714AD5C1ECF070A00C99C55 /* TermSearcher.swift in Sources */,
+				A714AD2E1ECEEA8700C99C55 /* Download.swift in Sources */,
+				A721B2E21ECECE16003E0D12 /* MediaCollectionViewController.swift in Sources */,
+				A714AD341ECEEBF500C99C55 /* Resuable.swift in Sources */,
+				A714AD121ECEDEFC00C99C55 /* PlayerViewControllerDelegate.swift in Sources */,
+				A721B2DC1ECECC60003E0D12 /* SplashViewController.swift in Sources */,
+				A714AD1E1ECEDFC700C99C55 /* Track.swift in Sources */,
+				A714AD3E1ECEECBC00C99C55 /* BaseMediaController.swift in Sources */,
+				A714AD451ECEEE0B00C99C55 /* CALayer+Extension.swift in Sources */,
+				A721B2E41ECECE3D003E0D12 /* PlayerViewController.swift in Sources */,
+				A721B2D61ECECBC6003E0D12 /* Coordinator.swift in Sources */,
+				A714AD381ECEEC4400C99C55 /* UICollectionView+Extension.swift in Sources */,
+				A714AD581ECF06BB00C99C55 /* PlaylistItem.swift in Sources */,
+				A714AD621ECF080D00C99C55 /* DownloadDelegate.swift in Sources */,
+				A714AD2C1ECEEA7800C99C55 /* MediaAPIClient.swift in Sources */,
+				A721B2D81ECECC09003E0D12 /* RootViewController.swift in Sources */,
+				A714AD1A1ECEDF7E00C99C55 /* MediaCoordinatorPayload.swift in Sources */,
+				A714AD291ECEE93800C99C55 /* MediaDataStore.swift in Sources */,
+				A714AD141ECEDF1E00C99C55 /* MediaCollectionControllerDelegate.swift in Sources */,
+				A721B2D41ECECB74003E0D12 /* TabBarController.swift in Sources */,
+				A721B2AF1ECECB43003E0D12 /* AppDelegate.swift in Sources */,
+				A714AD361ECEEC0C00C99C55 /* CellRepresentable.swift in Sources */,
+				A714AD201ECEE05A00C99C55 /* SplashView.swift in Sources */,
+				A714AD641ECF082900C99C55 /* DownloadStatus.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A721B2BE1ECECB43003E0D12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A721B2C71ECECB43003E0D12 /* MediaPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A721B2C41ECECB43003E0D12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A721B2AA1ECECB43003E0D12 /* MediaPlayer */;
+			targetProxy = A721B2C31ECECB43003E0D12 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A721B2BA1ECECB43003E0D12 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A721B2BB1ECECB43003E0D12 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A721B2C91ECECB43003E0D12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A721B2CA1ECECB43003E0D12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A721B2CC1ECECB43003E0D12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4SZP4Q326F;
+				INFOPLIST_FILE = MediaPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.froleeyo.MediaPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A721B2CD1ECECB43003E0D12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4SZP4Q326F;
+				INFOPLIST_FILE = MediaPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.froleeyo.MediaPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A721B2CF1ECECB43003E0D12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4SZP4Q326F;
+				INFOPLIST_FILE = MediaPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.froleeyo.MediaPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediaPlayer.app/MediaPlayer";
+			};
+			name = Debug;
+		};
+		A721B2D01ECECB43003E0D12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4SZP4Q326F;
+				INFOPLIST_FILE = MediaPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.froleeyo.MediaPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediaPlayer.app/MediaPlayer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A721B2A61ECECB43003E0D12 /* Build configuration list for PBXProject "MediaPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A721B2C91ECECB43003E0D12 /* Debug */,
+				A721B2CA1ECECB43003E0D12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A721B2CB1ECECB43003E0D12 /* Build configuration list for PBXNativeTarget "MediaPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A721B2CC1ECECB43003E0D12 /* Debug */,
+				A721B2CD1ECECB43003E0D12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A721B2CE1ECECB43003E0D12 /* Build configuration list for PBXNativeTarget "MediaPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A721B2CF1ECECB43003E0D12 /* Debug */,
+				A721B2D01ECECB43003E0D12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A721B2B51ECECB43003E0D12 /* MediaPlayer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A721B2B61ECECB43003E0D12 /* MediaPlayer.xcdatamodel */,
+			);
+			currentVersion = A721B2B61ECECB43003E0D12 /* MediaPlayer.xcdatamodel */;
+			path = MediaPlayer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A721B2A31ECECB43003E0D12 /* Project object */;
+}
