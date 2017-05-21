@@ -61,6 +61,8 @@
 		A76B06681ED255CA0006476F /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06671ED255CA0006476F /* PlayerViewModel.swift */; };
 		A76B066A1ED255E10006476F /* BaseMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06691ED255E10006476F /* BaseMediaView.swift */; };
 		A76B066C1ED255F80006476F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B066B1ED255F80006476F /* BaseViewModel.swift */; };
+		A76B066E1ED2586D0006476F /* TrackItemsFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B066D1ED2586D0006476F /* TrackItemsFlowLayout.swift */; };
+		A76B06701ED2588D0006476F /* MediaViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B066F1ED2588D0006476F /* MediaViewDelegate.swift */; };
 		A7A080B91ECF0E580035EE1A /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */; };
 		A7A080BC1ECF0EA00035EE1A /* EqualizerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080BB1ECF0EA00035EE1A /* EqualizerAnimation.swift */; };
 		A7A080BF1ECF0ED50035EE1A /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080BE1ECF0ED50035EE1A /* IndicatorView.swift */; };
@@ -175,6 +177,8 @@
 		A76B06671ED255CA0006476F /* PlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 		A76B06691ED255E10006476F /* BaseMediaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMediaView.swift; sourceTree = "<group>"; };
 		A76B066B1ED255F80006476F /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		A76B066D1ED2586D0006476F /* TrackItemsFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackItemsFlowLayout.swift; sourceTree = "<group>"; };
+		A76B066F1ED2588D0006476F /* MediaViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewDelegate.swift; sourceTree = "<group>"; };
 		A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		A7A080BB1ECF0EA00035EE1A /* EqualizerAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualizerAnimation.swift; sourceTree = "<group>"; };
 		A7A080BE1ECF0ED50035EE1A /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
@@ -282,6 +286,8 @@
 			children = (
 				A714AD3D1ECEECBC00C99C55 /* BaseMediaController.swift */,
 				A714AD3B1ECEECB000C99C55 /* BaseMediaControllerDataSource.swift */,
+				A76B066D1ED2586D0006476F /* TrackItemsFlowLayout.swift */,
+				A76B066F1ED2588D0006476F /* MediaViewDelegate.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -906,6 +912,7 @@
 				A7A080B91ECF0E580035EE1A /* TextFieldExtension.swift in Sources */,
 				A714AD301ECEEB8600C99C55 /* PlayerView.swift in Sources */,
 				A7A080EF1ECF14760035EE1A /* LocalStorageManager.swift in Sources */,
+				A76B06701ED2588D0006476F /* MediaViewDelegate.swift in Sources */,
 				A7A081151ECF17AE0035EE1A /* CreateAccountViewController.swift in Sources */,
 				A714AD2E1ECEEA8700C99C55 /* Download.swift in Sources */,
 				A721B2E21ECECE16003E0D12 /* MediaCollectionViewController.swift in Sources */,
@@ -945,6 +952,7 @@
 				A721B2D81ECECC09003E0D12 /* RootViewController.swift in Sources */,
 				A714AD291ECEE93800C99C55 /* MediaDataStore.swift in Sources */,
 				A7A081191ECF18140035EE1A /* NewPlaylistView.swift in Sources */,
+				A76B066E1ED2586D0006476F /* TrackItemsFlowLayout.swift in Sources */,
 				A7A0811C1ECF18AA0035EE1A /* ImageLoadOperation.swift in Sources */,
 				A76B065C1ED254EA0006476F /* BaseView.swift in Sources */,
 				A7A080FC1ECF15520035EE1A /* BaseOperation.swift in Sources */,

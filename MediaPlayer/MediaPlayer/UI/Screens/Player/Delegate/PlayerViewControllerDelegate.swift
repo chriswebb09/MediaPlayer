@@ -9,5 +9,7 @@
 import UIKit
 
 public protocol PlayerViewControllerDelegate: class {
-    
+    func playButtonTapped()
+    func pauseButtonTapped()
+    func skipButtonTapped()
 }

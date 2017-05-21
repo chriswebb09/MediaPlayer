@@ -46,15 +46,27 @@ class AppCoordinator: RootViewCoordinator {
         splashViewController.delegate = self
         navigationController.viewControllers = [splashViewController]
     }
-    
 }
 
 extension AppCoordinator: SplashViewControllerDelegate {
     func splashViewFinishedAnimation(finished: Bool) {
         let dataSource = BaseMediaControllerDataSource(store: store)
         let mediaCollectionController = MediaCollectionViewController(dataSource: dataSource)
+        mediaCollectionController.delegate = self
         navigationController.viewControllers = [mediaCollectionController]
     }
+}
+
+extension AppCoordinator: MediaControllerDelegate {
+    
+    func didSelectTrackAt(at index: Int, with playlist: Playlist) {
+        let playerViewController = PlayerViewController()
+        playerViewController.index = index
+        playerViewController.playlist = playlist
+        navigationController.pushViewController(playerViewController, animated: false)
+    }
+
+    
 }
 
 
