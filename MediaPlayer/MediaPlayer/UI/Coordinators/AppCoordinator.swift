@@ -5,9 +5,7 @@ class AppCoordinator: RootViewCoordinator {
     // MARK: - Properties
     
     var store = MediaDataStore(client: MediaAPIClient())
-    
     let services: Services
-    
     var childCoordinators: [Coordinator] = []
     
     var rootViewController: UIViewController {
@@ -49,6 +47,7 @@ class AppCoordinator: RootViewCoordinator {
 }
 
 extension AppCoordinator: SplashViewControllerDelegate {
+    
     func splashViewFinishedAnimation(finished: Bool) {
         let dataSource = BaseMediaControllerDataSource(store: store)
         let mediaCollectionController = MediaCollectionViewController(dataSource: dataSource)
@@ -65,8 +64,6 @@ extension AppCoordinator: MediaControllerDelegate {
         playerViewController.playlist = playlist
         navigationController.pushViewController(playerViewController, animated: false)
     }
-
-    
 }
 
 

@@ -8,13 +8,6 @@
 
 import UIKit
 
-protocol PlayerViewDelegate: class {
-    func playButtonTapped()
-    func pauseButtonTapped()
-    func skipButtonTapped()
-    func backButtonTapped() 
-}
-
 class PlayerView: UIView {
     weak var delegate: PlayerViewDelegate?
     var model: PlayerViewModel!

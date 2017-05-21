@@ -1,6 +1,7 @@
 import UIKit
 
 class BaseMediaControllerDataSource {
+    
     var image = #imageLiteral(resourceName: "search-button").withRenderingMode(.alwaysOriginal)
     
     var store: MediaDataStore
