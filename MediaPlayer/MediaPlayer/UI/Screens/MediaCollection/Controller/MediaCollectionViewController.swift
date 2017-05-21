@@ -45,6 +45,7 @@ extension MediaCollectionViewController: UISearchControllerDelegate {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = false
         searchController.delegate = self
         title = "Music.ly"
         buttonItem = UIBarButtonItem(image: dataSource.image, style: .plain, target: self, action: #selector(navigationBarSetup))

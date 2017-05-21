@@ -6,9 +6,8 @@
 //  Copyright © 2017 Christopher Webb-Orenstein. All rights reserved.
 //
 
-import UIKit 
+import UIKit
 
 public protocol SplashViewControllerDelegate: class {
-    func splashViewControllerDidTapNewOrder(splashViewController: SplashViewController)
-    func splashViewFinishedAnimation(finished: Bool) 
+    func splashViewFinishedAnimation(finished: Bool)
 }
