@@ -8,10 +8,6 @@
 
 import UIKit
 
-struct NavigationBarAttributes {
-    static let navBarTint = UIColor.white
-}
-
 public class MediaCollectionViewController: BaseMediaViewController {
     
     var buttonItem: UIBarButtonItem!
@@ -23,7 +19,6 @@ public class MediaCollectionViewController: BaseMediaViewController {
             searchBar.returnKeyType = .done
         }
     }
-    
     
     var searchBarActive: Bool = false {
         didSet {
@@ -46,12 +41,11 @@ public class MediaCollectionViewController: BaseMediaViewController {
         navigationItem.setRightBarButton(buttonItem, animated: false)
         setupSearchController()
     }
-    
 }
 
 extension MediaCollectionViewController: UISearchControllerDelegate {
     
- 
+    
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let searchBarText = searchBar.text, searchBarText.characters.count > 0 { searchBarActive = true }
@@ -157,10 +151,10 @@ extension MediaCollectionViewController: UISearchBarDelegate {
         navigationItem.setRightBarButton(buttonItem, animated: false)
         searchBarActive = false
     }
-    
 }
 
 extension MediaCollectionViewController: UISearchResultsUpdating {
+    
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         let searchString = searchController.searchBar.text
         if searchString != nil {

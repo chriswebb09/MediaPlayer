@@ -8,14 +8,7 @@
 
 import UIKit
 
-protocol MediaCollectionHandler: class {
-    func didSearchForTrack(with term: String)
-    //func didTapClose(mediaViewController: MediaCollectionViewController)
-}
-
 public protocol MediaViewControllerDelegate:  class {
     func didTapClose(mediaViewController: MediaCollectionViewController)
     func didSelectPlaylistItem(at index: Int, for list: Playlist)
-    //func drinkTypeViewControllerDidTapClose(_ drinkTypeViewController: DrinkTypeViewController)
-//    func playerViewControllerDidTapClose(_ mediaCoordinator: MediaCoordinator)
 }

@@ -8,7 +8,6 @@ final class PlaylistViewController: BaseMediaViewController {
         super.viewDidLoad()
         guard let playlist = dataSource.playlist else { return }
         if playlist.itemCount > 0 {
-           // contentState = .results
             collectionView.isHidden = false
         }
        

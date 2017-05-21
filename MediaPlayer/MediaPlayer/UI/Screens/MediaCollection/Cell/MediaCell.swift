@@ -8,28 +8,6 @@
 
 import UIKit
 
-struct MediaCellConstants {
-    static let smallFont = UIFont(name: "Avenir-Book", size: 10)
-    static let albumHeightMultiplier: CGFloat =  0.86
-    static let labelHeightMultiplier: CGFloat = 0.2
-}
-
-
-protocol MediaCellModeler {
-    var trackName: String { get set }
-    var albumImageUrl: URL { get set }
-}
-
-class MediaCellViewModel: MediaCellModeler {
-    var trackName: String
-    var albumImageUrl: URL
-    
-    init(trackName: String, albumImageURL: URL) {
-        self.trackName = trackName
-        self.albumImageUrl = albumImageURL
-    }
-}
-
 class MediaCell: UICollectionViewCell, Reusable {
     
     private var viewModel: MediaCellViewModel? {
