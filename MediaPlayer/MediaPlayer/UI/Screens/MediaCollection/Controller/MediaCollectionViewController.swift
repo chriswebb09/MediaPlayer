@@ -37,12 +37,6 @@ public class MediaCollectionViewController: BaseMediaViewController {
         }
     }
     
-    //  weak var delegate: MediaViewControllerDelegate?
-    
-}
-
-extension MediaCollectionViewController: UISearchControllerDelegate {
-    
     override public func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = false
@@ -53,6 +47,11 @@ extension MediaCollectionViewController: UISearchControllerDelegate {
         setupSearchController()
     }
     
+}
+
+extension MediaCollectionViewController: UISearchControllerDelegate {
+    
+ 
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let searchBarText = searchBar.text, searchBarText.characters.count > 0 { searchBarActive = true }
@@ -117,7 +116,6 @@ extension MediaCollectionViewController: UISearchBarDelegate {
             strongSelf.collectionView.reloadData()
             strongSelf.collectionView.performBatchUpdates ({
                 DispatchQueue.main.async {
-                    // strongSelf.contentState = .results
                     strongSelf.collectionView.reloadItems(at: strongSelf.collectionView.indexPathsForVisibleItems)
                     strongSelf.collectionView.isHidden = false
                 }
@@ -155,7 +153,6 @@ extension MediaCollectionViewController: UISearchBarDelegate {
     
     public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         dataSource.playlist?.removeAll()
-        //contentState = .none
         collectionView.reloadData()
         navigationItem.setRightBarButton(buttonItem, animated: false)
         searchBarActive = false

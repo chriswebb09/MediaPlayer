@@ -53,8 +53,6 @@
 		A76EA8991ECF208600D7CDDF /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76EA8981ECF208600D7CDDF /* BaseView.swift */; };
 		A76EA89B1ECF20A800D7CDDF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76EA89A1ECF20A800D7CDDF /* Router.swift */; };
 		A76EA89D1ECF20D000D7CDDF /* RouterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76EA89C1ECF20D000D7CDDF /* RouterImp.swift */; };
-		A76EA89F1ECF211900D7CDDF /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76EA89E1ECF211900D7CDDF /* BaseCoordinator.swift */; };
-		A76EA8A31ECF21DD00D7CDDF /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76EA8A21ECF21DD00D7CDDF /* TabbarView.swift */; };
 		A7A080B91ECF0E580035EE1A /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */; };
 		A7A080BC1ECF0EA00035EE1A /* EqualizerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080BB1ECF0EA00035EE1A /* EqualizerAnimation.swift */; };
 		A7A080BF1ECF0ED50035EE1A /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080BE1ECF0ED50035EE1A /* IndicatorView.swift */; };
@@ -161,8 +159,6 @@
 		A76EA8981ECF208600D7CDDF /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		A76EA89A1ECF20A800D7CDDF /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A76EA89C1ECF20D000D7CDDF /* RouterImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterImp.swift; sourceTree = "<group>"; };
-		A76EA89E1ECF211900D7CDDF /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
-		A76EA8A21ECF21DD00D7CDDF /* TabbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		A7A080BB1ECF0EA00035EE1A /* EqualizerAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualizerAnimation.swift; sourceTree = "<group>"; };
 		A7A080BE1ECF0ED50035EE1A /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
@@ -261,7 +257,6 @@
 			children = (
 				A721B2D11ECECB67003E0D12 /* AppCoordinator.swift */,
 				A721B2D51ECECBC6003E0D12 /* Coordinator.swift */,
-				A76EA89E1ECF211900D7CDDF /* BaseCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -511,7 +506,6 @@
 			children = (
 				A721B2D71ECECC09003E0D12 /* RootViewController.swift */,
 				A721B2D31ECECB74003E0D12 /* TabBarController.swift */,
-				A76EA8A21ECF21DD00D7CDDF /* TabbarView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -884,7 +878,6 @@
 				A7A080B91ECF0E580035EE1A /* TextFieldExtension.swift in Sources */,
 				A714AD301ECEEB8600C99C55 /* PlayerView.swift in Sources */,
 				A7A080EF1ECF14760035EE1A /* LocalStorageManager.swift in Sources */,
-				A76EA89F1ECF211900D7CDDF /* BaseCoordinator.swift in Sources */,
 				A714AD5C1ECF070A00C99C55 /* TermSearcher.swift in Sources */,
 				A7A081151ECF17AE0035EE1A /* CreateAccountViewController.swift in Sources */,
 				A714AD2E1ECEEA8700C99C55 /* Download.swift in Sources */,
@@ -921,7 +914,6 @@
 				A714AD2C1ECEEA7800C99C55 /* MediaAPIClient.swift in Sources */,
 				A7A080FE1ECF158B0035EE1A /* TrackDelegate.swift in Sources */,
 				A721B2D81ECECC09003E0D12 /* RootViewController.swift in Sources */,
-				A76EA8A31ECF21DD00D7CDDF /* TabbarView.swift in Sources */,
 				A714AD291ECEE93800C99C55 /* MediaDataStore.swift in Sources */,
 				A7A081191ECF18140035EE1A /* NewPlaylistView.swift in Sources */,
 				A7A0811C1ECF18AA0035EE1A /* ImageLoadOperation.swift in Sources */,

@@ -42,7 +42,6 @@ class AppCoordinator: RootViewCoordinator {
     // Creates a new SplashViewController and places it into the navigation controller
     
     private func showSplashViewController() {
-
         let splashViewController = SplashViewController(services: services)
         splashViewController.delegate = self
         navigationController.viewControllers = [splashViewController]
@@ -57,75 +56,5 @@ extension AppCoordinator: SplashViewControllerDelegate {
         navigationController.viewControllers = [mediaCollectionController]
     }
 }
-
-
-
-//
-//extension AppCoordinator: MediaCollectionViewControllerDelegate {
-//    
-//}
-
-
-// MARK: - SplashViewControllerDelegate
-
-
-//extension AppCoordinator: SplashCoordinatorDelegate {
-//    func animationFinished(finished: Bool) {
-//        print(finished)
-//        let dataSource = BaseMediaControllerDataSource(store: store)
-////        let mediaCoordinator = MediaCoordinator(services: self.services, dataSource: dataSource)
-////        mediaCoordinator.delegate = self
-////        mediaCoordinator.start()
-////        addChildCoordinator(mediaCoordinator)
-////        rootViewController.present(mediaCoordinator.rootViewController, animated: false, completion: nil)
-//    }
-//
-//    
-//}
-
-//extension AppCoordinator: SplashViewControllerDelegate {
-//    
-//    func splashViewFinishedAnimation(finished: Bool) {
-//        let dataSource = BaseMediaControllerDataSource(store: store)
-//        let mediaCoordinator = MediaCoordinator(services: self.services, dataSource: dataSource)
-//        mediaCoordinator.delegate = self
-//        mediaCoordinator.start()
-//        addChildCoordinator(mediaCoordinator)
-//        rootViewController.present(mediaCoordinator.rootViewController, animated: false, completion: nil)
-//    }
-//    
-//    
-//    func splashViewControllerDidTapNewOrder(splashViewController: SplashViewController) {
-//        let dataSource = BaseMediaControllerDataSource(store: store)
-//        let mediaCoordinator = MediaCoordinator(services: self.services, dataSource: dataSource)
-//        mediaCoordinator.delegate = self
-//        mediaCoordinator.start()
-//        addChildCoordinator(mediaCoordinator)
-//        rootViewController.present(mediaCoordinator.rootViewController, animated: false, completion: nil)
-//    }
-//    
-//}
-
-// MARK: - MediaCoordinatorDelegate
-//
-//extension AppCoordinator: MediaCoordinatorDelegate {
-//    
-//    func mediCoordinator(didSelectTrackAt index: Int, withPlaylist: Playlist) {
-//        let dataSource = BaseMediaControllerDataSource(store: store)
-//        let mediaCoordinator = MediaCoordinator(services: self.services, dataSource: dataSource)
-//        mediaCoordinator.delegate = self
-//        mediaCoordinator.start()
-//        addChildCoordinator(mediaCoordinator)
-//        rootViewController.present(mediaCoordinator.rootViewController, animated: false, completion: nil)
-//    }
-//    
-//    
-//    func mediaCoordinatorDidRequestCancel(newMediaCoordinator mediaCoordinator: MediaCoordinator) {
-//        mediaCoordinator.rootViewController.dismiss(animated: true)
-//        self.removeChildCoordinator(mediaCoordinator)
-//    }
-//}
-//
-
 
 

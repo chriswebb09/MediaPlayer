@@ -18,7 +18,7 @@ class StartViewController: UIViewController, StartViewDelegate {
     func continueAsGuestTapped() {
         delegate?.continueAsGuestSelected()
         weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
-        appDelegate?.window?.rootViewController = TabbarController()
+        appDelegate?.window?.rootViewController = TabBarController()
     }
     
     func createAccountTapped() {
