@@ -1,6 +1,6 @@
 import UIKit
 
-class StartViewController: UIViewController, StartViewDelegate {
+class StartViewController: UIViewController {
     
     var startView: StartView = StartView()
     
@@ -14,7 +14,10 @@ class StartViewController: UIViewController, StartViewDelegate {
         startView.layoutSubviews()
         startView.delegate = self
     }
-    
+}
+
+extension StartViewController: StartViewDelegate {
+
     func continueAsGuestTapped() {
         delegate?.continueAsGuestSelected()
         weak var appDelegate = UIApplication.shared.delegate as? AppDelegate

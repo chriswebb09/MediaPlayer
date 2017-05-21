@@ -57,6 +57,10 @@
 		A76B06601ED254F40006476F /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B065F1ED254F40006476F /* Presentable.swift */; };
 		A76B06621ED254F80006476F /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06611ED254F80006476F /* Configurable.swift */; };
 		A76B06641ED254FD0006476F /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06631ED254FD0006476F /* Downloader.swift */; };
+		A76B06661ED255B10006476F /* PlayerViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06651ED255B10006476F /* PlayerViewConstants.swift */; };
+		A76B06681ED255CA0006476F /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06671ED255CA0006476F /* PlayerViewModel.swift */; };
+		A76B066A1ED255E10006476F /* BaseMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06691ED255E10006476F /* BaseMediaView.swift */; };
+		A76B066C1ED255F80006476F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B066B1ED255F80006476F /* BaseViewModel.swift */; };
 		A7A080B91ECF0E580035EE1A /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */; };
 		A7A080BC1ECF0EA00035EE1A /* EqualizerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080BB1ECF0EA00035EE1A /* EqualizerAnimation.swift */; };
 		A7A080BF1ECF0ED50035EE1A /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080BE1ECF0ED50035EE1A /* IndicatorView.swift */; };
@@ -167,6 +171,10 @@
 		A76B065F1ED254F40006476F /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Presentable.swift; path = MediaPlayer/UI/Protocol/Presentable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06611ED254F80006476F /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configurable.swift; path = MediaPlayer/UI/Protocol/Configurable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06631ED254FD0006476F /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = MediaPlayer/UI/Protocol/Downloader.swift; sourceTree = SOURCE_ROOT; };
+		A76B06651ED255B10006476F /* PlayerViewConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewConstants.swift; sourceTree = "<group>"; };
+		A76B06671ED255CA0006476F /* PlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		A76B06691ED255E10006476F /* BaseMediaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMediaView.swift; sourceTree = "<group>"; };
+		A76B066B1ED255F80006476F /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		A7A080BB1ECF0EA00035EE1A /* EqualizerAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualizerAnimation.swift; sourceTree = "<group>"; };
 		A7A080BE1ECF0ED50035EE1A /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
@@ -399,6 +407,9 @@
 			isa = PBXGroup;
 			children = (
 				A714AD2F1ECEEB8500C99C55 /* PlayerView.swift */,
+				A76B06671ED255CA0006476F /* PlayerViewModel.swift */,
+				A76B06691ED255E10006476F /* BaseMediaView.swift */,
+				A76B066B1ED255F80006476F /* BaseViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -606,6 +617,7 @@
 				A711F04F1ED25300005437C8 /* CollectionViewAttributes.swift */,
 				A711F0511ED2535B005437C8 /* NavigationBarAttributes.swift */,
 				A711F0551ED253B3005437C8 /* MediaCellConstants.swift */,
+				A76B06651ED255B10006476F /* PlayerViewConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -877,6 +889,7 @@
 				A714AD3C1ECEECB000C99C55 /* BaseMediaControllerDataSource.swift in Sources */,
 				A721B2E01ECECD98003E0D12 /* Services.swift in Sources */,
 				A76B06621ED254F80006476F /* Configurable.swift in Sources */,
+				A76B06661ED255B10006476F /* PlayerViewConstants.swift in Sources */,
 				A7A081001ECF160C0035EE1A /* Notification+Extension.swift in Sources */,
 				A7A080EA1ECF13400035EE1A /* UILabel+Extension.swift in Sources */,
 				A7A080FA1ECF15120035EE1A /* Response.swift in Sources */,
@@ -918,6 +931,7 @@
 				A721B2E41ECECE3D003E0D12 /* PlayerViewController.swift in Sources */,
 				A7A081091ECF16FE0035EE1A /* StartViewController.swift in Sources */,
 				A721B2D61ECECBC6003E0D12 /* Coordinator.swift in Sources */,
+				A76B06681ED255CA0006476F /* PlayerViewModel.swift in Sources */,
 				A7A0810D1ECF17580035EE1A /* LoginView.swift in Sources */,
 				A714AD381ECEEC4400C99C55 /* UICollectionView+Extension.swift in Sources */,
 				A7A080E21ECF12560035EE1A /* MenuActive.swift in Sources */,
@@ -935,6 +949,7 @@
 				A76B065C1ED254EA0006476F /* BaseView.swift in Sources */,
 				A7A080FC1ECF15520035EE1A /* BaseOperation.swift in Sources */,
 				A7A080D71ECF11740035EE1A /* ButtonMaker.swift in Sources */,
+				A76B066A1ED255E10006476F /* BaseMediaView.swift in Sources */,
 				A7A080E01ECF123A0035EE1A /* MenuOptionView.swift in Sources */,
 				A714AD141ECEDF1E00C99C55 /* MediaCollectionControllerDelegate.swift in Sources */,
 				A721B2D41ECECB74003E0D12 /* TabBarController.swift in Sources */,
@@ -944,6 +959,7 @@
 				A711F05A1ED253EB005437C8 /* MediaCellViewModel.swift in Sources */,
 				A714AD641ECF082900C99C55 /* DownloadStatus.swift in Sources */,
 				A7A080C31ECF0F6F0035EE1A /* EmptyView.swift in Sources */,
+				A76B066C1ED255F80006476F /* BaseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
