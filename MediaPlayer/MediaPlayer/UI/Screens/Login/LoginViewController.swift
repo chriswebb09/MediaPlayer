@@ -10,6 +10,7 @@ class LoginViewController: UIViewController {
         loginView.layoutSubviews()
         view.addSubview(loginView)
         dump(loginView.usernameField.bounds)
+        navigationController?.isNavigationBarHidden = false
     }
     
 }

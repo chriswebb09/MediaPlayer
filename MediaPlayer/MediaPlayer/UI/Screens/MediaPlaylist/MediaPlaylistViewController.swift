@@ -1,6 +1,6 @@
 import UIKit
 
-final class PlaylistViewController: BaseMediaViewController {
+final class MediaPlaylistViewController: BaseMediaViewController {
     
     var buttonItem: UIBarButtonItem?
     

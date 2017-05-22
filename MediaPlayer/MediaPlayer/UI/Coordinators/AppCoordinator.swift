@@ -7,7 +7,7 @@ class AppCoordinator: RootViewCoordinator {
     var store = MediaDataStore(client: MediaAPIClient())
     let services: Services
     var childCoordinators: [Coordinator] = []
-    
+    let dataSource: BaseMediaControllerDataSource
     var rootViewController: UIViewController {
         return self.navigationController
     }
@@ -25,6 +25,7 @@ class AppCoordinator: RootViewCoordinator {
     public init(window: UIWindow, services: Services) {
         self.services = services
         self.window = window
+        self.dataSource = BaseMediaControllerDataSource(store: store)
         self.window.rootViewController = self.rootViewController
         self.window.makeKeyAndVisible()
     }
@@ -49,10 +50,13 @@ class AppCoordinator: RootViewCoordinator {
 extension AppCoordinator: SplashViewControllerDelegate {
     
     func splashViewFinishedAnimation(finished: Bool) {
-        let dataSource = BaseMediaControllerDataSource(store: store)
-        let mediaCollectionController = MediaCollectionViewController(dataSource: dataSource)
-        mediaCollectionController.delegate = self
-        navigationController.viewControllers = [mediaCollectionController]
+        let startViewController = StartViewController()
+        startViewController.delegate = self
+        navigationController.viewControllers = [startViewController]
+//        let dataSource = BaseMediaControllerDataSource(store: store)
+//        let mediaCollectionController = MediaCollectionViewController(dataSource: dataSource)
+//        mediaCollectionController.delegate = self
+//        navigationController.viewControllers = [mediaCollectionController]
     }
 }
 
@@ -63,6 +67,23 @@ extension AppCoordinator: MediaControllerDelegate {
         playerViewController.index = index
         playerViewController.playlist = playlist
         navigationController.pushViewController(playerViewController, animated: false)
+    }
+}
+
+extension AppCoordinator: StartViewControllerDelegate {
+    func loginSelected() {
+        let loginViewController = LoginViewController()
+        navigationController.pushViewController(loginViewController, animated: false)
+    }
+
+    func continueAsGuestSelected() {
+        let mediaCollectionController = MediaCollectionViewController(dataSource: dataSource)
+        mediaCollectionController.delegate = self
+        navigationController.viewControllers = [mediaCollectionController]
+    }
+
+    func createAccountSelected() {
+        
     }
 }
 
