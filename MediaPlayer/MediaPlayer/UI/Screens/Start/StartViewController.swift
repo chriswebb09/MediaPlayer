@@ -20,18 +20,13 @@ extension StartViewController: StartViewDelegate {
 
     func continueAsGuestTapped() {
         delegate?.continueAsGuestSelected()
-//        delegate?.continueAsGuestSelected()
-//        weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
-//        appDelegate?.window?.rootViewController = TabBarController()
     }
     
     func createAccountTapped() {
         delegate?.createAccountSelected()
-     //   navigationController?.pushViewController(CreateAccountViewController(), animated: false)
     }
     
     func loginTapped() {
         delegate?.loginSelected()
-      //  navigationController?.pushViewController(LoginViewController(), animated: false)
     }
 }

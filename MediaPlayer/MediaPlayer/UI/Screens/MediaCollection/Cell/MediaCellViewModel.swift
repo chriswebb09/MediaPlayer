@@ -9,6 +9,7 @@
 import Foundation
 
 class MediaCellViewModel: MediaCellModeler {
+    
     var trackName: String
     var albumImageUrl: URL
     

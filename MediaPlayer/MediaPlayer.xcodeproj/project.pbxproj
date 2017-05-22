@@ -69,6 +69,8 @@
 		A7959C051ED2A9BE005B49D2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7959C041ED2A9BE005B49D2 /* UIColor+Extension.swift */; };
 		A7959C071ED2ACB6005B49D2 /* DetailViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7959C061ED2ACB6005B49D2 /* DetailViewConstants.swift */; };
 		A7959C091ED2ACE5005B49D2 /* PlaylistViewControllerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7959C081ED2ACE5005B49D2 /* PlaylistViewControllerConstants.swift */; };
+		A7959C0B1ED2ADB5005B49D2 /* SplashViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7959C0A1ED2ADB5005B49D2 /* SplashViewDelegate.swift */; };
+		A7959C0D1ED2ADD9005B49D2 /* LogoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7959C0C1ED2ADD9005B49D2 /* LogoConstants.swift */; };
 		A7A080B91ECF0E580035EE1A /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */; };
 		A7A080BC1ECF0EA00035EE1A /* EqualizerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080BB1ECF0EA00035EE1A /* EqualizerAnimation.swift */; };
 		A7A080BF1ECF0ED50035EE1A /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080BE1ECF0ED50035EE1A /* IndicatorView.swift */; };
@@ -191,6 +193,8 @@
 		A7959C041ED2A9BE005B49D2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		A7959C061ED2ACB6005B49D2 /* DetailViewConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewConstants.swift; sourceTree = "<group>"; };
 		A7959C081ED2ACE5005B49D2 /* PlaylistViewControllerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistViewControllerConstants.swift; sourceTree = "<group>"; };
+		A7959C0A1ED2ADB5005B49D2 /* SplashViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewDelegate.swift; sourceTree = "<group>"; };
+		A7959C0C1ED2ADD9005B49D2 /* LogoConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoConstants.swift; sourceTree = "<group>"; };
 		A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		A7A080BB1ECF0EA00035EE1A /* EqualizerAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualizerAnimation.swift; sourceTree = "<group>"; };
 		A7A080BE1ECF0ED50035EE1A /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
@@ -376,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				A714AD1F1ECEE05A00C99C55 /* SplashView.swift */,
+				A7959C0A1ED2ADB5005B49D2 /* SplashViewDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -640,6 +645,7 @@
 				A76B06651ED255B10006476F /* PlayerViewConstants.swift */,
 				A7959C061ED2ACB6005B49D2 /* DetailViewConstants.swift */,
 				A7959C081ED2ACE5005B49D2 /* PlaylistViewControllerConstants.swift */,
+				A7959C0C1ED2ADD9005B49D2 /* LogoConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -896,6 +902,7 @@
 				A7A081171ECF17C10035EE1A /* CreateAccountDelegate.swift in Sources */,
 				A7A080E81ECF12DF0035EE1A /* BasePopConstant.swift in Sources */,
 				A721B2D21ECECB67003E0D12 /* AppCoordinator.swift in Sources */,
+				A7959C0B1ED2ADB5005B49D2 /* SplashViewDelegate.swift in Sources */,
 				A714AD561ECF069500C99C55 /* Playlist.swift in Sources */,
 				A7A080ED1ECF14440035EE1A /* NSError+Extension.swift in Sources */,
 				A7A081121ECF178E0035EE1A /* CreateAccountView.swift in Sources */,
@@ -957,6 +964,7 @@
 				A7A080D21ECF11200035EE1A /* StartView.swift in Sources */,
 				A714AD451ECEEE0B00C99C55 /* CALayer+Extension.swift in Sources */,
 				A7A080BC1ECF0EA00035EE1A /* EqualizerAnimation.swift in Sources */,
+				A7959C0D1ED2ADD9005B49D2 /* LogoConstants.swift in Sources */,
 				A7A080BF1ECF0ED50035EE1A /* IndicatorView.swift in Sources */,
 				A721B2E41ECECE3D003E0D12 /* PlayerViewController.swift in Sources */,
 				A7A081091ECF16FE0035EE1A /* StartViewController.swift in Sources */,
