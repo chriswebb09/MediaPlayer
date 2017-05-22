@@ -9,7 +9,9 @@
 import UIKit
 
 class PlayerView: UIView {
+    
     weak var delegate: PlayerViewDelegate?
+    
     var model: PlayerViewModel!
     
     var titleView: UIView = {

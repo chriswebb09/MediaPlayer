@@ -12,6 +12,8 @@ public class SplashViewController: UIViewController {
     
     weak var delegate: SplashViewControllerDelegate?
     
+    let splashView = SplashView()
+    
     private let services: Services
     
     public init(services: Services) {
@@ -26,10 +28,22 @@ public class SplashViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        splashView.delegate = self
+        splashView.frame = UIScreen.main.bounds
+        view.addSubview(splashView)
         view.backgroundColor = .purple
+        splashView.zoomAnimation {
+            print("animation")
+        }
+    }
+}
+
+extension SplashViewController: SplashViewDelegate {
+    func animationHasCompleted() {
         animate()
     }
-    
+
+
     func animate() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             dump(self.delegate)
