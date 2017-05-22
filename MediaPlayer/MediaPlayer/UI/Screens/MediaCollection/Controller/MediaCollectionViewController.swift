@@ -37,7 +37,6 @@ public class MediaCollectionViewController: BaseMediaViewController {
 
 extension MediaCollectionViewController: UISearchControllerDelegate {
     
-    
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let searchBarText = searchBar.text, searchBarText.characters.count > 0 { searchBarActive = true }
