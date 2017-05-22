@@ -53,10 +53,6 @@ extension AppCoordinator: SplashViewControllerDelegate {
         let startViewController = StartViewController()
         startViewController.delegate = self
         navigationController.viewControllers = [startViewController]
-//        let dataSource = BaseMediaControllerDataSource(store: store)
-//        let mediaCollectionController = MediaCollectionViewController(dataSource: dataSource)
-//        mediaCollectionController.delegate = self
-//        navigationController.viewControllers = [mediaCollectionController]
     }
 }
 

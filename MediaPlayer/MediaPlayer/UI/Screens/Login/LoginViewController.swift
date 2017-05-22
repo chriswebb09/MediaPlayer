@@ -12,5 +12,4 @@ class LoginViewController: UIViewController {
         dump(loginView.usernameField.bounds)
         navigationController?.isNavigationBarHidden = false
     }
-    
 }

@@ -16,5 +16,4 @@ class BaseMediaControllerDataSource {
     init(store: MediaDataStore) {
         self.store = store
     }
-    
 }

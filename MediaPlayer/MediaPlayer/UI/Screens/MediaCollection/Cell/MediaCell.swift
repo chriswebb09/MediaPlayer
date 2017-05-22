@@ -1,16 +1,8 @@
-//
-//  MediaCell.swift
-//  MediaPlayer
-//
-//  Created by Christopher Webb-Orenstein on 5/19/17.
-//  Copyright © 2017 Christopher Webb-Orenstein. All rights reserved.
-//
-
 import UIKit
 
-class MediaCell: UICollectionViewCell, Reusable {
+class MediaCell: UICollectionViewCell {
     
-    private var viewModel: MediaCellViewModel? {
+    fileprivate var viewModel: MediaCellViewModel? {
         didSet {
             guard let viewModel = viewModel else { return }
             trackNameLabel.text = viewModel.trackName
@@ -18,7 +10,7 @@ class MediaCell: UICollectionViewCell, Reusable {
         }
     }
     
-    private var trackNameLabel: UILabel = {
+    fileprivate var trackNameLabel: UILabel = {
         var trackName = UILabel()
         trackName.backgroundColor = .white
         trackName.font = MediaCellConstants.smallFont
@@ -27,11 +19,14 @@ class MediaCell: UICollectionViewCell, Reusable {
         return trackName
     }()
     
-    private var albumArtView: UIImageView = {
+    fileprivate var albumArtView: UIImageView = {
         var album = UIImageView()
         return album
     }()
-    
+}
+
+extension MediaCell: Reusable {
+
     private func setShadow() {
         layer.setCellShadow(contentView: contentView)
         let path =  UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius)

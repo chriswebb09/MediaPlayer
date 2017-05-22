@@ -17,7 +17,6 @@ extension Downloader {
         }
     }
     
-    
     func startDownload(_ download: Download?) {
         if let download = download, let url = download.url {
             activeDownloads?[url] = download

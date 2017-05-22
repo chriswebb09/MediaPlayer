@@ -10,7 +10,6 @@ final class MediaPlaylistViewController: BaseMediaViewController {
         if playlist.itemCount > 0 {
             collectionView.isHidden = false
         }
-       
         buttonItem = UIBarButtonItem(image: dataSource.image, style: .plain, target: self, action: #selector(goToSearch))
         commonInit(buttonItem: buttonItem!)
     }
