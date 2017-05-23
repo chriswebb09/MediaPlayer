@@ -7,8 +7,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loginView.frame = UIScreen.main.bounds
-        loginView.layoutSubviews()
         view.addSubview(loginView)
+        loginView.layoutSubviews()
         navigationController?.isNavigationBarHidden = false
     }
 }
