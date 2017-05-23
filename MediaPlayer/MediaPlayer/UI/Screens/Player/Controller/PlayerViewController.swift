@@ -1,10 +1,10 @@
 import UIKit
 
-public class PlayerViewController: UIViewController {
+public final class PlayerViewController: UIViewController {
     
     weak var delegate: PlayerViewControllerDelegate?
     
-    var playerView = PlayerView()
+    private var playerView = PlayerView()
     var playlist: Playlist!
     var index: Int! 
     

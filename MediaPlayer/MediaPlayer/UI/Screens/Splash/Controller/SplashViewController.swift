@@ -12,7 +12,7 @@ public class SplashViewController: UIViewController {
     
     weak var delegate: SplashViewControllerDelegate?
     
-    let splashView = SplashView()
+    private let splashView = SplashView()
     
     private let services: Services
     
@@ -42,8 +42,7 @@ extension SplashViewController: SplashViewDelegate {
     func animationHasCompleted() {
         animate()
     }
-
-
+    
     func animate() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             dump(self.delegate)

@@ -8,31 +8,31 @@
 
 import UIKit
 
-class PlayerView: UIView {
+final class PlayerView: UIView {
     
     weak var delegate: PlayerViewDelegate?
     
     var model: PlayerViewModel!
     
-    var titleView: UIView = {
+    private var titleView: UIView = {
         let top = UIView()
         top.backgroundColor = .blue
         return top
     }()
     
-    var albumView: UIView = {
+   private var albumView: UIView = {
         let album = UIView()
         album.backgroundColor = .red
         return album
     }()
     
-    var activityView: UIView = {
+    private var activityView: UIView = {
         let activty = UIView()
         activty.backgroundColor = .cyan
         return activty
     }()
     
-    var preferencesView: UIView = {
+   private var preferencesView: UIView = {
         let preferences = UIView()
         preferences.backgroundColor = .green
         return preferences
@@ -49,7 +49,7 @@ class PlayerView: UIView {
         setupViews()
     }
     
-    func sharedTitleArtLayout(view: UIView) {
+    private func sharedTitleArtLayout(view: UIView) {
         addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
@@ -80,7 +80,7 @@ class PlayerView: UIView {
         controlsView.topAnchor.constraint(equalTo: preferencesView.bottomAnchor).isActive = true
     }
     
-    func setupViews() {
+    private func setupViews() {
         layoutSubviews()
         setup(titleView: titleView)
         setup(albumView: albumView)

@@ -14,7 +14,7 @@ class AppCoordinator: RootViewCoordinator {
     
     let window: UIWindow
     
-    fileprivate lazy var navigationController: UINavigationController = {
+    lazy var navigationController: UINavigationController = {
         let navigationController = UINavigationController()
         navigationController.isNavigationBarHidden = true
         return navigationController
@@ -34,14 +34,13 @@ class AppCoordinator: RootViewCoordinator {
     
     // Starts the coordinator
     
-    public func start() {
-        self.showSplashViewController()
+    public func start(viewController: UIViewController) {
+        self.showSplashViewController(splashViewController: viewController as! SplashViewController)
     }
     
     // Creates a new SplashViewController and places it into the navigation controller
     
-    private func showSplashViewController() {
-        let splashViewController = SplashViewController(services: services)
+    private func showSplashViewController(splashViewController: SplashViewController) {
         splashViewController.delegate = self
         navigationController.viewControllers = [splashViewController]
     }
@@ -71,13 +70,13 @@ extension AppCoordinator: StartViewControllerDelegate {
         let loginViewController = LoginViewController()
         navigationController.pushViewController(loginViewController, animated: false)
     }
-
+    
     func continueAsGuestSelected() {
         let mediaCollectionController = MediaCollectionViewController(dataSource: dataSource)
         mediaCollectionController.delegate = self
         navigationController.viewControllers = [mediaCollectionController]
     }
-
+    
     func createAccountSelected() {
         
     }

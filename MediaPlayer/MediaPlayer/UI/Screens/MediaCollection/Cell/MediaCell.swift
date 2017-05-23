@@ -1,6 +1,6 @@
 import UIKit
 
-class MediaCell: UICollectionViewCell {
+final class MediaCell: UICollectionViewCell {
     
     fileprivate var viewModel: MediaCellViewModel? {
         didSet {

@@ -18,4 +18,11 @@ class MediaPlayerTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
+    
+    func testSplashCoordinator() {
+        let appCoordinator = AppCoordinator(window: UIWindow(), services: Services())
+        let splashViewController =  SplashViewController(services: Services())
+        appCoordinator.start(viewController:splashViewController)
+        XCTAssert(appCoordinator.navigationController.viewControllers[0] == splashViewController, "Navigation viewcontrollers is StartViewController")
+    }
 }

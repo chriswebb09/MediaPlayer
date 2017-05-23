@@ -1,6 +1,6 @@
 import UIKit
 
-class LoginView: UIView {
+final class LoginView: UIView {
     
     private var titleLabel: UILabel = {
         let titleLabel = UILabel()
