@@ -2,7 +2,7 @@ import UIKit
 
 class LoginView: UIView {
     
-    var titleLabel: UILabel = {
+    private var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.text = "Login"
         titleLabel.textColor = .black
@@ -10,7 +10,7 @@ class LoginView: UIView {
         return titleLabel
     }()
     
-    var usernameField: TextFieldExtension = {
+    private var usernameField: TextFieldExtension = {
         let usernameField = TextFieldExtension()
         usernameField.placeholder = "Username"
         usernameField.layer.borderColor = UIColor.lightGray.cgColor
@@ -18,7 +18,7 @@ class LoginView: UIView {
         return usernameField
     }()
     
-    var passwordField: TextFieldExtension = {
+    private var passwordField: TextFieldExtension = {
         let passwordField = TextFieldExtension()
         passwordField.placeholder = "Password"
         passwordField.layer.borderColor = UIColor.lightGray.cgColor
@@ -26,7 +26,7 @@ class LoginView: UIView {
         return passwordField
     }()
     
-    var submitButton: UIButton = {
+    private var submitButton: UIButton = {
         let submitButton = UIButton()
         return submitButton
     }()

@@ -2,9 +2,9 @@ import UIKit
 
 final class EmptyView: UIView {
     
-    var infoLabel: UILabel = UILabel.setupInfoLabel()
+    private var infoLabel: UILabel = UILabel.setupInfoLabel()
     
-    var musicIcon: UIImageView = {
+    private var musicIcon: UIImageView = {
         var musicIcon = UIImageView()
         musicIcon.image = #imageLiteral(resourceName: "headphones-blue")
         return musicIcon
@@ -12,8 +12,8 @@ final class EmptyView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        setupMusicIcon(icon: musicIcon)
-        setupInfoLabel(infoLabel: infoLabel)
+        setup(musicIcon: musicIcon)
+        setup(infoLabel: infoLabel)
         backgroundColor = CollectionViewAttributes.backgroundColor
     }
     
@@ -21,16 +21,16 @@ final class EmptyView: UIView {
         layoutSubviews()
     }
     
-    func setupMusicIcon(icon: UIView) {
-        addSubview(icon)
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        icon.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.18).isActive = true
-        icon.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.35).isActive = true
-        icon.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        icon.centerYAnchor.constraint(equalTo: centerYAnchor, constant: UIScreen.main.bounds.height * -0.16).isActive = true
+    private func setup(musicIcon: UIView) {
+        addSubview(musicIcon)
+        musicIcon.translatesAutoresizingMaskIntoConstraints = false
+        musicIcon.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.18).isActive = true
+        musicIcon.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.35).isActive = true
+        musicIcon.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        musicIcon.centerYAnchor.constraint(equalTo: centerYAnchor, constant: UIScreen.main.bounds.height * -0.16).isActive = true
     }
     
-    func setupInfoLabel(infoLabel: UILabel) {
+    private func setup(infoLabel: UILabel) {
         addSubview(infoLabel)
         infoLabel.translatesAutoresizingMaskIntoConstraints = false
         infoLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.35).isActive = true
