@@ -14,10 +14,7 @@ public class SplashViewController: UIViewController {
     
     private let splashView = SplashView()
     
-    private let services: Services
-    
-    public init(services: Services) {
-        self.services = services
+    public init() {
         dump(delegate)
         super.init(nibName: nil, bundle: nil)
     }

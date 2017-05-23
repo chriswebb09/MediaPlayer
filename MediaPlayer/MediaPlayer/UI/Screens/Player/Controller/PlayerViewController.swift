@@ -15,7 +15,8 @@ public final class PlayerViewController: UIViewController {
         edgesForExtendedLayout = []
         title = track?.track?.artistName
         playerView.frame = UIScreen.main.bounds
-        let model = PlayerViewModel(title: "Test", imageUrl: "Test 2")
+        guard let trackName = track?.track?.trackName, let imageUrl = track?.track?.artworkUrl else { return }
+        let model = PlayerViewModel(title: trackName, imageUrl: imageUrl)
         playerView.configure(with: model)
         view.addSubview(playerView)
     }

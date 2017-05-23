@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.appCoordinator = AppCoordinator(window: self.window!, services: Services())
-        self.appCoordinator.start(viewController: SplashViewController(services: appCoordinator.services))
+        self.appCoordinator.start(viewController: SplashViewController())
         return true
     }
     

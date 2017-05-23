@@ -71,6 +71,8 @@
 		A7959C091ED2ACE5005B49D2 /* PlaylistViewControllerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7959C081ED2ACE5005B49D2 /* PlaylistViewControllerConstants.swift */; };
 		A7959C0B1ED2ADB5005B49D2 /* SplashViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7959C0A1ED2ADB5005B49D2 /* SplashViewDelegate.swift */; };
 		A7959C0D1ED2ADD9005B49D2 /* LogoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7959C0C1ED2ADD9005B49D2 /* LogoConstants.swift */; };
+		A799BEB21ED4FF5300F6C4A9 /* PlayerViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A799BEB11ED4FF5300F6C4A9 /* PlayerViewControllerModel.swift */; };
+		A799BEB41ED4FF7100F6C4A9 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A799BEB31ED4FF7100F6C4A9 /* SplashCoordinator.swift */; };
 		A7A080B91ECF0E580035EE1A /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */; };
 		A7A080BC1ECF0EA00035EE1A /* EqualizerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080BB1ECF0EA00035EE1A /* EqualizerAnimation.swift */; };
 		A7A080BF1ECF0ED50035EE1A /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080BE1ECF0ED50035EE1A /* IndicatorView.swift */; };
@@ -112,7 +114,6 @@
 		A7A0811C1ECF18AA0035EE1A /* ImageLoadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0811B1ECF18AA0035EE1A /* ImageLoadOperation.swift */; };
 		A7A0811E1ECF18DA0035EE1A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0811D1ECF18DA0035EE1A /* UIImage+Extension.swift */; };
 		A7A081201ECF19100035EE1A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0811F1ECF19100035EE1A /* String+Extension.swift */; };
-		A7A081221ECF19790035EE1A /* MediaPlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081211ECF19790035EE1A /* MediaPlaylistViewController.swift */; };
 		A7A081271ECF1BE40035EE1A /* CALayer+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081261ECF1BE40035EE1A /* CALayer+Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -195,6 +196,8 @@
 		A7959C081ED2ACE5005B49D2 /* PlaylistViewControllerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistViewControllerConstants.swift; sourceTree = "<group>"; };
 		A7959C0A1ED2ADB5005B49D2 /* SplashViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewDelegate.swift; sourceTree = "<group>"; };
 		A7959C0C1ED2ADD9005B49D2 /* LogoConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoConstants.swift; sourceTree = "<group>"; };
+		A799BEB11ED4FF5300F6C4A9 /* PlayerViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewControllerModel.swift; sourceTree = "<group>"; };
+		A799BEB31ED4FF7100F6C4A9 /* SplashCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		A7A080BB1ECF0EA00035EE1A /* EqualizerAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualizerAnimation.swift; sourceTree = "<group>"; };
 		A7A080BE1ECF0ED50035EE1A /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
@@ -236,7 +239,6 @@
 		A7A0811B1ECF18AA0035EE1A /* ImageLoadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoadOperation.swift; sourceTree = "<group>"; };
 		A7A0811D1ECF18DA0035EE1A /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		A7A0811F1ECF19100035EE1A /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		A7A081211ECF19790035EE1A /* MediaPlaylistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlaylistViewController.swift; sourceTree = "<group>"; };
 		A7A081261ECF1BE40035EE1A /* CALayer+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Constants.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -293,6 +295,7 @@
 			children = (
 				A721B2D11ECECB67003E0D12 /* AppCoordinator.swift */,
 				A721B2D51ECECBC6003E0D12 /* Coordinator.swift */,
+				A799BEB31ED4FF7100F6C4A9 /* SplashCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */,
+				A799BEB11ED4FF5300F6C4A9 /* PlayerViewControllerModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -461,7 +465,6 @@
 				A7A081131ECF179D0035EE1A /* CreateAccount */,
 				A7A0810E1ECF17680035EE1A /* Login */,
 				A714AD221ECEE06E00C99C55 /* MediaCollection */,
-				A7A081231ECF197E0035EE1A /* MediaPlaylist */,
 				A714AD231ECEE08600C99C55 /* Player */,
 				A714AD211ECEE06000C99C55 /* Splash */,
 				A7A080D51ECF11650035EE1A /* Start */,
@@ -784,14 +787,6 @@
 			path = NewPlaylist;
 			sourceTree = "<group>";
 		};
-		A7A081231ECF197E0035EE1A /* MediaPlaylist */ = {
-			isa = PBXGroup;
-			children = (
-				A7A081211ECF19790035EE1A /* MediaPlaylistViewController.swift */,
-			);
-			path = MediaPlaylist;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -946,7 +941,7 @@
 				A714AD2E1ECEEA8700C99C55 /* Download.swift in Sources */,
 				A721B2E21ECECE16003E0D12 /* MediaCollectionViewController.swift in Sources */,
 				A714AD121ECEDEFC00C99C55 /* PlayerViewControllerDelegate.swift in Sources */,
-				A7A081221ECF19790035EE1A /* MediaPlaylistViewController.swift in Sources */,
+				A799BEB21ED4FF5300F6C4A9 /* PlayerViewControllerModel.swift in Sources */,
 				A7A080E41ECF126C0035EE1A /* MenuDelegate.swift in Sources */,
 				A711F0521ED2535B005437C8 /* NavigationBarAttributes.swift in Sources */,
 				A721B2DC1ECECC60003E0D12 /* SplashViewController.swift in Sources */,
@@ -964,6 +959,7 @@
 				A7A080D21ECF11200035EE1A /* StartView.swift in Sources */,
 				A714AD451ECEEE0B00C99C55 /* CALayer+Extension.swift in Sources */,
 				A7A080BC1ECF0EA00035EE1A /* EqualizerAnimation.swift in Sources */,
+				A799BEB41ED4FF7100F6C4A9 /* SplashCoordinator.swift in Sources */,
 				A7959C0D1ED2ADD9005B49D2 /* LogoConstants.swift in Sources */,
 				A7A080BF1ECF0ED50035EE1A /* IndicatorView.swift in Sources */,
 				A721B2E41ECECE3D003E0D12 /* PlayerViewController.swift in Sources */,

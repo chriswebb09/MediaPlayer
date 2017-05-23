@@ -12,7 +12,13 @@ final class PlayerView: UIView {
     
     weak var delegate: PlayerViewDelegate?
     
-    var model: PlayerViewModel!
+    var model: PlayerViewModel! {
+        didSet {
+            titleLabel.text = model.title
+            guard let imageUrl = URL(string: model.imageUrl) else { return }
+            albumImageView.downloadImage(url: imageUrl)
+        }
+    }
     
     private var titleView: UIView = {
         let top = UIView()
@@ -20,10 +26,21 @@ final class PlayerView: UIView {
         return top
     }()
     
+    private var titleLabel: UILabel = {
+        let title = UILabel()
+        title.textAlignment = .center
+        return title
+    }()
+    
    private var albumView: UIView = {
         let album = UIView()
         album.backgroundColor = .red
         return album
+    }()
+    
+    private var albumImageView: UIImageView = {
+        let albumImage = UIImageView()
+        return albumImage
     }()
     
     private var activityView: UIView = {
@@ -61,11 +78,29 @@ final class PlayerView: UIView {
         titleView.topAnchor.constraint(equalTo: topAnchor).isActive = true
     }
     
+    private func setup(titleLabel: UILabel) {
+        titleView.addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.centerXAnchor.constraint(equalTo: titleView.centerXAnchor).isActive = true
+        titleLabel.centerYAnchor.constraint(equalTo: titleView.centerYAnchor).isActive = true
+        titleLabel.heightAnchor.constraint(equalTo: titleView.heightAnchor, multiplier: 0.5).isActive = true
+        titleLabel.widthAnchor.constraint(equalTo: titleView.widthAnchor, multiplier: 0.7).isActive = true
+    }
+    
     private func setup(albumView: UIView) {
         sharedTitleArtLayout(view: albumView)
         albumView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: PlayerViewConstants.artworkViewHeightMultiplier).isActive = true
         albumView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         albumView.topAnchor.constraint(equalTo: titleView.bottomAnchor).isActive = true
+    }
+    
+    private func setup(albumImageView: UIImageView) {
+        albumView.addSubview(albumImageView)
+        albumImageView.translatesAutoresizingMaskIntoConstraints = false
+        albumImageView.centerXAnchor.constraint(equalTo: albumView.centerXAnchor).isActive = true
+        albumImageView.centerYAnchor.constraint(equalTo: albumView.centerYAnchor).isActive = true
+        albumImageView.heightAnchor.constraint(equalTo: albumView.heightAnchor, multiplier: 0.25).isActive = true
+        albumImageView.widthAnchor.constraint(equalTo: albumView.widthAnchor, multiplier: 0.25).isActive = true
     }
     
     private func setup(preferencesView: UIView) {
@@ -83,7 +118,9 @@ final class PlayerView: UIView {
     private func setupViews() {
         layoutSubviews()
         setup(titleView: titleView)
+        setup(titleLabel: titleLabel)
         setup(albumView: albumView)
+        setup(albumImageView: albumImageView)
         setup(preferencesView: preferencesView)
         setup(controlsView: controlsView)
     }
