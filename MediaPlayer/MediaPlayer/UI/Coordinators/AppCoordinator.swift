@@ -66,6 +66,7 @@ extension AppCoordinator: MediaControllerDelegate {
 }
 
 extension AppCoordinator: StartViewControllerDelegate {
+    
     func loginSelected() {
         let loginViewController = LoginViewController()
         navigationController.pushViewController(loginViewController, animated: false)
