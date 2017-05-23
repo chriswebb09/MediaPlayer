@@ -24,6 +24,6 @@ final class MediaPlaylistViewController: BaseMediaViewController {
     }
     
     func goToSearch() {
-        
+        // implement
     }
 }

@@ -28,15 +28,20 @@ class StartView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        setupElements()
+        titleLabel.text = "Get started!"
+        backgroundColor = .white
+        setupSelectors()
+    }
+    
+    func setupElements() {
         setupTitleLabel(label: titleLabel)
         setupGuestUserButton(button: guestUserButton)
         setupUserLogin(button: userLoginButton)
         setupCreatAccount(button: createAccount)
-        titleLabel.text = "Get started!"
-        guestUserButton.setTitle("Continue as Guest", for: .normal)
-        userLoginButton.setTitle("Log In To Account", for: .normal)
-        createAccount.setTitle("Create an Account", for: .normal)
-        backgroundColor = .white
+    }
+    
+    func setupSelectors() {
         createAccount.addTarget(self, action: #selector(createAccountButtonTapped), for: .touchUpInside)
         guestUserButton.addTarget(self, action: #selector(guestUserButtonTapped), for: .touchUpInside)
         userLoginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)

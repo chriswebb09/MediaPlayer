@@ -3,6 +3,7 @@ import UIKit
 public class PlayerViewController: UIViewController {
     
     weak var delegate: PlayerViewControllerDelegate?
+    
     var playerView = PlayerView()
     var playlist: Playlist!
     var index: Int! 

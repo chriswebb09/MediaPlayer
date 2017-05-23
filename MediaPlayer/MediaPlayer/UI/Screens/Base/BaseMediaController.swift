@@ -3,6 +3,7 @@ import UIKit
 public class BaseMediaViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     lazy var collectionView : UICollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
+    
     weak var delegate: MediaControllerDelegate?
     
     var dataSource: BaseMediaControllerDataSource
