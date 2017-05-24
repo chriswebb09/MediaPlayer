@@ -1,12 +1,12 @@
 import UIKit
 
-class AppCoordinator: RootViewCoordinator {
+class AppCoordinator {
     
     // MARK: - Properties
     
     var store = MediaDataStore(client: MediaAPIClient())
     let services: Services
-    var childCoordinators: [Coordinator] = []
+    
     let dataSource: BaseMediaControllerDataSource
     var rootViewController: UIViewController {
         return self.navigationController

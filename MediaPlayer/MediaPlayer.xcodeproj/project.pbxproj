@@ -43,8 +43,6 @@
 		A721B2C71ECECB43003E0D12 /* MediaPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2C61ECECB43003E0D12 /* MediaPlayerTests.swift */; };
 		A721B2D21ECECB67003E0D12 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2D11ECECB67003E0D12 /* AppCoordinator.swift */; };
 		A721B2D41ECECB74003E0D12 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2D31ECECB74003E0D12 /* TabBarController.swift */; };
-		A721B2D61ECECBC6003E0D12 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2D51ECECBC6003E0D12 /* Coordinator.swift */; };
-		A721B2D81ECECC09003E0D12 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2D71ECECC09003E0D12 /* RootViewController.swift */; };
 		A721B2DA1ECECC4D003E0D12 /* SplashViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2D91ECECC4D003E0D12 /* SplashViewControllerDelegate.swift */; };
 		A721B2DC1ECECC60003E0D12 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2DB1ECECC5F003E0D12 /* SplashViewController.swift */; };
 		A721B2E01ECECD98003E0D12 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2DF1ECECD98003E0D12 /* Services.swift */; };
@@ -168,8 +166,6 @@
 		A721B2C81ECECB43003E0D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A721B2D11ECECB67003E0D12 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A721B2D31ECECB74003E0D12 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		A721B2D51ECECBC6003E0D12 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		A721B2D71ECECC09003E0D12 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		A721B2D91ECECC4D003E0D12 /* SplashViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewControllerDelegate.swift; sourceTree = "<group>"; };
 		A721B2DB1ECECC5F003E0D12 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		A721B2DF1ECECD98003E0D12 /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
@@ -294,7 +290,6 @@
 			isa = PBXGroup;
 			children = (
 				A721B2D11ECECB67003E0D12 /* AppCoordinator.swift */,
-				A721B2D51ECECBC6003E0D12 /* Coordinator.swift */,
 				A799BEB31ED4FF7100F6C4A9 /* SplashCoordinator.swift */,
 			);
 			path = Coordinators;
@@ -553,7 +548,6 @@
 		A7A080B51ECF0E180035EE1A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A721B2D71ECECC09003E0D12 /* RootViewController.swift */,
 				A721B2D31ECECB74003E0D12 /* TabBarController.swift */,
 			);
 			path = Controllers;
@@ -964,7 +958,6 @@
 				A7A080BF1ECF0ED50035EE1A /* IndicatorView.swift in Sources */,
 				A721B2E41ECECE3D003E0D12 /* PlayerViewController.swift in Sources */,
 				A7A081091ECF16FE0035EE1A /* StartViewController.swift in Sources */,
-				A721B2D61ECECBC6003E0D12 /* Coordinator.swift in Sources */,
 				A76B06681ED255CA0006476F /* PlayerViewModel.swift in Sources */,
 				A7A0810D1ECF17580035EE1A /* LoginView.swift in Sources */,
 				A714AD381ECEEC4400C99C55 /* UICollectionView+Extension.swift in Sources */,
@@ -976,7 +969,6 @@
 				A7A080CA1ECF10360035EE1A /* BaseMenuPopover.swift in Sources */,
 				A714AD2C1ECEEA7800C99C55 /* MediaAPIClient.swift in Sources */,
 				A7A080FE1ECF158B0035EE1A /* TrackDelegate.swift in Sources */,
-				A721B2D81ECECC09003E0D12 /* RootViewController.swift in Sources */,
 				A714AD291ECEE93800C99C55 /* MediaDataStore.swift in Sources */,
 				A7A081191ECF18140035EE1A /* NewPlaylistView.swift in Sources */,
 				A76B066E1ED2586D0006476F /* TrackItemsFlowLayout.swift in Sources */,
