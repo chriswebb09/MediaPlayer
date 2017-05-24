@@ -57,4 +57,44 @@ class MediaPlayerTests: XCTestCase {
         XCTAssert(controller.title == "Test", "Title is set to track")
     }
     
+    func testNetworkRequest() {
+        let expect = expectation(description: "API Client returns proper number of items from search")
+        let searchTerm = "new"
+        MediaAPIClient.search(for: searchTerm) { response in
+            switch response {
+            case .success(let json):
+                XCTAssertNotNil(json)
+                expect.fulfill()
+            case .failed(let error):
+                assertionFailure()
+            }
+        }
+        
+        waitForExpectations(timeout: 4) { error in
+            if let error = error {
+                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
+            }
+        }
+    }
+    
+    func testSearch() {
+        let client = MediaAPIClient()
+        let networkService = NetworkService(provider: client)
+        let dataSource = MediaDataStore(service: networkService)
+        
+        dataSource.setSearch(string: "new")
+        let expect = expectation(description: "API Client returns proper number of items from search")
+        
+        dataSource.searchForTracks { playlist, error in
+            XCTAssert(playlist?.itemCount == 50)
+            expect.fulfill()
+        }
+        
+        waitForExpectations(timeout: 4) { error in
+            if let error = error {
+                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
+            }
+        }
+    }
+    
 }

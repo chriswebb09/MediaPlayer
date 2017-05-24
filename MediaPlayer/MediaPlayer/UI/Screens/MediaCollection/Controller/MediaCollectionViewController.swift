@@ -98,6 +98,7 @@ extension MediaCollectionViewController: UISearchBarDelegate {
         dataSource.store.searchForTracks { [weak self] playlist, error in
             guard let playlist = playlist, let strongSelf = self else { return }
             strongSelf.dataSource.playlist = playlist
+            print(playlist.itemCount)
             strongSelf.collectionView.reloadData()
             strongSelf.collectionView.performBatchUpdates ({
                 DispatchQueue.main.async {
