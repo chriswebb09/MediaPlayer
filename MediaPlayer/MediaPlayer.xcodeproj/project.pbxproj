@@ -51,6 +51,7 @@
 		A725B07E1ED54C4800CAC00E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B07D1ED54C4800CAC00E /* SettingsViewController.swift */; };
 		A725B0801ED57DEA00CAC00E /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B07F1ED57DEA00CAC00E /* TabBarCoordinator.swift */; };
 		A725B0821ED5A24500CAC00E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B0811ED5A24500CAC00E /* Coordinator.swift */; };
+		A725B0841ED5A38300CAC00E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B0831ED5A38200CAC00E /* MenuView.swift */; };
 		A76B06581ED254DE0006476F /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06571ED254DE0006476F /* Resuable.swift */; };
 		A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06591ED254E40006476F /* CellRepresentable.swift */; };
 		A76B065C1ED254EA0006476F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B065B1ED254EA0006476F /* BaseView.swift */; };
@@ -177,6 +178,7 @@
 		A725B07D1ED54C4800CAC00E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A725B07F1ED57DEA00CAC00E /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		A725B0811ED5A24500CAC00E /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A725B0831ED5A38200CAC00E /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		A76B06571ED254DE0006476F /* Resuable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resuable.swift; path = MediaPlayer/UI/Protocol/Resuable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06591ED254E40006476F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = MediaPlayer/UI/Protocol/CellRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		A76B065B1ED254EA0006476F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = MediaPlayer/UI/Protocol/BaseView.swift; sourceTree = SOURCE_ROOT; };
@@ -634,6 +636,7 @@
 				A7A080E11ECF12560035EE1A /* MenuActive.swift */,
 				A7A080E31ECF126C0035EE1A /* MenuDelegate.swift */,
 				A7A080DF1ECF123A0035EE1A /* MenuOptionView.swift */,
+				A725B0831ED5A38200CAC00E /* MenuView.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -906,6 +909,7 @@
 				A7A081121ECF178E0035EE1A /* CreateAccountView.swift in Sources */,
 				A711F0581ED253D6005437C8 /* MediaCellModeler.swift in Sources */,
 				A76B06601ED254F40006476F /* Presentable.swift in Sources */,
+				A725B0841ED5A38300CAC00E /* MenuView.swift in Sources */,
 				A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */,
 				A7A080E61ECF12AC0035EE1A /* EqualizerConstants.swift in Sources */,
 				A7A080DA1ECF11970035EE1A /* BasicButtonFactory.swift in Sources */,
