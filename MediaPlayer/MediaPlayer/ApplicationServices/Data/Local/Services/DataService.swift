@@ -8,8 +8,18 @@
 
 import Foundation
 
-public class DataService {
+class DataService {
+    var tracks: [Track] = []
+}
+
+
+class NetworkService {
+
+    var provider: MediaAPIClient
     
-    public var tracks: [Track] = []
+    init(provider: MediaAPIClient) {
+        self.provider = provider
+    }
     
 }
+

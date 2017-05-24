@@ -15,7 +15,7 @@ public class SplashViewController: UIViewController {
     private let splashView = SplashView()
     
     public init() {
-        dump(delegate)
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -36,6 +36,7 @@ public class SplashViewController: UIViewController {
 }
 
 extension SplashViewController: SplashViewDelegate {
+    
     func animationHasCompleted() {
         animate()
     }

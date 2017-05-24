@@ -2,12 +2,11 @@ import UIKit
 
 class MediaDataStore: MediaCollectionHandler {
     
-    var client: MediaAPIClient
+    let networkService: NetworkService!
     var searchTerm: String = ""
-    var items: [Int] = []
     
-    init(client: MediaAPIClient) {
-        self.client = client
+    init(service: NetworkService) {
+        self.networkService = service
     }
     
     func setSearch(string: String?) {
@@ -17,13 +16,6 @@ class MediaDataStore: MediaCollectionHandler {
     func didSearchForTrack(with term: String) {
         print(term)
     }
-    
-    func addItems() {
-        for i in 0..<5 {
-            items.append(i)
-        }
-    }
-    
     
     func searchForTracks(completion: @escaping (_ playlist: Playlist? , _ error: Error?) -> Void) {
        

@@ -4,7 +4,7 @@ class AppCoordinator {
     
     // MARK: - Properties
     
-    var store = MediaDataStore(client: MediaAPIClient())
+    var store = MediaDataStore(service: NetworkService(provider: MediaAPIClient()))
     let services: Services
     
     let dataSource: BaseMediaControllerDataSource
@@ -27,6 +27,11 @@ class AppCoordinator {
         self.window = window
         self.dataSource = BaseMediaControllerDataSource(store: store)
         self.window.rootViewController = self.rootViewController
+        self.window.makeKeyAndVisible()
+    }
+    
+    func setupRootWindow(viewController: TabBarController) {
+        self.window.rootViewController = viewController
         self.window.makeKeyAndVisible()
     }
     
@@ -55,10 +60,11 @@ extension AppCoordinator: SplashViewControllerDelegate {
     }
 }
 
-extension AppCoordinator: MediaControllerDelegate {
+extension AppCoordinator: TabControllerDelegate {
     
-    func didSelectTrackAt(at index: Int, with playlist: Playlist) {
-        let playerViewController = PlayerViewController()
+    func didSelectTrack(at index: Int, with playlist: Playlist) {
+        let playerView = PlayerView()
+        let playerViewController = PlayerViewController(playerView: playerView)
         playerViewController.index = index
         playerViewController.playlist = playlist
         navigationController.pushViewController(playerViewController, animated: false)
@@ -73,14 +79,31 @@ extension AppCoordinator: StartViewControllerDelegate {
     }
     
     func continueAsGuestSelected() {
+        let tabbarController = TabBarController()
         let mediaCollectionController = MediaCollectionViewController(dataSource: dataSource)
+        let settingsController = SettingsViewController()
+        tabbarController.controllerDelegate = self
         mediaCollectionController.delegate = self
-        navigationController.viewControllers = [mediaCollectionController]
+        //    navigationController.viewControllers = [mediaCollectionController]
+        tabbarController.setControllers(mediaCollectionController: mediaCollectionController, collectionNav: navigationController, settingsController: settingsController)
+        setupRootWindow(viewController: tabbarController)
     }
     
     func createAccountSelected() {
         
     }
 }
+
+extension AppCoordinator: MediaControllerDelegate {
+    
+    func didSelectTrackAt(at index: Int, with playlist: Playlist) {
+        print(index)
+        let playerViewController = PlayerViewController()
+        playerViewController.index = index
+        playerViewController.playlist = playlist
+        navigationController.pushViewController(playerViewController, animated: false)
+    }
+}
+
 
 

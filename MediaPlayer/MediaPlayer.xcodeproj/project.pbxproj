@@ -48,6 +48,8 @@
 		A721B2E01ECECD98003E0D12 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2DF1ECECD98003E0D12 /* Services.swift */; };
 		A721B2E21ECECE16003E0D12 /* MediaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2E11ECECE16003E0D12 /* MediaCollectionViewController.swift */; };
 		A721B2E41ECECE3D003E0D12 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */; };
+		A725B07E1ED54C4800CAC00E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B07D1ED54C4800CAC00E /* SettingsViewController.swift */; };
+		A725B0801ED57DEA00CAC00E /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B07F1ED57DEA00CAC00E /* TabBarCoordinator.swift */; };
 		A76B06581ED254DE0006476F /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06571ED254DE0006476F /* Resuable.swift */; };
 		A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06591ED254E40006476F /* CellRepresentable.swift */; };
 		A76B065C1ED254EA0006476F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B065B1ED254EA0006476F /* BaseView.swift */; };
@@ -171,6 +173,8 @@
 		A721B2DF1ECECD98003E0D12 /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		A721B2E11ECECE16003E0D12 /* MediaCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewController.swift; sourceTree = "<group>"; };
 		A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		A725B07D1ED54C4800CAC00E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A725B07F1ED57DEA00CAC00E /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		A76B06571ED254DE0006476F /* Resuable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resuable.swift; path = MediaPlayer/UI/Protocol/Resuable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06591ED254E40006476F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = MediaPlayer/UI/Protocol/CellRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		A76B065B1ED254EA0006476F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = MediaPlayer/UI/Protocol/BaseView.swift; sourceTree = SOURCE_ROOT; };
@@ -290,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				A721B2D11ECECB67003E0D12 /* AppCoordinator.swift */,
+				A725B07F1ED57DEA00CAC00E /* TabBarCoordinator.swift */,
 				A799BEB31ED4FF7100F6C4A9 /* SplashCoordinator.swift */,
 			);
 			path = Coordinators;
@@ -463,6 +468,7 @@
 				A714AD231ECEE08600C99C55 /* Player */,
 				A714AD211ECEE06000C99C55 /* Splash */,
 				A7A080D51ECF11650035EE1A /* Start */,
+				A725B07D1ED54C4800CAC00E /* SettingsViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -908,6 +914,7 @@
 				A76B06581ED254DE0006476F /* Resuable.swift in Sources */,
 				A721B2DA1ECECC4D003E0D12 /* SplashViewControllerDelegate.swift in Sources */,
 				A714AD3C1ECEECB000C99C55 /* BaseMediaControllerDataSource.swift in Sources */,
+				A725B07E1ED54C4800CAC00E /* SettingsViewController.swift in Sources */,
 				A721B2E01ECECD98003E0D12 /* Services.swift in Sources */,
 				A76B06621ED254F80006476F /* Configurable.swift in Sources */,
 				A76B06661ED255B10006476F /* PlayerViewConstants.swift in Sources */,
@@ -922,6 +929,7 @@
 				A7A080C61ECF0FD90035EE1A /* BasePopoverAlert.swift in Sources */,
 				A7A081271ECF1BE40035EE1A /* CALayer+Constants.swift in Sources */,
 				A711F0561ED253B3005437C8 /* MediaCellConstants.swift in Sources */,
+				A725B0801ED57DEA00CAC00E /* TabBarCoordinator.swift in Sources */,
 				A714AD1C1ECEDFAE00C99C55 /* DataService.swift in Sources */,
 				A714AD681ECF09A200C99C55 /* UIViewController+Extension.swift in Sources */,
 				A7A080B91ECF0E580035EE1A /* TextFieldExtension.swift in Sources */,

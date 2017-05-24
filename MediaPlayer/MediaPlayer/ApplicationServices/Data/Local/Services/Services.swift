@@ -8,11 +8,11 @@
 
 import Foundation
 
-public struct Services {
+struct Services {
     
-    public let dataService: DataService
+    let dataService: DataService
     
-    public init() {
+    init() {
         self.dataService = DataService()
     }
 }

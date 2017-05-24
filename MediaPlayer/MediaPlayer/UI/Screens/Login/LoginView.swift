@@ -1,6 +1,13 @@
 import UIKit
 
+protocol LoginViewDelegate: class {
+    func submitButtonTapped()
+    func usernameFieldDidAddText(text: String?)
+}
+
 final class LoginView: UIView {
+    
+    weak var delegate: LoginViewDelegate?
     
     private var titleLabel: UILabel = {
         let titleLabel = UILabel()
@@ -10,7 +17,7 @@ final class LoginView: UIView {
         return titleLabel
     }()
     
-    private var usernameField: TextFieldExtension = {
+    fileprivate var usernameField: TextFieldExtension = {
         let usernameField = TextFieldExtension()
         usernameField.placeholder = "Username"
         usernameField.layer.borderColor = UIColor.lightGray.cgColor
@@ -60,5 +67,12 @@ final class LoginView: UIView {
     private func setup(passwordField: TextFieldExtension) {
         sharedLayout(view: passwordField)
         passwordField.topAnchor.constraint(equalTo: usernameField.bottomAnchor).isActive = true
+    }
+}
+
+extension LoginView: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        delegate?.usernameFieldDidAddText(text: usernameField.text)
     }
 }
