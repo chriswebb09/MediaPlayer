@@ -4,7 +4,7 @@ Media Stuff
 
 Porting Musicly project to Navigation Coordinators
 
-[https://github.com/chriswebb09/Musicly](Original Project)
+[Original Project](https://github.com/chriswebb09/Musicly)
 
 Original project screens:
 
