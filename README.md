@@ -2,7 +2,7 @@
 
 ---
 
-Porting Musicly project to Navigation Coordinators
+Rebuilding Musicly With Navigation Coordinators
 
 [Original Project](https://github.com/chriswebb09/Musicly)
 
