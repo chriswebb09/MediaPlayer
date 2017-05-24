@@ -1,6 +1,6 @@
 import UIKit
 
-class AppCoordinator {
+class AppCoordinator: Coordinator {
     
     // MARK: - Properties
     
@@ -60,17 +60,6 @@ extension AppCoordinator: SplashViewControllerDelegate {
     }
 }
 
-extension AppCoordinator: TabControllerDelegate {
-    
-    func didSelectTrack(at index: Int, with playlist: Playlist) {
-        let playerView = PlayerView()
-        let playerViewController = PlayerViewController(playerView: playerView)
-        playerViewController.index = index
-        playerViewController.playlist = playlist
-        navigationController.pushViewController(playerViewController, animated: false)
-    }
-}
-
 extension AppCoordinator: StartViewControllerDelegate {
     
     func loginSelected() {
@@ -80,30 +69,15 @@ extension AppCoordinator: StartViewControllerDelegate {
     
     func continueAsGuestSelected() {
         let tabbarController = TabBarController()
-        let mediaCollectionController = MediaCollectionViewController(dataSource: dataSource)
-        let settingsController = SettingsViewController()
-        tabbarController.controllerDelegate = self
-        mediaCollectionController.delegate = self
-        //    navigationController.viewControllers = [mediaCollectionController]
-        tabbarController.setControllers(mediaCollectionController: mediaCollectionController, collectionNav: navigationController, settingsController: settingsController)
-        setupRootWindow(viewController: tabbarController)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let tabCoordinator = TabbarCoordinator(window: window, services: services)
+        appDelegate.appCoordinator = tabCoordinator
+        tabCoordinator.start(viewController: tabbarController)
     }
     
     func createAccountSelected() {
-        
+        print("Create account")
     }
 }
-
-extension AppCoordinator: MediaControllerDelegate {
-    
-    func didSelectTrackAt(at index: Int, with playlist: Playlist) {
-        print(index)
-        let playerViewController = PlayerViewController()
-        playerViewController.index = index
-        playerViewController.playlist = playlist
-        navigationController.pushViewController(playerViewController, animated: false)
-    }
-}
-
 
 

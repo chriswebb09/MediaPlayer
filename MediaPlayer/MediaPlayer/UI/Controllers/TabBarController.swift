@@ -37,9 +37,9 @@ final class TabBarController: UITabBarController {
         tabBar.isTranslucent = true
     }
     
-    func setControllers(mediaCollectionController: MediaCollectionViewController, collectionNav: UINavigationController, settingsController: SettingsViewController) {
+    func setControllers(mediaCollectionController: MediaCollectionViewController, settingsController: SettingsViewController) {
         UITabBar.appearance().tintColor = UIColor.orange
-        let mediaCollectionTab = setupSearchTab(tracksViewController: mediaCollectionController, navController: collectionNav)
+        let mediaCollectionTab = setupSearchTab(tracksViewController: mediaCollectionController)
         let playlistTab = setupTab(settingsViewController: settingsController)
         let controllers = [mediaCollectionTab, playlistTab]
         setTabTitles(controllers: controllers)
@@ -52,25 +52,25 @@ final class TabBarController: UITabBarController {
         selectedIndex = 0
     }
     
-    func setupSearchTab(tracksViewController: MediaCollectionViewController, navController: UINavigationController) -> UINavigationController {
+    func setupSearchTab(tracksViewController: MediaCollectionViewController) -> UINavigationController {
         let normalImage = #imageLiteral(resourceName: "blue-dj")
         let selectedImage = #imageLiteral(resourceName: "orangedj")
-       // let dataSource = ListControllerDataSource(store: store!)
+        // let dataSource = ListControllerDataSource(store: store!)
         //dataSource.store = self.store!
-      //  tracksViewController.dataSource = dataSource
-       // tracksViewController.delegate = self
+       
+        tracksViewController.delegate = self
         tracksViewController.tabBarItem = UITabBarItem(title: nil, image: normalImage.withRenderingMode(.alwaysOriginal), selectedImage: selectedImage.withRenderingMode(.alwaysTemplate))
-        navController.viewControllers = [tracksViewController]
-        let tracksTab = navController
+        let tracksTab = UINavigationController(rootViewController: tracksViewController)
+        
         return tracksTab
     }
     
     private func setupTab(settingsViewController: SettingsViewController) -> UINavigationController {
         let selectedImage = #imageLiteral(resourceName: "orange-soundwave")
         let normalImage = #imageLiteral(resourceName: "blue-soundwave")
-       // let dataSource = ListControllerDataSource(store: store!)
-       // dataSource.store = store!
-       // playlistViewController.dataSource = dataSource
+        // let dataSource = ListControllerDataSource(store: store!)
+        // dataSource.store = store!
+        // playlistViewController.dataSource = dataSource
         settingsViewController.tabBarItem = UITabBarItem(title: nil, image: normalImage.withRenderingMode(.alwaysOriginal), selectedImage: selectedImage.withRenderingMode(.alwaysTemplate))
         settingsViewController.tabBarItem.selectedImage = selectedImage
         let playlistTab = UINavigationController(rootViewController: settingsViewController)
@@ -83,11 +83,11 @@ extension TabBarController: MediaControllerDelegate {
         print(index)
         controllerDelegate?.didSelectTrack(at: index, with: playlist)
     }
-
+    
     
 }
 
 
 protocol TabControllerDelegate: class {
-     func didSelectTrack(at index: Int, with playlist: Playlist)
+    func didSelectTrack(at index: Int, with playlist: Playlist)
 }

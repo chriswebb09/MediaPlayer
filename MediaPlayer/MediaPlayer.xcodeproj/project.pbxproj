@@ -50,6 +50,7 @@
 		A721B2E41ECECE3D003E0D12 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */; };
 		A725B07E1ED54C4800CAC00E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B07D1ED54C4800CAC00E /* SettingsViewController.swift */; };
 		A725B0801ED57DEA00CAC00E /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B07F1ED57DEA00CAC00E /* TabBarCoordinator.swift */; };
+		A725B0821ED5A24500CAC00E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B0811ED5A24500CAC00E /* Coordinator.swift */; };
 		A76B06581ED254DE0006476F /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06571ED254DE0006476F /* Resuable.swift */; };
 		A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06591ED254E40006476F /* CellRepresentable.swift */; };
 		A76B065C1ED254EA0006476F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B065B1ED254EA0006476F /* BaseView.swift */; };
@@ -175,6 +176,7 @@
 		A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		A725B07D1ED54C4800CAC00E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A725B07F1ED57DEA00CAC00E /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		A725B0811ED5A24500CAC00E /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A76B06571ED254DE0006476F /* Resuable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resuable.swift; path = MediaPlayer/UI/Protocol/Resuable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06591ED254E40006476F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = MediaPlayer/UI/Protocol/CellRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		A76B065B1ED254EA0006476F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = MediaPlayer/UI/Protocol/BaseView.swift; sourceTree = SOURCE_ROOT; };
@@ -296,6 +298,7 @@
 				A721B2D11ECECB67003E0D12 /* AppCoordinator.swift */,
 				A725B07F1ED57DEA00CAC00E /* TabBarCoordinator.swift */,
 				A799BEB31ED4FF7100F6C4A9 /* SplashCoordinator.swift */,
+				A725B0811ED5A24500CAC00E /* Coordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -973,6 +976,7 @@
 				A714AD581ECF06BB00C99C55 /* PlaylistItem.swift in Sources */,
 				A7A081071ECF16AC0035EE1A /* AnimationDelegate.swift in Sources */,
 				A7A081201ECF19100035EE1A /* String+Extension.swift in Sources */,
+				A725B0821ED5A24500CAC00E /* Coordinator.swift in Sources */,
 				A714AD621ECF080D00C99C55 /* DownloadDelegate.swift in Sources */,
 				A7A080CA1ECF10360035EE1A /* BaseMenuPopover.swift in Sources */,
 				A714AD2C1ECEEA7800C99C55 /* MediaAPIClient.swift in Sources */,

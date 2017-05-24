@@ -15,10 +15,9 @@ final class PlayerViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +28,6 @@ final class PlayerViewController: UIViewController {
         playerView.frame = UIScreen.main.bounds
         guard let trackName = track?.track?.trackName, let imageUrl = track?.track?.artworkUrl else { return }
         setModel(model: PlayerViewModel(title: trackName, imageUrl: imageUrl))
-        playerView.configure(with: playerViewModel)
         view.addSubview(playerView)
     }
     
