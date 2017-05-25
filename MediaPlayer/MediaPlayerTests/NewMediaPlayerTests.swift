@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import MediaPlayer
+@testable import NewMediaPlayer
 
 class MediaPlayerTests: XCTestCase {
     

@@ -25,10 +25,9 @@ final class PlayerViewController: UIViewController {
         let track = playlist.playlistItem(at: index)
         edgesForExtendedLayout = []
         title = track?.track?.artistName
-        playerView.frame = UIScreen.main.bounds
         guard let trackName = track?.track?.trackName, let imageUrl = track?.track?.artworkUrl else { return }
         setModel(model: PlayerViewModel(title: trackName, imageUrl: imageUrl))
-        view.addSubview(playerView)
+        view.addView(view: playerView, type: .full)
     }
     
     func setModel(model: PlayerViewModel) {

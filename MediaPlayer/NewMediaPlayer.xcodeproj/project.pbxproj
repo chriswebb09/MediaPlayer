@@ -40,7 +40,7 @@
 		A721B2B71ECECB43003E0D12 /* MediaPlayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A721B2B51ECECB43003E0D12 /* MediaPlayer.xcdatamodeld */; };
 		A721B2B91ECECB43003E0D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A721B2B81ECECB43003E0D12 /* Assets.xcassets */; };
 		A721B2BC1ECECB43003E0D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A721B2BA1ECECB43003E0D12 /* LaunchScreen.storyboard */; };
-		A721B2C71ECECB43003E0D12 /* MediaPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2C61ECECB43003E0D12 /* MediaPlayerTests.swift */; };
+		A721B2C71ECECB43003E0D12 /* NewMediaPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2C61ECECB43003E0D12 /* NewMediaPlayerTests.swift */; };
 		A721B2D21ECECB67003E0D12 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2D11ECECB67003E0D12 /* AppCoordinator.swift */; };
 		A721B2D41ECECB74003E0D12 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2D31ECECB74003E0D12 /* TabBarController.swift */; };
 		A721B2DA1ECECC4D003E0D12 /* SplashViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2D91ECECC4D003E0D12 /* SplashViewControllerDelegate.swift */; };
@@ -73,6 +73,9 @@
 		A7959C091ED2ACE5005B49D2 /* PlaylistViewControllerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7959C081ED2ACE5005B49D2 /* PlaylistViewControllerConstants.swift */; };
 		A7959C0B1ED2ADB5005B49D2 /* SplashViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7959C0A1ED2ADB5005B49D2 /* SplashViewDelegate.swift */; };
 		A7959C0D1ED2ADD9005B49D2 /* LogoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7959C0C1ED2ADD9005B49D2 /* LogoConstants.swift */; };
+		A797EC751ED78F5000898C09 /* TabControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A797EC741ED78F5000898C09 /* TabControllerDelegate.swift */; };
+		A797EC771ED78F7A00898C09 /* TabbarConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A797EC761ED78F7A00898C09 /* TabbarConstants.swift */; };
+		A797EC791ED7950200898C09 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A797EC781ED7950200898C09 /* UIView+Extension.swift */; };
 		A799BEB21ED4FF5300F6C4A9 /* PlayerViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A799BEB11ED4FF5300F6C4A9 /* PlayerViewControllerModel.swift */; };
 		A799BEB41ED4FF7100F6C4A9 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A799BEB31ED4FF7100F6C4A9 /* SplashCoordinator.swift */; };
 		A7A080B91ECF0E580035EE1A /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */; };
@@ -159,14 +162,14 @@
 		A714AD611ECF080D00C99C55 /* DownloadDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadDelegate.swift; sourceTree = "<group>"; };
 		A714AD631ECF082900C99C55 /* DownloadStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadStatus.swift; sourceTree = "<group>"; };
 		A714AD671ECF09A200C99C55 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		A721B2AB1ECECB43003E0D12 /* MediaPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A721B2AB1ECECB43003E0D12 /* NewMediaPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewMediaPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A721B2AE1ECECB43003E0D12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A721B2B61ECECB43003E0D12 /* MediaPlayer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MediaPlayer.xcdatamodel; sourceTree = "<group>"; };
 		A721B2B81ECECB43003E0D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A721B2BB1ECECB43003E0D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A721B2BD1ECECB43003E0D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A721B2C21ECECB43003E0D12 /* MediaPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A721B2C61ECECB43003E0D12 /* MediaPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerTests.swift; sourceTree = "<group>"; };
+		A721B2C21ECECB43003E0D12 /* NewMediaPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewMediaPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A721B2C61ECECB43003E0D12 /* NewMediaPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMediaPlayerTests.swift; sourceTree = "<group>"; };
 		A721B2C81ECECB43003E0D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A721B2D11ECECB67003E0D12 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A721B2D31ECECB74003E0D12 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -200,6 +203,9 @@
 		A7959C081ED2ACE5005B49D2 /* PlaylistViewControllerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistViewControllerConstants.swift; sourceTree = "<group>"; };
 		A7959C0A1ED2ADB5005B49D2 /* SplashViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewDelegate.swift; sourceTree = "<group>"; };
 		A7959C0C1ED2ADD9005B49D2 /* LogoConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoConstants.swift; sourceTree = "<group>"; };
+		A797EC741ED78F5000898C09 /* TabControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabControllerDelegate.swift; sourceTree = "<group>"; };
+		A797EC761ED78F7A00898C09 /* TabbarConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarConstants.swift; sourceTree = "<group>"; };
+		A797EC781ED7950200898C09 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A799BEB11ED4FF5300F6C4A9 /* PlayerViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewControllerModel.swift; sourceTree = "<group>"; };
 		A799BEB31ED4FF7100F6C4A9 /* SplashCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		A7A080B81ECF0E580035EE1A /* TextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
@@ -329,6 +335,7 @@
 				A7A080E91ECF13400035EE1A /* UILabel+Extension.swift */,
 				A714AD671ECF09A200C99C55 /* UIViewController+Extension.swift */,
 				A7959C041ED2A9BE005B49D2 /* UIColor+Extension.swift */,
+				A797EC781ED7950200898C09 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -520,8 +527,8 @@
 		A721B2A21ECECB43003E0D12 = {
 			isa = PBXGroup;
 			children = (
-				A721B2AD1ECECB43003E0D12 /* MediaPlayer */,
-				A721B2C51ECECB43003E0D12 /* MediaPlayerTests */,
+				A721B2AD1ECECB43003E0D12 /* NewMediaPlayer */,
+				A721B2C51ECECB43003E0D12 /* NewMediaPlayerTests */,
 				A721B2AC1ECECB43003E0D12 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -529,13 +536,13 @@
 		A721B2AC1ECECB43003E0D12 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A721B2AB1ECECB43003E0D12 /* MediaPlayer.app */,
-				A721B2C21ECECB43003E0D12 /* MediaPlayerTests.xctest */,
+				A721B2AB1ECECB43003E0D12 /* NewMediaPlayer.app */,
+				A721B2C21ECECB43003E0D12 /* NewMediaPlayerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A721B2AD1ECECB43003E0D12 /* MediaPlayer */ = {
+		A721B2AD1ECECB43003E0D12 /* NewMediaPlayer */ = {
 			isa = PBXGroup;
 			children = (
 				A714AD5F1ECF076D00C99C55 /* ApplicationServices */,
@@ -544,15 +551,17 @@
 				A714AD5D1ECF073300C99C55 /* UI */,
 				A721B2AE1ECECB43003E0D12 /* AppDelegate.swift */,
 			);
+			name = NewMediaPlayer;
 			path = MediaPlayer;
 			sourceTree = "<group>";
 		};
-		A721B2C51ECECB43003E0D12 /* MediaPlayerTests */ = {
+		A721B2C51ECECB43003E0D12 /* NewMediaPlayerTests */ = {
 			isa = PBXGroup;
 			children = (
 				A721B2C81ECECB43003E0D12 /* Info.plist */,
-				A721B2C61ECECB43003E0D12 /* MediaPlayerTests.swift */,
+				A721B2C61ECECB43003E0D12 /* NewMediaPlayerTests.swift */,
 			);
+			name = NewMediaPlayerTests;
 			path = MediaPlayerTests;
 			sourceTree = "<group>";
 		};
@@ -560,6 +569,7 @@
 			isa = PBXGroup;
 			children = (
 				A721B2D31ECECB74003E0D12 /* TabBarController.swift */,
+				A797EC741ED78F5000898C09 /* TabControllerDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -655,6 +665,7 @@
 				A7959C061ED2ACB6005B49D2 /* DetailViewConstants.swift */,
 				A7959C081ED2ACE5005B49D2 /* PlaylistViewControllerConstants.swift */,
 				A7959C0C1ED2ADD9005B49D2 /* LogoConstants.swift */,
+				A797EC761ED78F7A00898C09 /* TabbarConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -796,9 +807,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A721B2AA1ECECB43003E0D12 /* MediaPlayer */ = {
+		A721B2AA1ECECB43003E0D12 /* NewMediaPlayer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A721B2CB1ECECB43003E0D12 /* Build configuration list for PBXNativeTarget "MediaPlayer" */;
+			buildConfigurationList = A721B2CB1ECECB43003E0D12 /* Build configuration list for PBXNativeTarget "NewMediaPlayer" */;
 			buildPhases = (
 				A721B2A71ECECB43003E0D12 /* Sources */,
 				A721B2A81ECECB43003E0D12 /* Frameworks */,
@@ -808,14 +819,14 @@
 			);
 			dependencies = (
 			);
-			name = MediaPlayer;
+			name = NewMediaPlayer;
 			productName = MediaPlayer;
-			productReference = A721B2AB1ECECB43003E0D12 /* MediaPlayer.app */;
+			productReference = A721B2AB1ECECB43003E0D12 /* NewMediaPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A721B2C11ECECB43003E0D12 /* MediaPlayerTests */ = {
+		A721B2C11ECECB43003E0D12 /* NewMediaPlayerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A721B2CE1ECECB43003E0D12 /* Build configuration list for PBXNativeTarget "MediaPlayerTests" */;
+			buildConfigurationList = A721B2CE1ECECB43003E0D12 /* Build configuration list for PBXNativeTarget "NewMediaPlayerTests" */;
 			buildPhases = (
 				A721B2BE1ECECB43003E0D12 /* Sources */,
 				A721B2BF1ECECB43003E0D12 /* Frameworks */,
@@ -826,9 +837,9 @@
 			dependencies = (
 				A721B2C41ECECB43003E0D12 /* PBXTargetDependency */,
 			);
-			name = MediaPlayerTests;
+			name = NewMediaPlayerTests;
 			productName = MediaPlayerTests;
-			productReference = A721B2C21ECECB43003E0D12 /* MediaPlayerTests.xctest */;
+			productReference = A721B2C21ECECB43003E0D12 /* NewMediaPlayerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -854,7 +865,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A721B2A61ECECB43003E0D12 /* Build configuration list for PBXProject "MediaPlayer" */;
+			buildConfigurationList = A721B2A61ECECB43003E0D12 /* Build configuration list for PBXProject "NewMediaPlayer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -867,8 +878,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A721B2AA1ECECB43003E0D12 /* MediaPlayer */,
-				A721B2C11ECECB43003E0D12 /* MediaPlayerTests */,
+				A721B2AA1ECECB43003E0D12 /* NewMediaPlayer */,
+				A721B2C11ECECB43003E0D12 /* NewMediaPlayerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -901,6 +912,7 @@
 				A7A080CF1ECF10A00035EE1A /* BasePopoverConstants.swift in Sources */,
 				A714AD3A1ECEEC7600C99C55 /* UIImageView+Extension.swift in Sources */,
 				A7A081171ECF17C10035EE1A /* CreateAccountDelegate.swift in Sources */,
+				A797EC751ED78F5000898C09 /* TabControllerDelegate.swift in Sources */,
 				A7A080E81ECF12DF0035EE1A /* BasePopConstant.swift in Sources */,
 				A721B2D21ECECB67003E0D12 /* AppCoordinator.swift in Sources */,
 				A7959C0B1ED2ADB5005B49D2 /* SplashViewDelegate.swift in Sources */,
@@ -919,6 +931,7 @@
 				A721B2B71ECECB43003E0D12 /* MediaPlayer.xcdatamodeld in Sources */,
 				A714AD161ECEDF4100C99C55 /* MediaViewControllerDelegate.swift in Sources */,
 				A76B06581ED254DE0006476F /* Resuable.swift in Sources */,
+				A797EC771ED78F7A00898C09 /* TabbarConstants.swift in Sources */,
 				A721B2DA1ECECC4D003E0D12 /* SplashViewControllerDelegate.swift in Sources */,
 				A714AD3C1ECEECB000C99C55 /* BaseMediaControllerDataSource.swift in Sources */,
 				A725B07E1ED54C4800CAC00E /* SettingsViewController.swift in Sources */,
@@ -983,6 +996,7 @@
 				A725B0821ED5A24500CAC00E /* Coordinator.swift in Sources */,
 				A714AD621ECF080D00C99C55 /* DownloadDelegate.swift in Sources */,
 				A7A080CA1ECF10360035EE1A /* BaseMenuPopover.swift in Sources */,
+				A797EC791ED7950200898C09 /* UIView+Extension.swift in Sources */,
 				A714AD2C1ECEEA7800C99C55 /* MediaAPIClient.swift in Sources */,
 				A7A080FE1ECF158B0035EE1A /* TrackDelegate.swift in Sources */,
 				A714AD291ECEE93800C99C55 /* MediaDataStore.swift in Sources */,
@@ -1011,7 +1025,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A721B2C71ECECB43003E0D12 /* MediaPlayerTests.swift in Sources */,
+				A721B2C71ECECB43003E0D12 /* NewMediaPlayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1020,7 +1034,7 @@
 /* Begin PBXTargetDependency section */
 		A721B2C41ECECB43003E0D12 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A721B2AA1ECECB43003E0D12 /* MediaPlayer */;
+			target = A721B2AA1ECECB43003E0D12 /* NewMediaPlayer */;
 			targetProxy = A721B2C31ECECB43003E0D12 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1170,7 +1184,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.froleeyo.MediaPlayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediaPlayer.app/MediaPlayer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewMediaPlayer.app/NewMediaPlayer";
 			};
 			name = Debug;
 		};
@@ -1185,14 +1199,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.froleeyo.MediaPlayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediaPlayer.app/MediaPlayer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewMediaPlayer.app/NewMediaPlayer";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A721B2A61ECECB43003E0D12 /* Build configuration list for PBXProject "MediaPlayer" */ = {
+		A721B2A61ECECB43003E0D12 /* Build configuration list for PBXProject "NewMediaPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A721B2C91ECECB43003E0D12 /* Debug */,
@@ -1201,7 +1215,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A721B2CB1ECECB43003E0D12 /* Build configuration list for PBXNativeTarget "MediaPlayer" */ = {
+		A721B2CB1ECECB43003E0D12 /* Build configuration list for PBXNativeTarget "NewMediaPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A721B2CC1ECECB43003E0D12 /* Debug */,
@@ -1210,7 +1224,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A721B2CE1ECECB43003E0D12 /* Build configuration list for PBXNativeTarget "MediaPlayerTests" */ = {
+		A721B2CE1ECECB43003E0D12 /* Build configuration list for PBXNativeTarget "NewMediaPlayerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A721B2CF1ECECB43003E0D12 /* Debug */,

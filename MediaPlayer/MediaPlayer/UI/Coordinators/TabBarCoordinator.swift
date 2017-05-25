@@ -12,30 +12,44 @@ class TabbarCoordinator: Coordinator {
     
     // MARK: - Properties
     
-    var store = MediaDataStore(service: NetworkService(provider: MediaAPIClient()))
-    let services: Services
-    let mediaCollectionController: MediaCollectionViewController!
+    
+    var mediaCollectionController: MediaCollectionViewController!
     var settingsController: SettingsViewController!
-    let dataSource: BaseMediaControllerDataSource
-    let window: UIWindow
-    var tabbarController = TabBarController()
+    var dataSource: BaseMediaControllerDataSource!
+    var window: UIWindow!
+    var tabbarController: TabBarController!
     
     // MARK: - Init
     
-    public init(window: UIWindow, services: Services) {
-        self.services = services
-        self.window = window
-        self.dataSource = BaseMediaControllerDataSource(store: store)
-        self.mediaCollectionController = MediaCollectionViewController(dataSource: dataSource)
+    init(window: UIWindow, tabbarController: TabBarController = TabBarController()) {
+        self.setStore(from: MediaAPIClient())
         self.settingsController = SettingsViewController()
+        self.tabbarController = tabbarController
+        setWindow(window: window)
+    }
+    
+    func setWindow(window: UIWindow) {
+        self.window = window
         self.window.rootViewController = tabbarController
         self.window.makeKeyAndVisible()
     }
     
-    func start(viewController: UIViewController) {
-        mediaCollectionController.delegate = self
+    func setupTabController(tabController: TabBarController) {
         tabbarController.controllerDelegate = self
         tabbarController.setControllers(mediaCollectionController: mediaCollectionController, settingsController: settingsController)
+    }
+    
+    func start(viewController: UIViewController) {
+        mediaCollectionController.delegate = self
+        setupTabController(tabController: tabbarController)
+    }
+    
+    func setStore(from client: MediaAPIClient) {
+        let networkService = NetworkService(provider: client)
+        let store = MediaDataStore(service: networkService)
+        self.dataSource = BaseMediaControllerDataSource(store: store)
+        let collectionView = MediaCollectionViewController(dataSource: dataSource)
+        self.mediaCollectionController = collectionView
     }
 }
 

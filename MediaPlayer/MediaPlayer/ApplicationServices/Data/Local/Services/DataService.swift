@@ -8,18 +8,20 @@
 
 import Foundation
 
-class DataService {
+protocol ServiceProtocol {
+    
+}
+
+class DataService: ServiceProtocol {
     var tracks: [Track] = []
 }
 
-
-class NetworkService {
-
+class NetworkService: ServiceProtocol {
+    
     var provider: MediaAPIClient
     
     init(provider: MediaAPIClient) {
         self.provider = provider
     }
-    
 }
 

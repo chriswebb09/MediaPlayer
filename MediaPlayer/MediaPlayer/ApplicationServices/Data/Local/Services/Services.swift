@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct Services {
+protocol Services {
+    var dataService: DataService { get set }
+}
+
+struct Service: ServiceProtocol {
     
     let dataService: DataService
     

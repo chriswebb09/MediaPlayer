@@ -5,7 +5,6 @@ class AppCoordinator: Coordinator {
     // MARK: - Properties
     
     var store = MediaDataStore(service: NetworkService(provider: MediaAPIClient()))
-    let services: Services
     
     let dataSource: BaseMediaControllerDataSource
     var rootViewController: UIViewController {
@@ -22,16 +21,10 @@ class AppCoordinator: Coordinator {
     
     // MARK: - Init
     
-    public init(window: UIWindow, services: Services) {
-        self.services = services
+    init(window: UIWindow) {
         self.window = window
         self.dataSource = BaseMediaControllerDataSource(store: store)
         self.window.rootViewController = self.rootViewController
-        self.window.makeKeyAndVisible()
-    }
-    
-    func setupRootWindow(viewController: TabBarController) {
-        self.window.rootViewController = viewController
         self.window.makeKeyAndVisible()
     }
     
@@ -39,7 +32,7 @@ class AppCoordinator: Coordinator {
     
     // Starts the coordinator
     
-    public func start(viewController: UIViewController) {
+    func start(viewController: UIViewController) {
         self.showSplashViewController(splashViewController: viewController as! SplashViewController)
     }
     
@@ -70,7 +63,7 @@ extension AppCoordinator: StartViewControllerDelegate {
     func continueAsGuestSelected() {
         let tabbarController = TabBarController()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let tabCoordinator = TabbarCoordinator(window: window, services: services)
+        let tabCoordinator = TabbarCoordinator(window: window, tabbarController: tabbarController)
         appDelegate.appCoordinator = tabCoordinator
         tabCoordinator.start(viewController: tabbarController)
     }

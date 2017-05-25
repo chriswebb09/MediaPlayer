@@ -10,9 +10,7 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         edgesForExtendedLayout = []
         startView.tag = 0
-        startView.frame = UIScreen.main.bounds
-        view.addSubview(startView)
-        startView.layoutSubviews()
+        view.addView(view: startView, type: .full)
         startView.delegate = self
     }
 }
@@ -31,3 +29,9 @@ extension StartViewController: StartViewDelegate {
         delegate?.loginSelected()
     }
 }
+
+enum ViewType {
+    case full, element
+}
+
+

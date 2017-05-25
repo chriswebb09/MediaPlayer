@@ -1,20 +1,9 @@
 import UIKit
 
-public struct Tabbar {
-    public static let tint = UIColor(red:0.07, green:0.59, blue:1.00, alpha:1.0)
-    public static let tabbarFrameHeight: CGFloat = 0.09
-}
-
-struct TabbarConstants {
-    static let navXYOrigin: CGFloat = 0
-    static let navHeightMultiplier: CGFloat = 1.2
-}
-
 final class TabBarController: UITabBarController {
     
     // Accessible in Tabbar child controllers
     weak var controllerDelegate: TabControllerDelegate?
-    var store: BaseMediaControllerDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +44,6 @@ final class TabBarController: UITabBarController {
     func setupSearchTab(tracksViewController: MediaCollectionViewController) -> UINavigationController {
         let normalImage = #imageLiteral(resourceName: "blue-dj")
         let selectedImage = #imageLiteral(resourceName: "orangedj")
-        // let dataSource = ListControllerDataSource(store: store!)
-        //dataSource.store = self.store!
-       
         tracksViewController.delegate = self
         tracksViewController.tabBarItem = UITabBarItem(title: nil, image: normalImage.withRenderingMode(.alwaysOriginal), selectedImage: selectedImage.withRenderingMode(.alwaysTemplate))
         let tracksTab = UINavigationController(rootViewController: tracksViewController)
@@ -68,9 +54,6 @@ final class TabBarController: UITabBarController {
     private func setupTab(settingsViewController: SettingsViewController) -> UINavigationController {
         let selectedImage = #imageLiteral(resourceName: "orange-soundwave")
         let normalImage = #imageLiteral(resourceName: "blue-soundwave")
-        // let dataSource = ListControllerDataSource(store: store!)
-        // dataSource.store = store!
-        // playlistViewController.dataSource = dataSource
         settingsViewController.tabBarItem = UITabBarItem(title: nil, image: normalImage.withRenderingMode(.alwaysOriginal), selectedImage: selectedImage.withRenderingMode(.alwaysTemplate))
         settingsViewController.tabBarItem.selectedImage = selectedImage
         let playlistTab = UINavigationController(rootViewController: settingsViewController)
@@ -83,11 +66,4 @@ extension TabBarController: MediaControllerDelegate {
         print(index)
         controllerDelegate?.didSelectTrack(at: index, with: playlist)
     }
-    
-    
-}
-
-
-protocol TabControllerDelegate: class {
-    func didSelectTrack(at index: Int, with playlist: Playlist)
 }

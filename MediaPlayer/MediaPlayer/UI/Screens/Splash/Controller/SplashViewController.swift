@@ -15,7 +15,6 @@ public class SplashViewController: UIViewController {
     private let splashView = SplashView()
     
     public init() {
-        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -26,8 +25,7 @@ public class SplashViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         splashView.delegate = self
-        splashView.frame = UIScreen.main.bounds
-        view.addSubview(splashView)
+        view.addView(view: splashView, type: .full)
         view.backgroundColor = .purple
         splashView.zoomAnimation {
             print("animation")
