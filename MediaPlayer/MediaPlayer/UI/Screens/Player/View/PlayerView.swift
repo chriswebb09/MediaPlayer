@@ -12,7 +12,7 @@ final class PlayerView: UIView {
     
     weak var delegate: PlayerViewDelegate?
     
-    var model: PlayerViewModel! {
+    private var model: PlayerViewModel! {
         didSet {
             titleLabel.text = model.title
             guard let imageUrl = URL(string: model.imageUrl) else { return }
@@ -136,8 +136,8 @@ final class PlayerView: UIView {
         albumImageView.translatesAutoresizingMaskIntoConstraints = false
         albumImageView.centerXAnchor.constraint(equalTo: albumView.centerXAnchor).isActive = true
         albumImageView.centerYAnchor.constraint(equalTo: albumView.centerYAnchor).isActive = true
-        albumImageView.heightAnchor.constraint(equalTo: albumView.heightAnchor, multiplier: 0.25).isActive = true
-        albumImageView.widthAnchor.constraint(equalTo: albumView.widthAnchor, multiplier: 0.25).isActive = true
+        albumImageView.heightAnchor.constraint(equalTo: albumView.heightAnchor, multiplier: 0.7).isActive = true
+        albumImageView.widthAnchor.constraint(equalTo: albumView.widthAnchor, multiplier: 0.65).isActive = true
     }
     
     private func setup(preferencesView: UIView) {
@@ -191,7 +191,6 @@ final class PlayerView: UIView {
         backButton.leftAnchor.constraint(equalTo: controlsView.leftAnchor, constant: UIScreen.main.bounds.width * 0.15).isActive = true
         backButton.centerYAnchor.constraint(equalTo: controlsView.centerYAnchor, constant: UIScreen.main.bounds.height * -0.03).isActive = true
     }
-    
     
     private func setupViews() {
         layoutSubviews()

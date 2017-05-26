@@ -1,6 +1,6 @@
 import UIKit
 
-class StartViewController: UIViewController {
+final class StartViewController: UIViewController {
     
     var startView: StartView = StartView()
     
@@ -30,8 +30,5 @@ extension StartViewController: StartViewDelegate {
     }
 }
 
-enum ViewType {
-    case full, element
-}
 
 

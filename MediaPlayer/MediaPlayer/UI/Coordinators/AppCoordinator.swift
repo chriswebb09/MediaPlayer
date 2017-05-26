@@ -69,7 +69,8 @@ extension AppCoordinator: StartViewControllerDelegate {
     }
     
     func createAccountSelected() {
-        print("Create account")
+        let createAccountViewController = CreateAccountViewController()
+        navigationController.pushViewController(createAccountViewController, animated: false)
     }
 }
 

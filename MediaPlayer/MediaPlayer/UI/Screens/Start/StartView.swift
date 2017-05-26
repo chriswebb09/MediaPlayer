@@ -4,7 +4,7 @@ final class StartView: UIView {
     
     weak var delegate: StartViewDelegate?
     
-   private var titleLabel: UILabel = {
+    private var titleLabel: UILabel = {
         let title = UILabel()
         title.textAlignment = .center
         return title
@@ -25,7 +25,6 @@ final class StartView: UIView {
         return createAccount.createButton()
     }()
     
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         setupElements()
@@ -34,7 +33,7 @@ final class StartView: UIView {
         setupSelectors()
     }
     
-   private func setupElements() {
+    private func setupElements() {
         setup(titleLabel: titleLabel)
         setup(guestUserButton: guestUserButton)
         setup(loginButton: userLoginButton)
@@ -68,7 +67,7 @@ final class StartView: UIView {
         titleLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
     }
     
-   private func setup(guestUserButton: UIButton) {
+    private func setup(guestUserButton: UIButton) {
         addSubview(guestUserButton)
         guestUserButton.translatesAutoresizingMaskIntoConstraints = false
         guestUserButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true

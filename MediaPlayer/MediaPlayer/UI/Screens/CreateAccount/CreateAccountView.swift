@@ -39,6 +39,7 @@ class CreateAccountView: UIView {
         super.layoutSubviews()
         backgroundColor = .white
         setup(titleLabel: titleLabel)
+        tag = 3
     }
     
     func setup(titleLabel: UILabel) {

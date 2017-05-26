@@ -9,5 +9,6 @@ class CreateAccountViewController: UIViewController {
         createAccountView.frame = UIScreen.main.bounds
         view.addSubview(createAccountView)
         createAccountView.layoutSubviews()
+        view = createAccountView
     }
 }

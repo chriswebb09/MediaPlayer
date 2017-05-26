@@ -23,7 +23,7 @@ public class BaseMediaViewController: UIViewController, UICollectionViewDelegate
         view.addSubview(collectionView)
         collectionView.setupCollectionView(view: view, newLayout: TrackItemsFlowLayout())
         collectionView.collectionViewRegister(viewController: self)
-        self.getData()
+        getData()
     }
     
     

@@ -1,14 +1,6 @@
-//
-//  SplashViewController.swift
-//  MediaPlayer
-//
-//  Created by Christopher Webb-Orenstein on 5/19/17.
-//  Copyright © 2017 Christopher Webb-Orenstein. All rights reserved.
-//
-
 import UIKit
 
-class SplashViewController: UIViewController {
+final class SplashViewController: UIViewController {
     
     weak var delegate: SplashViewControllerDelegate?
     
@@ -26,8 +18,8 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         splashView.delegate = self
+        view.backgroundColor = .white
         view.addView(view: splashView, type: .full)
-        view.backgroundColor = .purple
         splashView.zoomAnimation {
             print("animation")
         }
@@ -36,7 +28,7 @@ class SplashViewController: UIViewController {
 
 extension SplashViewController: SplashViewDelegate {
     
-    func animationHasCompleted() {
+    func animationIsComplete() {
         animate()
     }
     

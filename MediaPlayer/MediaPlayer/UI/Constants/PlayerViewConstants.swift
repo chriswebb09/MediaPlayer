@@ -21,7 +21,7 @@ struct PlayerViewConstants {
     static let artworkViewHeightMultiplier: CGFloat = 0.4
     static let albumWidthMultiplier: CGFloat = 0.4
     static let albumHeightMultiplier: CGFloat = 0.5
-    static let preferenceHeightMultiplier: CGFloat = 0.05
+    static let preferenceHeightMultiplier: CGFloat = 0.06
     static let thumbsUpLeftOffset: CGFloat = 0.06
     static let artistInfoWidthMultiplier: CGFloat = 0.2
     static let artistInfoHeightMultiplier: CGFloat = 0.7

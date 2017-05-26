@@ -24,6 +24,7 @@ final class TabBarController: UITabBarController {
         tabFrame.origin.y = view.frame.size.height - tabBarHeight
         tabBar.frame = tabFrame
         tabBar.isTranslucent = true
+        tabBar.tintColor = UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
     }
     
     func setControllers(mediaCollectionController: MediaCollectionViewController, settingsController: SettingsViewController) {
