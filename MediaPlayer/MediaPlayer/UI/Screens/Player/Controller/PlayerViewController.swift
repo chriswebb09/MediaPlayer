@@ -63,7 +63,8 @@ extension PlayerViewController: PlayerViewDelegate {
     }
 
     func skipButtonTapped() {
-        guard let next = playlistItem.next else { return }
+        guard let item = playlistItem, let next = item.next else { return }
+        //guard let next = playlistItem.next else { return }
         self.playlistItem = next
         guard let trackName = playlistItem.track?.trackName, let imageUrl = playlistItem.track?.artworkUrl else { return }
         setModel(model: PlayerViewModel(title: trackName, timer: nil, progressIncrementer: 0, time: 0, progress: 0, imageUrl: imageUrl))

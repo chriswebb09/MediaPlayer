@@ -128,8 +128,9 @@ class MediaPlayerTests: XCTestCase {
         dataSource.searchForTracks { playlist, error in
             controller.playlist = playlist
             controller.index = 1
+            controller.viewDidLoad()
+            XCTAssert(controller.playlistItem == playlist?.playlistItem(at: 1), "PlaylistItem is first track" )
         }
-        controller.viewDidLoad()
         controller.playButtonTapped()
         XCTAssert(controller.playerState == .playing, "Title is set to track")
     }
@@ -144,11 +145,31 @@ class MediaPlayerTests: XCTestCase {
         dataSource.searchForTracks { playlist, error in
             controller.playlist = playlist
             controller.index = 1
+            controller.viewDidLoad()
+            XCTAssert(controller.playlistItem == playlist?.playlistItem(at: 1), "PlaylistItem is first track" )
         }
-        controller.viewDidLoad()
         controller.playButtonTapped()
         controller.pauseButtonTapped()
         XCTAssert(controller.playerState == .paused, "Title is set to track")
+    }
+    
+    func testSkip() {
+        let client = MediaAPIClient()
+        let networkService = NetworkService(provider: client)
+        let dataSource = MediaDataStore(service: networkService)
+        dataSource.setSearch(string: "new")
+        let playerView = PlayerView()
+        let controller = PlayerViewController(playerView: playerView)
+        var playerlist: Playlist!
+        dataSource.searchForTracks { playlist, error in
+            controller.playlist = playlist
+            playerlist = playlist
+            controller.index = 1
+            XCTAssert(controller.playlistItem == playlist?.playlistItem(at: 1), "PlaylistItem is first track" )
+        }
+        controller.viewDidLoad()
+        controller.skipButtonTapped()
+        XCTAssert(controller.playlistItem == playerlist?.playlistItem(at: 2), "PlaylistItem is first track" )
     }
     
     
