@@ -46,11 +46,11 @@ extension MediaCell: Reusable {
     
     private func viewConfigurations() {
         setShadow()
-        setupAlbumArt(albumArtView: albumArtView)
-        setupTrackInfoLabel(trackNameLabel: trackNameLabel)
+        setup(albumArtView: albumArtView)
+        setup(trackNameLabel: trackNameLabel)
     }
     
-    private func setupAlbumArt(albumArtView: UIImageView) {
+    private func setup(albumArtView: UIImageView) {
         contentView.addSubview(albumArtView)
         albumArtView.translatesAutoresizingMaskIntoConstraints = false
         albumArtView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: MediaCellConstants.albumHeightMultiplier).isActive = true
@@ -58,7 +58,7 @@ extension MediaCell: Reusable {
         albumArtView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
     }
     
-    private func setupTrackInfoLabel(trackNameLabel: UILabel) {
+    private func setup(trackNameLabel: UILabel) {
         contentView.addSubview(trackNameLabel)
         trackNameLabel.translatesAutoresizingMaskIntoConstraints = false
         trackNameLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: MediaCellConstants.labelHeightMultiplier).isActive = true

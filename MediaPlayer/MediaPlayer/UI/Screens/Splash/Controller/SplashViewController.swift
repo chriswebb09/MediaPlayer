@@ -8,21 +8,22 @@
 
 import UIKit
 
-public class SplashViewController: UIViewController {
+class SplashViewController: UIViewController {
     
     weak var delegate: SplashViewControllerDelegate?
     
-    private let splashView = SplashView()
+    private let splashView: SplashView!
     
-    public init() {
+    init(splashView: SplashView) {
+        self.splashView = splashView
         super.init(nibName: nil, bundle: nil)
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override public func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         splashView.delegate = self
         view.addView(view: splashView, type: .full)
@@ -31,6 +32,7 @@ public class SplashViewController: UIViewController {
             print("animation")
         }
     }
+    
 }
 
 extension SplashViewController: SplashViewDelegate {

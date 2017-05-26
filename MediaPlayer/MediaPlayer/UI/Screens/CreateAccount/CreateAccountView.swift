@@ -38,10 +38,10 @@ class CreateAccountView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         backgroundColor = .white
-        setupTitleLabel(label: titleLabel)
+        setup(titleLabel: titleLabel)
     }
     
-    func setupTitleLabel(label: UILabel) {
+    func setup(titleLabel: UILabel) {
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0).isActive = true

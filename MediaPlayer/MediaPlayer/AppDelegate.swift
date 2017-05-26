@@ -20,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mpMusic = MPUserMediaPlayer()
         mpMusic.getPlaylists()
         self.appCoordinator = AppCoordinator(window: self.window!)
-        self.appCoordinator.start(viewController: SplashViewController())
+        let splashView = SplashView()
+        let splashViewController = SplashViewController(splashView: splashView)
+        self.appCoordinator.start(viewController: splashViewController)
         return true
     }
     

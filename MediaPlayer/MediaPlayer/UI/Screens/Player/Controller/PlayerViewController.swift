@@ -5,9 +5,9 @@ final class PlayerViewController: UIViewController {
     weak var delegate: PlayerViewControllerDelegate?
     
     private var playerView: PlayerView!
+    
     var playlist: Playlist!
     var index: Int!
-    
     var playerViewModel: PlayerViewModel!
     
     init(playerView: PlayerView = PlayerView()) {
@@ -33,6 +33,7 @@ final class PlayerViewController: UIViewController {
     func setModel(model: PlayerViewModel) {
         playerView.configure(with: model)
         title = model.title
+        hidesBottomBarWhenPushed = true
     }
 }
 

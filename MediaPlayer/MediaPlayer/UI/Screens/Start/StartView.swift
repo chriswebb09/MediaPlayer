@@ -20,7 +20,7 @@ final class StartView: UIView {
         return userLogin.createButton()
     }()
     
-    private var createAccount: UIButton = {
+    private var createAccountButton: UIButton = {
         let createAccount = LoginButtonFactory(text: "Create Account", textColor: .white, buttonBorderWidth: 2, buttonBorderColor: UIColor.blue.cgColor, buttonBackgroundColor: .blue)
         return createAccount.createButton()
     }()
@@ -37,12 +37,12 @@ final class StartView: UIView {
    private func setupElements() {
         setup(titleLabel: titleLabel)
         setup(guestUserButton: guestUserButton)
-        setupUserLogin(button: userLoginButton)
-        setupCreatAccount(button: createAccount)
+        setup(loginButton: userLoginButton)
+        setup(createAccountButton: createAccountButton)
     }
     
     private func setupSelectors() {
-        createAccount.addTarget(self, action: #selector(createAccountButtonTapped), for: .touchUpInside)
+        createAccountButton.addTarget(self, action: #selector(createAccountButtonTapped), for: .touchUpInside)
         guestUserButton.addTarget(self, action: #selector(guestUserButtonTapped), for: .touchUpInside)
         userLoginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
@@ -77,21 +77,21 @@ final class StartView: UIView {
         guestUserButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
     }
     
-    private func setupUserLogin(button: UIButton) {
-        addSubview(button)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        button.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0).isActive = true
-        button.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.4).isActive = true
-        button.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
+    private func setup(loginButton: UIButton) {
+        addSubview(loginButton)
+        loginButton.translatesAutoresizingMaskIntoConstraints = false
+        loginButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        loginButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0).isActive = true
+        loginButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.4).isActive = true
+        loginButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
     }
     
-    private func setupCreatAccount(button: UIButton) {
-        addSubview(button)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        button.centerYAnchor.constraint(equalTo: centerYAnchor, constant: UIScreen.main.bounds.height * 0.25).isActive = true
-        button.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.4).isActive = true
-        button.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
+    private func setup(createAccountButton: UIButton) {
+        addSubview(createAccountButton)
+        createAccountButton.translatesAutoresizingMaskIntoConstraints = false
+        createAccountButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        createAccountButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: UIScreen.main.bounds.height * 0.25).isActive = true
+        createAccountButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.4).isActive = true
+        createAccountButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
     }
 }
