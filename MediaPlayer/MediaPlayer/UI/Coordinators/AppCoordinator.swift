@@ -2,13 +2,15 @@ import UIKit
 
 class AppCoordinator: Coordinator {
     
+    var type: CoordinatorType = .app
+    
     weak var delegate: CoordinatorDelegate?
     
     // MARK: - Properties
     
     var store = MediaDataStore(service: NetworkService(provider: MediaAPIClient()))
-    
     let dataSource: BaseMediaControllerDataSource
+    
     var rootViewController: UIViewController {
         return self.navigationController
     }
@@ -31,7 +33,6 @@ class AppCoordinator: Coordinator {
     }
     
     // MARK: - Functions
-    
     // Starts the coordinator
     
     func start(viewController: UIViewController) {
@@ -64,7 +65,7 @@ extension AppCoordinator: StartViewControllerDelegate {
     }
     
     func continueAsGuestSelected() {
-        delegate?.transitionCoordinator()
+        delegate?.transitionCoordinator(type: .tabbar)
     }
     
     func createAccountSelected() {
@@ -76,7 +77,7 @@ extension AppCoordinator: StartViewControllerDelegate {
 extension AppCoordinator: LoginViewControllerDelegate {
     
     func loginButtonTapped() {
-        delegate?.transitionCoordinator()
+        delegate?.transitionCoordinator(type: .tabbar)
     }
 }
 

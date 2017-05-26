@@ -10,6 +10,7 @@ import UIKit
 
 class TabbarCoordinator: Coordinator {
     
+    var type: CoordinatorType = .tabbar
     weak var delegate: CoordinatorDelegate?
     
     // MARK: - Properties

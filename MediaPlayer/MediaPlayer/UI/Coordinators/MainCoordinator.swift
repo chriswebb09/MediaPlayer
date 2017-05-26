@@ -26,11 +26,15 @@ class MainCoordinator {
 }
 
 extension MainCoordinator: CoordinatorDelegate {
-    
-    func transitionCoordinator() {
-        let tabbarController = TabBarController()
-        let tabCoordinator = TabbarCoordinator(window: window, tabbarController: tabbarController)
-        appCoordinator = tabCoordinator
-        tabCoordinator.start(viewController: tabbarController)
+    func transitionCoordinator(type: CoordinatorType) {
+        switch type {
+        case .app:
+            return
+        case .tabbar:
+            let tabbarController = TabBarController()
+            let tabCoordinator = TabbarCoordinator(window: window, tabbarController: tabbarController)
+            appCoordinator = tabCoordinator
+            tabCoordinator.start(viewController: tabbarController)
+        }
     }
 }
