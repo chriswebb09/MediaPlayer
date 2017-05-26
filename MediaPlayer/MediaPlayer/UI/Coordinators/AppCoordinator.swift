@@ -64,7 +64,7 @@ extension AppCoordinator: StartViewControllerDelegate {
         let tabbarController = TabBarController()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let tabCoordinator = TabbarCoordinator(window: window, tabbarController: tabbarController)
-        appDelegate.appCoordinator = tabCoordinator
+        appDelegate.mainCoordinator.appCoordinator = tabCoordinator
         tabCoordinator.start(viewController: tabbarController)
     }
     

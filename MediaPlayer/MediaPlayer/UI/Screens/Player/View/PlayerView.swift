@@ -22,7 +22,7 @@ final class PlayerView: UIView {
     
     private var titleView: UIView = {
         let top = UIView()
-        top.backgroundColor = .blue
+        top.backgroundColor = UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
         return top
     }()
     
@@ -32,9 +32,9 @@ final class PlayerView: UIView {
         return title
     }()
     
-   private var albumView: UIView = {
+    private var albumView: UIView = {
         let album = UIView()
-        album.backgroundColor = .red
+        album.backgroundColor = .lightGray
         return album
     }()
     
@@ -45,25 +45,62 @@ final class PlayerView: UIView {
     
     private var activityView: UIView = {
         let activty = UIView()
-        activty.backgroundColor = .cyan
+        activty.backgroundColor = .darkGray
         return activty
     }()
     
-   private var preferencesView: UIView = {
+    private var preferencesView: UIView = {
         let preferences = UIView()
-        preferences.backgroundColor = .green
+        preferences.backgroundColor = UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
         return preferences
     }()
     
     var controlsView: UIView = {
         let controls = UIView()
-        controls.backgroundColor = .darkGray
+        controls.backgroundColor = UIColor(red:0.10, green:0.09, blue:0.12, alpha:1.0)
         return controls
+    }()
+    
+    private var playButton: UIButton = {
+        var playButton = UIButton()
+        playButton.setImage(#imageLiteral(resourceName: "bordered-white-play"), for: .normal)
+        return playButton
+    }()
+    
+    private var pauseButton: UIButton = {
+        var pauseButton = UIButton()
+        pauseButton.setImage(#imageLiteral(resourceName: "white-bordered-pause"), for: .normal)
+        return pauseButton
+    }()
+    
+    private var skipButton: UIButton = {
+        var skipButton = UIButton()
+        skipButton.setImage(#imageLiteral(resourceName: "skip-white-hollow-icon"), for: .normal)
+        return skipButton
+    }()
+    
+    private var backButton: UIButton = {
+        var backButton = UIButton()
+        backButton.setImage(#imageLiteral(resourceName: "back-white-hollow"), for: .normal)
+        return backButton
+    }()
+    
+    private var playtimeSlider: UISlider = {
+        let slider = UISlider()
+        slider.thumbTintColor = UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
+        return slider
+    }()
+    
+    private var moreButton: UIButton = {
+        var moreButton = UIButton()
+        moreButton.setImage(#imageLiteral(resourceName: "morebutton"), for: .normal)
+        return moreButton
     }()
     
     func configure(with model: PlayerViewModel) {
         self.model = model
         setupViews()
+        pauseButton.isHidden = true
     }
     
     private func sharedTitleArtLayout(view: UIView) {
@@ -115,6 +152,47 @@ final class PlayerView: UIView {
         controlsView.topAnchor.constraint(equalTo: preferencesView.bottomAnchor).isActive = true
     }
     
+    private func setup(trackButton: UIButton) {
+        controlsView.addSubview(trackButton)
+        trackButton.translatesAutoresizingMaskIntoConstraints = false
+        trackButton.heightAnchor.constraint(equalTo: controlsView.heightAnchor, multiplier: 0.27).isActive = true
+        trackButton.centerYAnchor.constraint(equalTo: controlsView.centerYAnchor, constant: UIScreen.main.bounds.height * -0.03).isActive = true
+        trackButton.centerXAnchor.constraint(equalTo: controlsView.centerXAnchor).isActive = true
+    }
+    
+    private func setup(playButton: UIButton, pauseButton: UIButton) {
+        setup(trackButton: playButton)
+        playButton.widthAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.25).isActive = true
+        setup(trackButton: pauseButton)
+        pauseButton.widthAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.25).isActive = true
+    }
+    
+    private func setup(slider: UISlider) {
+        controlsView.addSubview(slider)
+        slider.translatesAutoresizingMaskIntoConstraints = false
+        slider.centerXAnchor.constraint(equalTo: controlsView.centerXAnchor).isActive = true
+        slider.topAnchor.constraint(equalTo: controlsView.topAnchor, constant: UIScreen.main.bounds.height * 0.08).isActive = true
+        slider.heightAnchor.constraint(equalTo: controlsView.heightAnchor, multiplier: 0.01).isActive = true
+        slider.widthAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.85).isActive = true
+    }
+    
+    private func skipButtonsSharedLayout(controlsView: UIView, button: UIButton) {
+        controlsView.addSubview(button)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.widthAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: PlayerViewConstants.backButtonWidthMultiplier).isActive = true
+        button.heightAnchor.constraint(equalTo: controlsView.heightAnchor, multiplier: PlayerViewConstants.backButtonHeightMultiplier).isActive = true
+    }
+    
+    private func setup(skipButton: UIButton, backButton: UIButton) {
+        skipButtonsSharedLayout(controlsView: controlsView, button: skipButton)
+        skipButton.rightAnchor.constraint(equalTo: controlsView.rightAnchor, constant: UIScreen.main.bounds.width * -0.16).isActive = true
+        skipButton.centerYAnchor.constraint(equalTo: controlsView.centerYAnchor, constant: UIScreen.main.bounds.height * -0.03).isActive = true
+        skipButtonsSharedLayout(controlsView: controlsView, button: backButton)
+        backButton.leftAnchor.constraint(equalTo: controlsView.leftAnchor, constant: UIScreen.main.bounds.width * 0.15).isActive = true
+        backButton.centerYAnchor.constraint(equalTo: controlsView.centerYAnchor, constant: UIScreen.main.bounds.height * -0.03).isActive = true
+    }
+    
+    
     private func setupViews() {
         layoutSubviews()
         setup(titleView: titleView)
@@ -123,5 +201,8 @@ final class PlayerView: UIView {
         setup(albumImageView: albumImageView)
         setup(preferencesView: preferencesView)
         setup(controlsView: controlsView)
+        setup(playButton: playButton, pauseButton: pauseButton)
+        setup(slider: playtimeSlider)
+        setup(skipButton: skipButton, backButton: backButton)
     }
 }

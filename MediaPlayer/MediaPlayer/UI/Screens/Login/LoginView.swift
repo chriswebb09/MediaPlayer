@@ -39,6 +39,7 @@ final class LoginView: UIView {
     }()
     
     override func layoutSubviews() {
+        tag = 1
         super.layoutSubviews()
         backgroundColor = .white
         setup(titleLabel: titleLabel)

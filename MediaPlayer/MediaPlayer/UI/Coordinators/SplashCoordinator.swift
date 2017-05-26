@@ -12,7 +12,7 @@ class SplashCoordinator {
     
     var controller: SplashViewController
 
-    public init(controller: SplashViewController) {
+    init(controller: SplashViewController) {
         self.controller = controller
     }
 }

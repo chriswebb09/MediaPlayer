@@ -12,7 +12,6 @@ class TabbarCoordinator: Coordinator {
     
     // MARK: - Properties
     
-    
     var mediaCollectionController: MediaCollectionViewController!
     var settingsController: SettingsViewController!
     var dataSource: BaseMediaControllerDataSource!
@@ -57,9 +56,6 @@ extension TabbarCoordinator: MediaControllerDelegate {
     
     func didSelectTrackAt(at index: Int, with playlist: Playlist) {
         print(index)
-        let playerViewController = PlayerViewController()
-        playerViewController.index = index
-        playerViewController.playlist = playlist
     }
 }
 
@@ -70,6 +66,7 @@ extension TabbarCoordinator: TabControllerDelegate {
         let playerViewController = PlayerViewController(playerView: playerView)
         playerViewController.index = index
         playerViewController.playlist = playlist
+        tabbarController.tabBar.alpha = 0
         mediaCollectionController.navigationController?.pushViewController(playerViewController, animated: false)
     }
 }

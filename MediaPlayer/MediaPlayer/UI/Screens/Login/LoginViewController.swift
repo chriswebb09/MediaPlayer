@@ -7,9 +7,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loginView.frame = UIScreen.main.bounds
-        view.addSubview(loginView)
-        loginView.layoutSubviews()
         loginView.delegate = self
+        view = loginView
+        view.layoutSubviews()
         navigationController?.isNavigationBarHidden = false
     }
 }
@@ -19,11 +19,11 @@ extension LoginViewController: LoginViewDelegate {
     func usernameFieldDidAddText(text: String?) {
         print(text)
     }
-
-
+    
+    
     func submitButtonTapped() {
         // None
     }
-
+    
     
 }

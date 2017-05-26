@@ -33,7 +33,11 @@ final class PlayerViewController: UIViewController {
     func setModel(model: PlayerViewModel) {
         playerView.configure(with: model)
         title = model.title
-        hidesBottomBarWhenPushed = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.alpha = 1
     }
 }
 

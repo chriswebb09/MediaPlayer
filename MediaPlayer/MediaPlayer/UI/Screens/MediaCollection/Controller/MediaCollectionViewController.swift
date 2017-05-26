@@ -1,6 +1,6 @@
 import UIKit
 
-public class MediaCollectionViewController: BaseMediaViewController {
+class MediaCollectionViewController: BaseMediaViewController {
     
     var buttonItem: UIBarButtonItem!
     
@@ -24,7 +24,7 @@ public class MediaCollectionViewController: BaseMediaViewController {
         }
     }
     
-    override public func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = false
         searchController.delegate = self
@@ -37,7 +37,7 @@ public class MediaCollectionViewController: BaseMediaViewController {
 
 extension MediaCollectionViewController: UISearchControllerDelegate {
     
-    override public func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let searchBarText = searchBar.text, searchBarText.characters.count > 0 { searchBarActive = true }
     }
@@ -71,7 +71,7 @@ extension MediaCollectionViewController: UISearchControllerDelegate {
 
 extension MediaCollectionViewController: UISearchBarDelegate {
     
-    public func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         dataSource.playlist?.removeAll()
         searchBar.setShowsCancelButton(true, animated: true)
         searchBarActive = true
@@ -87,7 +87,7 @@ extension MediaCollectionViewController: UISearchBarDelegate {
         self.searchBarActive = true
     }
     
-    public func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchBar.setShowsCancelButton(false, animated: false)
         searchBarActive = false
     }
@@ -121,7 +121,7 @@ extension MediaCollectionViewController: UISearchBarDelegate {
         }
     }
     
-    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("searchBarSearchButtonClicked")
         DispatchQueue.main.async {
             self.navigationItem.rightBarButtonItems = []
@@ -132,12 +132,12 @@ extension MediaCollectionViewController: UISearchBarDelegate {
         searchController.searchBar.resignFirstResponder()
     }
     
-    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard let barText = searchBar.text, let navcontroller = self.navigationController else { return }
         searchOnTextChange(text: barText, store: dataSource.store, navController: navcontroller)
     }
     
-    public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         dataSource.playlist?.removeAll()
         collectionView.reloadData()
         navigationItem.setRightBarButton(buttonItem, animated: false)
@@ -162,7 +162,7 @@ extension MediaCollectionViewController: UISearchResultsUpdating {
         collectionView.reloadData()
     }
     
-    public func updateSearchResults(for searchController: UISearchController) {
+    func updateSearchResults(for searchController: UISearchController) {
         searchBarActive = true
     }
 }

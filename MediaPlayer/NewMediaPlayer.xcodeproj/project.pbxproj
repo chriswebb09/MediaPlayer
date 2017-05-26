@@ -52,6 +52,7 @@
 		A725B0801ED57DEA00CAC00E /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B07F1ED57DEA00CAC00E /* TabBarCoordinator.swift */; };
 		A725B0821ED5A24500CAC00E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B0811ED5A24500CAC00E /* Coordinator.swift */; };
 		A725B0841ED5A38300CAC00E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B0831ED5A38200CAC00E /* MenuView.swift */; };
+		A73E5E251ED7FE2000349C01 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E5E241ED7FE2000349C01 /* MainCoordinator.swift */; };
 		A76B06581ED254DE0006476F /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06571ED254DE0006476F /* Resuable.swift */; };
 		A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06591ED254E40006476F /* CellRepresentable.swift */; };
 		A76B065C1ED254EA0006476F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B065B1ED254EA0006476F /* BaseView.swift */; };
@@ -182,6 +183,7 @@
 		A725B07F1ED57DEA00CAC00E /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		A725B0811ED5A24500CAC00E /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A725B0831ED5A38200CAC00E /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		A73E5E241ED7FE2000349C01 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		A76B06571ED254DE0006476F /* Resuable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resuable.swift; path = MediaPlayer/UI/Protocol/Resuable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06591ED254E40006476F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = MediaPlayer/UI/Protocol/CellRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		A76B065B1ED254EA0006476F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = MediaPlayer/UI/Protocol/BaseView.swift; sourceTree = SOURCE_ROOT; };
@@ -307,6 +309,7 @@
 				A725B07F1ED57DEA00CAC00E /* TabBarCoordinator.swift */,
 				A799BEB31ED4FF7100F6C4A9 /* SplashCoordinator.swift */,
 				A725B0811ED5A24500CAC00E /* Coordinator.swift */,
+				A73E5E241ED7FE2000349C01 /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -999,6 +1002,7 @@
 				A797EC791ED7950200898C09 /* UIView+Extension.swift in Sources */,
 				A714AD2C1ECEEA7800C99C55 /* MediaAPIClient.swift in Sources */,
 				A7A080FE1ECF158B0035EE1A /* TrackDelegate.swift in Sources */,
+				A73E5E251ED7FE2000349C01 /* MainCoordinator.swift in Sources */,
 				A714AD291ECEE93800C99C55 /* MediaDataStore.swift in Sources */,
 				A7A081191ECF18140035EE1A /* NewPlaylistView.swift in Sources */,
 				A76B066E1ED2586D0006476F /* TrackItemsFlowLayout.swift in Sources */,

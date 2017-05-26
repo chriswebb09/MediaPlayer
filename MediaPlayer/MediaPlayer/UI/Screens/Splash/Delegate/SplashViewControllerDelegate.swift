@@ -8,6 +8,6 @@
 
 import UIKit
 
-public protocol SplashViewControllerDelegate: class {
+protocol SplashViewControllerDelegate: class {
     func splashViewFinishedAnimation(finished: Bool)
 }

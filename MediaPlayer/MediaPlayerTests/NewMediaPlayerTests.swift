@@ -34,25 +34,37 @@ class MediaPlayerTests: XCTestCase {
     }
     
     func testSplashCoordinator() {
-        let appCoordinator = AppCoordinator(window: UIWindow(), services: Services())
-        let splashViewController =  SplashViewController()
+        let appCoordinator = AppCoordinator(window: UIWindow())
+        let splashView = SplashView()
+        let splashViewController =  SplashViewController(splashView: splashView)
         appCoordinator.start(viewController:splashViewController)
         XCTAssert(appCoordinator.navigationController.viewControllers[0] == splashViewController, "Navigation viewcontrollers is StartViewController")
     }
     
     func testStartCoordinator() {
-        let appCoordinator = AppCoordinator(window: UIWindow(), services: Services())
-        let splashViewController = SplashViewController()
+        let appCoordinator = AppCoordinator(window: UIWindow())
+        let splashView = SplashView()
+        let splashViewController = SplashViewController(splashView: splashView)
         appCoordinator.start(viewController:splashViewController)
         appCoordinator.splashViewFinishedAnimation(finished: true)
         XCTAssert(appCoordinator.navigationController.viewControllers[0].view.tag == 0, "View is of type startView / tag == 0")
     }
     
+    func testGoToLogin() {
+        let appCoordinator = AppCoordinator(window: UIWindow())
+        let splashView = SplashView()
+        let splashViewController = SplashViewController(splashView: splashView)
+        appCoordinator.start(viewController:splashViewController)
+        appCoordinator.splashViewFinishedAnimation(finished: true)
+        let startVC = appCoordinator.navigationController.viewControllers[0] as! StartViewController
+        startVC.loginTapped()
+        XCTAssert(appCoordinator.navigationController.viewControllers[1].view.tag == 1, "View is of type startView / tag == 0")
+    }
     
     func testPlayerView() {
         let model = PlayerViewModel(title: "Test", imageUrl: "http://i.imgur.com/5gBiQe0.jpg")
         let playerView = PlayerView()
-        var controller = PlayerViewController(playerView: playerView)
+        let controller = PlayerViewController(playerView: playerView)
         controller.setModel(model: model)
         XCTAssert(controller.title == "Test", "Title is set to track")
     }
@@ -66,6 +78,7 @@ class MediaPlayerTests: XCTestCase {
                 XCTAssertNotNil(json)
                 expect.fulfill()
             case .failed(let error):
+                print(error.localizedDescription)
                 assertionFailure()
             }
         }
@@ -81,15 +94,12 @@ class MediaPlayerTests: XCTestCase {
         let client = MediaAPIClient()
         let networkService = NetworkService(provider: client)
         let dataSource = MediaDataStore(service: networkService)
-        
         dataSource.setSearch(string: "new")
         let expect = expectation(description: "API Client returns proper number of items from search")
-        
         dataSource.searchForTracks { playlist, error in
             XCTAssert(playlist?.itemCount == 50)
             expect.fulfill()
         }
-        
         waitForExpectations(timeout: 4) { error in
             if let error = error {
                 XCTFail("waitForExpectationsWithTimeout errored: \(error)")

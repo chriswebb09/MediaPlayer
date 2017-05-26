@@ -32,7 +32,6 @@ class SplashViewController: UIViewController {
             print("animation")
         }
     }
-    
 }
 
 extension SplashViewController: SplashViewDelegate {
