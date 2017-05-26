@@ -1,11 +1,3 @@
-//
-//  SettingsView.swift
-//  NewMediaPlayer
-//
-//  Created by Christopher Webb-Orenstein on 5/26/17.
-//  Copyright © 2017 Christopher Webb-Orenstein. All rights reserved.
-//
-
 import UIKit
 
 class SettingsView: UIView {
@@ -28,25 +20,28 @@ class SettingsView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        settingOneView.set(settingName: "Setting One")
+        settingTwoView.set(settingName: "Setting Two")
         setup(settingOptionOne: settingOneView)
         setup(settingOptionTwo: settingTwoView)
     }
     
+    func sharedLayout(view: UIView) {
+        addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        view.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.25).isActive = true
+        view.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+    }
+    
     func setup(settingOptionOne: SettingsOptionView) {
-        addSubview(settingOptionOne)
-        settingOptionOne.translatesAutoresizingMaskIntoConstraints = false
+        sharedLayout(view: settingOptionOne)
         settingOptionOne.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        settingOptionOne.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        settingOptionOne.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.25).isActive = true
-        settingOptionOne.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+
     }
     
     func setup(settingOptionTwo: SettingsOptionView) {
-        addSubview(settingOptionTwo)
-        settingOptionTwo.translatesAutoresizingMaskIntoConstraints = false
+        sharedLayout(view: settingOptionTwo)
         settingOptionTwo.topAnchor.constraint(equalTo: settingOneView.bottomAnchor).isActive = true
-        settingOptionTwo.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        settingOptionTwo.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.25).isActive = true
-        settingOptionTwo.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
     }
 }

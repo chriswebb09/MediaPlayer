@@ -12,6 +12,7 @@ class SettingsOptionView: UIView {
     
     private var settingNameLabel: UILabel = {
         let settingName = UILabel()
+        settingName.textAlignment = .center 
         return settingName
     }()
     
@@ -22,5 +23,15 @@ class SettingsOptionView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         backgroundColor = .red
+        setup(nameLabel: settingNameLabel)
+    }
+    
+    func setup(nameLabel: UILabel) {
+        addSubview(nameLabel)
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        nameLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.7).isActive = true
+        nameLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.7).isActive = true
     }
 }
