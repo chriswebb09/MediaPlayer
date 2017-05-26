@@ -57,6 +57,8 @@
 		A73E5E2B1ED80B1B00349C01 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E5E291ED80B1B00349C01 /* BaseViewModel.swift */; };
 		A73E5E2D1ED80BBF00349C01 /* ViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E5E2C1ED80BBF00349C01 /* ViewType.swift */; };
 		A73E5E2F1ED80CB400349C01 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E5E2E1ED80CB400349C01 /* AudioPlayer.swift */; };
+		A73E5E321ED8201200349C01 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E5E311ED8201200349C01 /* SettingsView.swift */; };
+		A73E5E341ED8202700349C01 /* SettingsOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E5E331ED8202700349C01 /* SettingsOptionView.swift */; };
 		A76B06581ED254DE0006476F /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06571ED254DE0006476F /* Resuable.swift */; };
 		A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06591ED254E40006476F /* CellRepresentable.swift */; };
 		A76B065C1ED254EA0006476F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B065B1ED254EA0006476F /* BaseView.swift */; };
@@ -190,6 +192,8 @@
 		A73E5E291ED80B1B00349C01 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		A73E5E2C1ED80BBF00349C01 /* ViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewType.swift; sourceTree = "<group>"; };
 		A73E5E2E1ED80CB400349C01 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		A73E5E311ED8201200349C01 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Settings/SettingsView.swift; sourceTree = "<group>"; };
+		A73E5E331ED8202700349C01 /* SettingsOptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsOptionView.swift; path = Settings/SettingsOptionView.swift; sourceTree = "<group>"; };
 		A76B06571ED254DE0006476F /* Resuable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resuable.swift; path = MediaPlayer/UI/Protocol/Resuable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06591ED254E40006476F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = MediaPlayer/UI/Protocol/CellRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		A76B065B1ED254EA0006476F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = MediaPlayer/UI/Protocol/BaseView.swift; sourceTree = SOURCE_ROOT; };
@@ -487,7 +491,7 @@
 				A714AD231ECEE08600C99C55 /* Player */,
 				A714AD211ECEE06000C99C55 /* Splash */,
 				A7A080D51ECF11650035EE1A /* Start */,
-				A73E5E261ED80AF300349C01 /* SettingsViewController.swift */,
+				A73E5E301ED81FFF00349C01 /* Settings */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -570,6 +574,16 @@
 			);
 			name = NewMediaPlayerTests;
 			path = MediaPlayerTests;
+			sourceTree = "<group>";
+		};
+		A73E5E301ED81FFF00349C01 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A73E5E261ED80AF300349C01 /* SettingsViewController.swift */,
+				A73E5E311ED8201200349C01 /* SettingsView.swift */,
+				A73E5E331ED8202700349C01 /* SettingsOptionView.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		A7A080B51ECF0E180035EE1A /* Controllers */ = {
@@ -932,6 +946,7 @@
 				A7A081121ECF178E0035EE1A /* CreateAccountView.swift in Sources */,
 				A711F0581ED253D6005437C8 /* MediaCellModeler.swift in Sources */,
 				A76B06601ED254F40006476F /* Presentable.swift in Sources */,
+				A73E5E341ED8202700349C01 /* SettingsOptionView.swift in Sources */,
 				A725B0841ED5A38300CAC00E /* MenuView.swift in Sources */,
 				A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */,
 				A7A080E61ECF12AC0035EE1A /* EqualizerConstants.swift in Sources */,
@@ -992,6 +1007,7 @@
 				A7A080F71ECF14E30035EE1A /* MPMediaPlayer.swift in Sources */,
 				A7A081051ECF16970035EE1A /* BallIndicatorView.swift in Sources */,
 				A7A080D21ECF11200035EE1A /* StartView.swift in Sources */,
+				A73E5E321ED8201200349C01 /* SettingsView.swift in Sources */,
 				A714AD451ECEEE0B00C99C55 /* CALayer+Extension.swift in Sources */,
 				A7A080BC1ECF0EA00035EE1A /* EqualizerAnimation.swift in Sources */,
 				A799BEB41ED4FF7100F6C4A9 /* SplashCoordinator.swift in Sources */,

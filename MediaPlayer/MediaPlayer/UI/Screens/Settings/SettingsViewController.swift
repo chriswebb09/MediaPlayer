@@ -10,4 +10,15 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    var settingsView = SettingsView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        edgesForExtendedLayout = []
+        settingsView.backgroundColor = .cyan
+        settingsView.layoutSubviews()
+        view.addView(view: settingsView, type: .full)
+        view = settingsView
+        title = "Settings"
+    }
 }
