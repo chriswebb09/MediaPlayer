@@ -1,10 +1,5 @@
 import UIKit
 
-protocol LoginViewDelegate: class {
-    func submitButtonTapped()
-    func usernameFieldDidAddText(text: String?)
-}
-
 final class LoginView: UIView {
     
     weak var delegate: LoginViewDelegate?

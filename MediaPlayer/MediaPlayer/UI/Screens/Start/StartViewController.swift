@@ -6,6 +6,15 @@ final class StartViewController: UIViewController {
     
     weak var delegate: StartViewControllerDelegate?
     
+    init(startView: StartView = StartView()) {
+        self.startView = startView
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         edgesForExtendedLayout = []

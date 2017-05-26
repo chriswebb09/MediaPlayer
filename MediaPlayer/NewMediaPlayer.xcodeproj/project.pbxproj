@@ -63,6 +63,7 @@
 		A73E5E381ED847D500349C01 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E5E371ED847D500349C01 /* NetworkTests.swift */; };
 		A75EAE2E1ED84D8F009F6FC2 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE2D1ED84D8F009F6FC2 /* CoordinatorTests.swift */; };
 		A75EAE301ED84D9C009F6FC2 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE2F1ED84D9C009F6FC2 /* PlayerTests.swift */; };
+		A75EAE321ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE311ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift */; };
 		A76B06581ED254DE0006476F /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06571ED254DE0006476F /* Resuable.swift */; };
 		A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06591ED254E40006476F /* CellRepresentable.swift */; };
 		A76B065C1ED254EA0006476F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B065B1ED254EA0006476F /* BaseView.swift */; };
@@ -202,6 +203,7 @@
 		A73E5E371ED847D500349C01 /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		A75EAE2D1ED84D8F009F6FC2 /* CoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		A75EAE2F1ED84D9C009F6FC2 /* PlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
+		A75EAE311ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMenuPopoverAlert.swift; sourceTree = "<group>"; };
 		A76B06571ED254DE0006476F /* Resuable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resuable.swift; path = MediaPlayer/UI/Protocol/Resuable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06591ED254E40006476F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = MediaPlayer/UI/Protocol/CellRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		A76B065B1ED254EA0006476F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = MediaPlayer/UI/Protocol/BaseView.swift; sourceTree = SOURCE_ROOT; };
@@ -681,6 +683,7 @@
 				A7A080E31ECF126C0035EE1A /* MenuDelegate.swift */,
 				A7A080DF1ECF123A0035EE1A /* MenuOptionView.swift */,
 				A725B0831ED5A38200CAC00E /* MenuView.swift */,
+				A75EAE311ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -966,6 +969,7 @@
 				A714AD491ECEF16900C99C55 /* URLRoutable.swift in Sources */,
 				A711F0541ED25398005437C8 /* MediaCollectionHandler.swift in Sources */,
 				A714AD321ECEEB9200C99C55 /* MediaCell.swift in Sources */,
+				A75EAE321ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift in Sources */,
 				A721B2B71ECECB43003E0D12 /* MediaPlayer.xcdatamodeld in Sources */,
 				A73E5E361ED8299100349C01 /* SettingsViewDelegate.swift in Sources */,
 				A714AD161ECEDF4100C99C55 /* MediaViewControllerDelegate.swift in Sources */,

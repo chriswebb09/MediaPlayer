@@ -8,6 +8,7 @@
 
 import Foundation
 
-protocol LoginViewProtocol {
-    
+protocol LoginViewDelegate: class {
+    func submitButtonTapped()
+    func usernameFieldDidAddText(text: String?)
 }

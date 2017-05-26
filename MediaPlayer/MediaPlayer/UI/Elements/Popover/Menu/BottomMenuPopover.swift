@@ -1,13 +1,4 @@
-//
-//  BottomMenuPopover.swift
-//  Musicly
-//
-//  Created by Christopher Webb-Orenstein on 4/30/17.
-//  Copyright © 2017 Christopher Webb-Orenstein. All rights reserved.
-//
-
 import UIKit
-
 
 final class BottomMenuPopover: BasePopoverMenu {
     
@@ -18,7 +9,20 @@ final class BottomMenuPopover: BasePopoverMenu {
         return popView
     }()
     
-    public override func showPopView(viewController: UIViewController) {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    convenience init(popView: MenuView) {
+        self.init(frame: CGRect.zero)
+        self.popView = popView
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("This class does not support NSCoding")
+    }
+    
+    override func showPopView(viewController: UIViewController) {
         super.showPopView(viewController: viewController)
         DispatchQueue.main.async { [weak self] in
             guard let strongSelf = self else {
@@ -56,7 +60,7 @@ final class BottomMenuPopover: BasePopoverMenu {
     }
     
     
-    public override func hidePopView(viewController: UIViewController) {
+    override func hidePopView(viewController: UIViewController) {
         super.hidePopView(viewController: viewController)
     }
     

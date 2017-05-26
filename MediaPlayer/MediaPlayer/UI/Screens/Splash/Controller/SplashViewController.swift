@@ -6,7 +6,7 @@ final class SplashViewController: UIViewController {
     
     private let splashView: SplashView!
     
-    init(splashView: SplashView) {
+    init(splashView: SplashView = SplashView()) {
         self.splashView = splashView
         super.init(nibName: nil, bundle: nil)
     }
