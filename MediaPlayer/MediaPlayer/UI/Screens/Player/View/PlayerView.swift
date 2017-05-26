@@ -93,7 +93,7 @@ final class PlayerView: UIView {
         let slider = UISlider()
         slider.thumbTintColor = UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
         slider.tintColor = .white
-        slider.isUserInteractionEnabled = true 
+        slider.isUserInteractionEnabled = true
         return slider
     }()
     
@@ -216,7 +216,7 @@ final class PlayerView: UIView {
         print(playtimeSlider.value)
     }
     
-    func addSelectors() {
+    private func addSelectors() {
         playButton.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside)
         pauseButton.addTarget(self, action: #selector(pauseButtonTapped), for: .touchUpInside)
         skipButton.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
@@ -232,7 +232,7 @@ final class PlayerView: UIView {
         delegate?.playButtonTapped()
     }
     
-    func switchButtonAlpha(for button: UIButton, withButton: UIButton) {
+    private func switchButtonAlpha(for button: UIButton, withButton: UIButton) {
         button.alpha = 1
         withButton.alpha = 0
     }
@@ -247,12 +247,14 @@ final class PlayerView: UIView {
     func skipButtonTapped() {
         playButton.alpha = 1
         playtimeSlider.value = 0
+        timer?.invalidate()
         delegate?.skipButtonTapped()
     }
     
     func backButtonTapped() {
         playButton.alpha = 1
         playtimeSlider.value = 0
+        timer?.invalidate()
         delegate?.backButtonTapped()
     }
     
@@ -269,10 +271,9 @@ final class PlayerView: UIView {
             model.time = count
             timer?.invalidate()
         }
-        
     }
     
-    func updateTime() {
+    @objc private func updateTime() {
         guard let countDict = timer?.userInfo as? NSMutableDictionary else { return }
         guard let count = countDict["count"] as? Int else { return }
         model.time = count + 1

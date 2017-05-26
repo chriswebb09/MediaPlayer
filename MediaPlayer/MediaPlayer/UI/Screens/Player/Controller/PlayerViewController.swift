@@ -9,7 +9,6 @@ final class PlayerViewController: UIViewController {
     var playlist: Playlist!
     var index: Int!
     var playerViewModel: PlayerViewModel!
-    var track: Track!
     var playlistItem: PlaylistItem!
     
     init(playerView: PlayerView = PlayerView()) {
