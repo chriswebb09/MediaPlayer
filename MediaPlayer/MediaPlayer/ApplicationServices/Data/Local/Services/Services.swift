@@ -12,11 +12,3 @@ protocol Services {
     var dataService: DataService { get set }
 }
 
-struct Service: ServiceProtocol {
-    
-    let dataService: DataService
-    
-    init() {
-        self.dataService = DataService()
-    }
-}

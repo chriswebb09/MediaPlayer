@@ -8,9 +8,6 @@
 
 import Foundation
 
-protocol ServiceProtocol {
-    
-}
 
 class DataService: ServiceProtocol {
     var tracks: [Track] = []

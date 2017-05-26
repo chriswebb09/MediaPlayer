@@ -64,6 +64,8 @@
 		A75EAE2E1ED84D8F009F6FC2 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE2D1ED84D8F009F6FC2 /* CoordinatorTests.swift */; };
 		A75EAE301ED84D9C009F6FC2 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE2F1ED84D9C009F6FC2 /* PlayerTests.swift */; };
 		A75EAE321ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE311ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift */; };
+		A75EAE341ED85596009F6FC2 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE331ED85596009F6FC2 /* ServiceProtocol.swift */; };
+		A75EAE361ED855AA009F6FC2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE351ED855AA009F6FC2 /* Service.swift */; };
 		A76B06581ED254DE0006476F /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06571ED254DE0006476F /* Resuable.swift */; };
 		A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06591ED254E40006476F /* CellRepresentable.swift */; };
 		A76B065C1ED254EA0006476F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B065B1ED254EA0006476F /* BaseView.swift */; };
@@ -204,6 +206,8 @@
 		A75EAE2D1ED84D8F009F6FC2 /* CoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		A75EAE2F1ED84D9C009F6FC2 /* PlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
 		A75EAE311ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMenuPopoverAlert.swift; sourceTree = "<group>"; };
+		A75EAE331ED85596009F6FC2 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		A75EAE351ED855AA009F6FC2 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		A76B06571ED254DE0006476F /* Resuable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resuable.swift; path = MediaPlayer/UI/Protocol/Resuable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06591ED254E40006476F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = MediaPlayer/UI/Protocol/CellRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		A76B065B1ED254EA0006476F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = MediaPlayer/UI/Protocol/BaseView.swift; sourceTree = SOURCE_ROOT; };
@@ -755,6 +759,8 @@
 			children = (
 				A714AD1B1ECEDFAE00C99C55 /* DataService.swift */,
 				A721B2DF1ECECD98003E0D12 /* Services.swift */,
+				A75EAE331ED85596009F6FC2 /* ServiceProtocol.swift */,
+				A75EAE351ED855AA009F6FC2 /* Service.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -991,6 +997,7 @@
 				A711F0501ED25300005437C8 /* CollectionViewAttributes.swift in Sources */,
 				A7A080C61ECF0FD90035EE1A /* BasePopoverAlert.swift in Sources */,
 				A7A081271ECF1BE40035EE1A /* CALayer+Constants.swift in Sources */,
+				A75EAE341ED85596009F6FC2 /* ServiceProtocol.swift in Sources */,
 				A711F0561ED253B3005437C8 /* MediaCellConstants.swift in Sources */,
 				A725B0801ED57DEA00CAC00E /* TabBarCoordinator.swift in Sources */,
 				A714AD1C1ECEDFAE00C99C55 /* DataService.swift in Sources */,
@@ -1058,6 +1065,7 @@
 				A714AD141ECEDF1E00C99C55 /* MediaCollectionControllerDelegate.swift in Sources */,
 				A721B2D41ECECB74003E0D12 /* TabBarController.swift in Sources */,
 				A76B065E1ED254F00006476F /* TermSearcher.swift in Sources */,
+				A75EAE361ED855AA009F6FC2 /* Service.swift in Sources */,
 				A721B2AF1ECECB43003E0D12 /* AppDelegate.swift in Sources */,
 				A714AD201ECEE05A00C99C55 /* SplashView.swift in Sources */,
 				A711F05A1ED253EB005437C8 /* MediaCellViewModel.swift in Sources */,
