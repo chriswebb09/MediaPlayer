@@ -1,11 +1,15 @@
 import UIKit
 
+enum PlayState {
+    case queued, playing, paused, done
+}
+
 final class PlayerViewController: UIViewController {
     
     weak var delegate: PlayerViewControllerDelegate?
     
     private var playerView: PlayerView!
-    
+    var playerState: PlayState!
     var playlist: Playlist!
     var index: Int!
     var playerViewModel: PlayerViewModel!
@@ -23,12 +27,14 @@ final class PlayerViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         playerView.delegate = self
+        guard let playlist = playlist else { return }
         playlistItem = playlist.playlistItem(at: index)
         edgesForExtendedLayout = []
         title = playlistItem.track?.artistName
         guard let trackName = playlistItem.track?.trackName, let imageUrl = playlistItem.track?.artworkUrl else { return }
         setModel(model: PlayerViewModel(title: trackName, timer: nil, progressIncrementer: 0, time: 0, progress: 0, imageUrl: imageUrl))
         view.addView(view: playerView, type: .full)
+        playerState = .queued
     }
     
     func setModel(model: PlayerViewModel) {
@@ -64,10 +70,12 @@ extension PlayerViewController: PlayerViewDelegate {
     }
 
     func pauseButtonTapped() {
+        playerState = .paused 
         print("pause")
     }
 
     func playButtonTapped() {
+        playerState = .playing
         print("play")
     }
 }

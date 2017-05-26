@@ -74,7 +74,7 @@ class MediaPlayerTests: XCTestCase {
     
     
     func testPlayerView() {
-        let model = PlayerViewModel(title: "Test", imageUrl: "http://i.imgur.com/5gBiQe0.jpg")
+        let model = PlayerViewModel(title: "Test", timer: nil, progressIncrementer: 0, time: 0, progress: 0, imageUrl: "http://i.imgur.com/5gBiQe0.jpg")
         let playerView = PlayerView()
         let controller = PlayerViewController(playerView: playerView)
         controller.setModel(model: model)
@@ -111,11 +111,45 @@ class MediaPlayerTests: XCTestCase {
             XCTAssert(playlist?.itemCount == 50)
             expect.fulfill()
         }
-        waitForExpectations(timeout: 4) { error in
+        waitForExpectations(timeout: 6) { error in
             if let error = error {
                 XCTFail("waitForExpectationsWithTimeout errored: \(error)")
             }
         }
     }
+    
+    func testPlay() {
+        let client = MediaAPIClient()
+        let networkService = NetworkService(provider: client)
+        let dataSource = MediaDataStore(service: networkService)
+        dataSource.setSearch(string: "new")
+        let playerView = PlayerView()
+        let controller = PlayerViewController(playerView: playerView)
+        dataSource.searchForTracks { playlist, error in
+            controller.playlist = playlist
+            controller.index = 1
+        }
+        controller.viewDidLoad()
+        controller.playButtonTapped()
+        XCTAssert(controller.playerState == .playing, "Title is set to track")
+    }
+    
+    func testPause() {
+        let client = MediaAPIClient()
+        let networkService = NetworkService(provider: client)
+        let dataSource = MediaDataStore(service: networkService)
+        dataSource.setSearch(string: "new")
+        let playerView = PlayerView()
+        let controller = PlayerViewController(playerView: playerView)
+        dataSource.searchForTracks { playlist, error in
+            controller.playlist = playlist
+            controller.index = 1
+        }
+        controller.viewDidLoad()
+        controller.playButtonTapped()
+        controller.pauseButtonTapped()
+        XCTAssert(controller.playerState == .paused, "Title is set to track")
+    }
+    
     
 }
