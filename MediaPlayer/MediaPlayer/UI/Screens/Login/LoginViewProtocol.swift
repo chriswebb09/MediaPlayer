@@ -12,3 +12,7 @@ protocol LoginViewDelegate: class {
     func submitButtonTapped()
     func usernameFieldDidAddText(text: String?)
 }
+
+protocol LoginViewControllerDelegate: class {
+    func loginButtonTapped()
+}

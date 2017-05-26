@@ -57,6 +57,7 @@ extension AppCoordinator: StartViewControllerDelegate {
     
     func loginSelected() {
         let loginViewController = LoginViewController()
+        loginViewController.delegate = self
         navigationController.pushViewController(loginViewController, animated: false)
     }
     
@@ -71,6 +72,17 @@ extension AppCoordinator: StartViewControllerDelegate {
     func createAccountSelected() {
         let createAccountViewController = CreateAccountViewController()
         navigationController.pushViewController(createAccountViewController, animated: false)
+    }
+}
+
+extension AppCoordinator: LoginViewControllerDelegate {
+    
+    func loginButtonTapped() {
+        let tabbarController = TabBarController()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let tabCoordinator = TabbarCoordinator(window: window, tabbarController: tabbarController)
+        appDelegate.mainCoordinator.appCoordinator = tabCoordinator
+        tabCoordinator.start(viewController: tabbarController)
     }
 }
 

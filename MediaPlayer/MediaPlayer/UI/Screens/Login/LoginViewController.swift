@@ -4,6 +4,8 @@ class LoginViewController: UIViewController {
     
     let loginView = LoginView()
     
+    weak var delegate: LoginViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loginView.frame = UIScreen.main.bounds
@@ -17,13 +19,14 @@ class LoginViewController: UIViewController {
 
 
 extension LoginViewController: LoginViewDelegate {
+    
     func usernameFieldDidAddText(text: String?) {
         print(text)
     }
     
-    
     func submitButtonTapped() {
-        // None
+        print("Submitted")
+        delegate?.loginButtonTapped()
     }
     
     

@@ -36,8 +36,11 @@ final class StartView: UIView {
     private func setupElements() {
         setup(titleLabel: titleLabel)
         setup(guestUserButton: guestUserButton)
+        guestUserButton.layer.cornerRadius = 2
         setup(loginButton: userLoginButton)
+        userLoginButton.layer.cornerRadius = 2
         setup(createAccountButton: createAccountButton)
+        createAccountButton.layer.cornerRadius = 2
     }
     
     private func setupSelectors() {
@@ -63,7 +66,7 @@ final class StartView: UIView {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: UIScreen.main.bounds.height * -0.25).isActive = true
-        titleLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.4).isActive = true
+        titleLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8).isActive = true
         titleLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
     }
     
@@ -71,8 +74,8 @@ final class StartView: UIView {
         addSubview(guestUserButton)
         guestUserButton.translatesAutoresizingMaskIntoConstraints = false
         guestUserButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        guestUserButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: UIScreen.main.bounds.height * -0.1).isActive = true
-        guestUserButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.4).isActive = true
+        guestUserButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: UIScreen.main.bounds.height * 0.07).isActive = true
+        guestUserButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8).isActive = true
         guestUserButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
     }
     
@@ -80,8 +83,8 @@ final class StartView: UIView {
         addSubview(loginButton)
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         loginButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        loginButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0).isActive = true
-        loginButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.4).isActive = true
+        loginButton.topAnchor.constraint(equalTo: guestUserButton.bottomAnchor, constant: UIScreen.main.bounds.height * 0.07).isActive = true
+        loginButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8).isActive = true
         loginButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
     }
     
@@ -90,7 +93,7 @@ final class StartView: UIView {
         createAccountButton.translatesAutoresizingMaskIntoConstraints = false
         createAccountButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         createAccountButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: UIScreen.main.bounds.height * 0.25).isActive = true
-        createAccountButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.4).isActive = true
+        createAccountButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8).isActive = true
         createAccountButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.1).isActive = true
     }
 }

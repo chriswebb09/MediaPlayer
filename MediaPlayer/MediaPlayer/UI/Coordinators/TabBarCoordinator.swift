@@ -44,6 +44,12 @@ class TabbarCoordinator: Coordinator {
         setupTabController(tabController: tabbarController)
     }
     
+    func controllerAtIndex(index: Int) {
+        tabbarController.selectedIndex = index
+        let navController = tabbarController.viewControllers?[0] as! UINavigationController
+        navController.popViewController(animated: false)
+    }
+    
     func setStore(from client: MediaAPIClient) {
         let networkService = NetworkService(provider: client)
         let store = MediaDataStore(service: networkService)
