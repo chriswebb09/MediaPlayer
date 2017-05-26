@@ -66,6 +66,8 @@
 		A75EAE321ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE311ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift */; };
 		A75EAE341ED85596009F6FC2 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE331ED85596009F6FC2 /* ServiceProtocol.swift */; };
 		A75EAE361ED855AA009F6FC2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE351ED855AA009F6FC2 /* Service.swift */; };
+		A75EAE381ED8649A009F6FC2 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE371ED8649A009F6FC2 /* CoordinatorType.swift */; };
+		A75EAE3A1ED864B3009F6FC2 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE391ED864B3009F6FC2 /* CoordinatorDelegate.swift */; };
 		A76B06581ED254DE0006476F /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06571ED254DE0006476F /* Resuable.swift */; };
 		A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06591ED254E40006476F /* CellRepresentable.swift */; };
 		A76B065C1ED254EA0006476F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B065B1ED254EA0006476F /* BaseView.swift */; };
@@ -208,6 +210,8 @@
 		A75EAE311ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMenuPopoverAlert.swift; sourceTree = "<group>"; };
 		A75EAE331ED85596009F6FC2 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		A75EAE351ED855AA009F6FC2 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		A75EAE371ED8649A009F6FC2 /* CoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		A75EAE391ED864B3009F6FC2 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		A76B06571ED254DE0006476F /* Resuable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resuable.swift; path = MediaPlayer/UI/Protocol/Resuable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06591ED254E40006476F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = MediaPlayer/UI/Protocol/CellRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		A76B065B1ED254EA0006476F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = MediaPlayer/UI/Protocol/BaseView.swift; sourceTree = SOURCE_ROOT; };
@@ -332,6 +336,8 @@
 				A799BEB31ED4FF7100F6C4A9 /* SplashCoordinator.swift */,
 				A725B0811ED5A24500CAC00E /* Coordinator.swift */,
 				A73E5E241ED7FE2000349C01 /* MainCoordinator.swift */,
+				A75EAE371ED8649A009F6FC2 /* CoordinatorType.swift */,
+				A75EAE391ED864B3009F6FC2 /* CoordinatorDelegate.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -966,6 +972,7 @@
 				A73E5E2B1ED80B1B00349C01 /* BaseViewModel.swift in Sources */,
 				A7A081121ECF178E0035EE1A /* CreateAccountView.swift in Sources */,
 				A711F0581ED253D6005437C8 /* MediaCellModeler.swift in Sources */,
+				A75EAE381ED8649A009F6FC2 /* CoordinatorType.swift in Sources */,
 				A76B06601ED254F40006476F /* Presentable.swift in Sources */,
 				A73E5E341ED8202700349C01 /* SettingsOptionView.swift in Sources */,
 				A725B0841ED5A38300CAC00E /* MenuView.swift in Sources */,
@@ -973,6 +980,7 @@
 				A7A080E61ECF12AC0035EE1A /* EqualizerConstants.swift in Sources */,
 				A7A080DA1ECF11970035EE1A /* BasicButtonFactory.swift in Sources */,
 				A714AD491ECEF16900C99C55 /* URLRoutable.swift in Sources */,
+				A75EAE3A1ED864B3009F6FC2 /* CoordinatorDelegate.swift in Sources */,
 				A711F0541ED25398005437C8 /* MediaCollectionHandler.swift in Sources */,
 				A714AD321ECEEB9200C99C55 /* MediaCell.swift in Sources */,
 				A75EAE321ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift in Sources */,
