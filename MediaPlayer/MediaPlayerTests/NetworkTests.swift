@@ -32,7 +32,7 @@ class NetworkTests: XCTestCase {
                 assertionFailure()
             }
         }
-        waitForExpectations(timeout: 4) { error in
+        waitForExpectations(timeout: 6) { error in
             if let error = error {
                 XCTFail("waitForExpectationsWithTimeout errored: \(error)")
             }

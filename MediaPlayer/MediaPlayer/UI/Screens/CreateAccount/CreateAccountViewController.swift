@@ -6,9 +6,11 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createAccountView.frame = UIScreen.main.bounds
-        view.addSubview(createAccountView)
-        createAccountView.layoutSubviews()
+      createAccountView.frame = UIScreen.main.bounds
         view = createAccountView
+        view.layoutSubviews()
+        title = "Create Account"
+        
+        navigationController?.navigationBar.isHidden = false
     }
 }

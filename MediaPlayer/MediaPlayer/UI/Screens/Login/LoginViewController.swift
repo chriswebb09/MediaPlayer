@@ -10,6 +10,7 @@ class LoginViewController: UIViewController {
         loginView.delegate = self
         view = loginView
         view.layoutSubviews()
+        title = "Login"
         navigationController?.isNavigationBarHidden = false
     }
 }
