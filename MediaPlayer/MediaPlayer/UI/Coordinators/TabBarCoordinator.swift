@@ -9,8 +9,8 @@
 import UIKit
 
 class TabbarCoordinator: Coordinator {
+    
     weak var delegate: CoordinatorDelegate?
-
     
     // MARK: - Properties
     

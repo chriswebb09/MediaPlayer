@@ -1,8 +1,8 @@
 import UIKit
 
 class AppCoordinator: Coordinator {
-    weak var delegate: CoordinatorDelegate?
     
+    weak var delegate: CoordinatorDelegate?
     
     // MARK: - Properties
     
