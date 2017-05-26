@@ -9,5 +9,11 @@
 import UIKit
 
 protocol Coordinator {
+    weak var delegate: CoordinatorDelegate? { get set }
     func start(viewController: UIViewController)
+    
+}
+
+protocol CoordinatorDelegate: class {
+    func transitionCoordinator() 
 }

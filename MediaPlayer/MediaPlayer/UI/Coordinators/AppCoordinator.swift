@@ -1,6 +1,8 @@
 import UIKit
 
 class AppCoordinator: Coordinator {
+    weak var delegate: CoordinatorDelegate?
+    
     
     // MARK: - Properties
     
@@ -62,11 +64,7 @@ extension AppCoordinator: StartViewControllerDelegate {
     }
     
     func continueAsGuestSelected() {
-        let tabbarController = TabBarController()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let tabCoordinator = TabbarCoordinator(window: window, tabbarController: tabbarController)
-        appDelegate.mainCoordinator.appCoordinator = tabCoordinator
-        tabCoordinator.start(viewController: tabbarController)
+        delegate?.transitionCoordinator()
     }
     
     func createAccountSelected() {
@@ -78,11 +76,7 @@ extension AppCoordinator: StartViewControllerDelegate {
 extension AppCoordinator: LoginViewControllerDelegate {
     
     func loginButtonTapped() {
-        let tabbarController = TabBarController()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let tabCoordinator = TabbarCoordinator(window: window, tabbarController: tabbarController)
-        appDelegate.mainCoordinator.appCoordinator = tabCoordinator
-        tabCoordinator.start(viewController: tabbarController)
+        delegate?.transitionCoordinator()
     }
 }
 

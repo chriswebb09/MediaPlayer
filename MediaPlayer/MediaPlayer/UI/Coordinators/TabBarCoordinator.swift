@@ -9,6 +9,8 @@
 import UIKit
 
 class TabbarCoordinator: Coordinator {
+    weak var delegate: CoordinatorDelegate?
+
     
     // MARK: - Properties
     
@@ -17,7 +19,7 @@ class TabbarCoordinator: Coordinator {
     var dataSource: BaseMediaControllerDataSource!
     var window: UIWindow!
     var tabbarController: TabBarController!
-    
+
     // MARK: - Init
     
     init(window: UIWindow, tabbarController: TabBarController = TabBarController()) {

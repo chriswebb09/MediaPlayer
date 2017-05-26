@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mpMusic = MPUserMediaPlayer()
         mpMusic.getPlaylists()
         self.appCoordinator = AppCoordinator(window: self.window!)
-        self.mainCoordinator = MainCoordinator(coordinator: appCoordinator)
+        self.mainCoordinator = MainCoordinator(coordinator: appCoordinator, window: window!)
         return true
     }
     
