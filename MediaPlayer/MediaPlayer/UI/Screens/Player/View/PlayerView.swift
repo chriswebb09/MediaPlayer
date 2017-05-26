@@ -212,7 +212,7 @@ final class PlayerView: UIView {
         addSelectors()
     }
     
-    func sliderValueChanged() {
+    @objc private func sliderValueChanged() {
         print(playtimeSlider.value)
     }
     
@@ -224,7 +224,7 @@ final class PlayerView: UIView {
         playtimeSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
     }
     
-    func playButtonTapped() {
+    @objc private func playButtonTapped() {
         guard var model = model else { return }
         let timerDic: NSMutableDictionary = ["count": model.time]
         setTimer(timerDict: timerDic)
@@ -237,21 +237,21 @@ final class PlayerView: UIView {
         withButton.alpha = 0
     }
     
-    func pauseButtonTapped() {
+    @objc private func pauseButtonTapped() {
         guard let countDict = timer?.userInfo as? NSMutableDictionary else { return }
         pauseTime(countdict: countDict)
         switchButtonAlpha(for: playButton, withButton: pauseButton)
         delegate?.pauseButtonTapped()
     }
     
-    func skipButtonTapped() {
+    @objc private func skipButtonTapped() {
         playButton.alpha = 1
         playtimeSlider.value = 0
         timer?.invalidate()
         delegate?.skipButtonTapped()
     }
     
-    func backButtonTapped() {
+   @objc private func backButtonTapped() {
         playButton.alpha = 1
         playtimeSlider.value = 0
         timer?.invalidate()
