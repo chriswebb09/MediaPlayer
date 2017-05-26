@@ -59,6 +59,7 @@
 		A73E5E2F1ED80CB400349C01 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E5E2E1ED80CB400349C01 /* AudioPlayer.swift */; };
 		A73E5E321ED8201200349C01 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E5E311ED8201200349C01 /* SettingsView.swift */; };
 		A73E5E341ED8202700349C01 /* SettingsOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E5E331ED8202700349C01 /* SettingsOptionView.swift */; };
+		A73E5E361ED8299100349C01 /* SettingsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E5E351ED8299100349C01 /* SettingsViewDelegate.swift */; };
 		A76B06581ED254DE0006476F /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06571ED254DE0006476F /* Resuable.swift */; };
 		A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06591ED254E40006476F /* CellRepresentable.swift */; };
 		A76B065C1ED254EA0006476F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B065B1ED254EA0006476F /* BaseView.swift */; };
@@ -194,6 +195,7 @@
 		A73E5E2E1ED80CB400349C01 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		A73E5E311ED8201200349C01 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Settings/SettingsView.swift; sourceTree = "<group>"; };
 		A73E5E331ED8202700349C01 /* SettingsOptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsOptionView.swift; path = Settings/SettingsOptionView.swift; sourceTree = "<group>"; };
+		A73E5E351ED8299100349C01 /* SettingsViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewDelegate.swift; path = Settings/SettingsViewDelegate.swift; sourceTree = "<group>"; };
 		A76B06571ED254DE0006476F /* Resuable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resuable.swift; path = MediaPlayer/UI/Protocol/Resuable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06591ED254E40006476F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = MediaPlayer/UI/Protocol/CellRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		A76B065B1ED254EA0006476F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = MediaPlayer/UI/Protocol/BaseView.swift; sourceTree = SOURCE_ROOT; };
@@ -582,6 +584,7 @@
 				A73E5E261ED80AF300349C01 /* SettingsViewController.swift */,
 				A73E5E311ED8201200349C01 /* SettingsView.swift */,
 				A73E5E331ED8202700349C01 /* SettingsOptionView.swift */,
+				A73E5E351ED8299100349C01 /* SettingsViewDelegate.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -955,6 +958,7 @@
 				A711F0541ED25398005437C8 /* MediaCollectionHandler.swift in Sources */,
 				A714AD321ECEEB9200C99C55 /* MediaCell.swift in Sources */,
 				A721B2B71ECECB43003E0D12 /* MediaPlayer.xcdatamodeld in Sources */,
+				A73E5E361ED8299100349C01 /* SettingsViewDelegate.swift in Sources */,
 				A714AD161ECEDF4100C99C55 /* MediaViewControllerDelegate.swift in Sources */,
 				A76B06581ED254DE0006476F /* Resuable.swift in Sources */,
 				A73E5E271ED80AF300349C01 /* SettingsViewController.swift in Sources */,

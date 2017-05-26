@@ -22,7 +22,8 @@ class TabbarCoordinator: Coordinator {
     
     init(window: UIWindow, tabbarController: TabBarController = TabBarController()) {
         self.setStore(from: MediaAPIClient())
-        self.settingsController = SettingsViewController()
+        var settingsView = SettingsView()
+        self.settingsController = SettingsViewController(settingsView: settingsView)
         self.tabbarController = tabbarController
         setWindow(window: window)
     }

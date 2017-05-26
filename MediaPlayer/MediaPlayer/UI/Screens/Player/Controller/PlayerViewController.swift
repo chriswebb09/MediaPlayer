@@ -9,6 +9,8 @@ final class PlayerViewController: UIViewController {
     var playlist: Playlist!
     var index: Int!
     var playerViewModel: PlayerViewModel!
+    var track: Track!
+    var playlistItem: PlaylistItem!
     
     init(playerView: PlayerView = PlayerView()) {
         self.playerView = playerView
@@ -22,17 +24,22 @@ final class PlayerViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         playerView.delegate = self
-        let track = playlist.playlistItem(at: index)
+        playlistItem = playlist.playlistItem(at: index)
         edgesForExtendedLayout = []
-        title = track?.track?.artistName
-        guard let trackName = track?.track?.trackName, let imageUrl = track?.track?.artworkUrl else { return }
-        setModel(model: PlayerViewModel(title: trackName, imageUrl: imageUrl))
+        title = playlistItem.track?.artistName
+        guard let trackName = playlistItem.track?.trackName, let imageUrl = playlistItem.track?.artworkUrl else { return }
+        setModel(model: PlayerViewModel(title: trackName, timer: nil, progressIncrementer: 0, time: 0, progress: 0, imageUrl: imageUrl))
         view.addView(view: playerView, type: .full)
     }
     
     func setModel(model: PlayerViewModel) {
         playerView.configure(with: model)
         title = model.title
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         self.tabBarController?.tabBar.alpha = 0
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -44,18 +51,24 @@ final class PlayerViewController: UIViewController {
 extension PlayerViewController: PlayerViewDelegate {
     
     func backButtonTapped() {
-        // implement
+        guard let previous = playlistItem.previous else { return }
+        self.playlistItem = previous
+        guard let trackName = playlistItem.track?.trackName, let imageUrl = playlistItem.track?.artworkUrl else { return }
+        setModel(model: PlayerViewModel(title: trackName, timer: nil, progressIncrementer: 0, time: 0, progress: 0, imageUrl: imageUrl))
     }
 
     func skipButtonTapped() {
-        // implement
+        guard let next = playlistItem.next else { return }
+        self.playlistItem = next
+        guard let trackName = playlistItem.track?.trackName, let imageUrl = playlistItem.track?.artworkUrl else { return }
+        setModel(model: PlayerViewModel(title: trackName, timer: nil, progressIncrementer: 0, time: 0, progress: 0, imageUrl: imageUrl))
     }
 
     func pauseButtonTapped() {
-       // implement
+        print("pause")
     }
 
     func playButtonTapped() {
-        // implement
+        print("play")
     }
 }

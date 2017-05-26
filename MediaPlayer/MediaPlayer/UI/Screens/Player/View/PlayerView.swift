@@ -17,8 +17,11 @@ final class PlayerView: UIView {
             titleLabel.text = model.title
             guard let imageUrl = URL(string: model.imageUrl) else { return }
             albumImageView.downloadImage(url: imageUrl)
+            model.timer = Timer.init()
         }
     }
+    
+    private var timer: Timer?
     
     private var titleView: UIView = {
         let top = UIView()
@@ -28,6 +31,7 @@ final class PlayerView: UIView {
     
     private var titleLabel: UILabel = {
         let title = UILabel()
+        title.textColor = .white
         title.textAlignment = .center
         return title
     }()
@@ -88,6 +92,8 @@ final class PlayerView: UIView {
     private var playtimeSlider: UISlider = {
         let slider = UISlider()
         slider.thumbTintColor = UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
+        slider.tintColor = .white
+        slider.isUserInteractionEnabled = true 
         return slider
     }()
     
@@ -100,7 +106,7 @@ final class PlayerView: UIView {
     func configure(with model: PlayerViewModel) {
         self.model = model
         setupViews()
-        pauseButton.isHidden = true
+        pauseButton.alpha = 0
     }
     
     private func sharedTitleArtLayout(view: UIView) {
@@ -173,7 +179,7 @@ final class PlayerView: UIView {
         slider.centerXAnchor.constraint(equalTo: controlsView.centerXAnchor).isActive = true
         slider.topAnchor.constraint(equalTo: controlsView.topAnchor, constant: UIScreen.main.bounds.height * 0.08).isActive = true
         slider.heightAnchor.constraint(equalTo: controlsView.heightAnchor, multiplier: 0.01).isActive = true
-        slider.widthAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.85).isActive = true
+        slider.widthAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.9).isActive = true
     }
     
     private func skipButtonsSharedLayout(controlsView: UIView, button: UIButton) {
@@ -203,5 +209,75 @@ final class PlayerView: UIView {
         setup(playButton: playButton, pauseButton: pauseButton)
         setup(slider: playtimeSlider)
         setup(skipButton: skipButton, backButton: backButton)
+        addSelectors()
+    }
+    
+    func sliderValueChanged() {
+        print(playtimeSlider.value)
+    }
+    
+    func addSelectors() {
+        playButton.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside)
+        pauseButton.addTarget(self, action: #selector(pauseButtonTapped), for: .touchUpInside)
+        skipButton.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
+        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        playtimeSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
+    }
+    
+    func playButtonTapped() {
+        guard var model = model else { return }
+        let timerDic: NSMutableDictionary = ["count": model.time]
+        setTimer(timerDict: timerDic)
+        switchButtonAlpha(for: pauseButton, withButton: playButton)
+        delegate?.playButtonTapped()
+    }
+    
+    func switchButtonAlpha(for button: UIButton, withButton: UIButton) {
+        button.alpha = 1
+        withButton.alpha = 0
+    }
+    
+    func pauseButtonTapped() {
+        guard let countDict = timer?.userInfo as? NSMutableDictionary else { return }
+        pauseTime(countdict: countDict)
+        switchButtonAlpha(for: playButton, withButton: pauseButton)
+        delegate?.pauseButtonTapped()
+    }
+    
+    func skipButtonTapped() {
+        playButton.alpha = 1
+        playtimeSlider.value = 0
+        delegate?.skipButtonTapped()
+    }
+    
+    func backButtonTapped() {
+        playButton.alpha = 1
+        playtimeSlider.value = 0
+        delegate?.backButtonTapped()
+    }
+    
+    private func setTimer(timerDict: NSMutableDictionary) {
+        guard var model = model else { return }
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTime), userInfo: timerDict, repeats: true)
+    }
+    
+    private func pauseTime(countdict: NSMutableDictionary) {
+        guard var model = model else { return }
+        if let count = countdict["count"] as? Int {
+            countdict["count"] = count
+            model.time = count
+            timer?.invalidate()
+        }
+        
+    }
+    
+    func updateTime() {
+        guard let countDict = timer?.userInfo as? NSMutableDictionary else { return }
+        guard let count = countDict["count"] as? Int else { return }
+        model.time = count + 1
+        model.progressIncrementer += 0.001
+        playtimeSlider.value += model.progressIncrementer
+        model.progress = playtimeSlider.value
     }
 }

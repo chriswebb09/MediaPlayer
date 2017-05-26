@@ -12,6 +12,7 @@ class SettingsOptionView: UIView {
     
     private var settingNameLabel: UILabel = {
         let settingName = UILabel()
+        settingName.textColor = .white
         settingName.textAlignment = .center 
         return settingName
     }()
@@ -22,7 +23,6 @@ class SettingsOptionView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        backgroundColor = .red
         setup(nameLabel: settingNameLabel)
     }
     
