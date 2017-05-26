@@ -25,7 +25,8 @@ class AppCoordinator: Coordinator {
     
     // MARK: - Init
     
-    init(window: UIWindow) {
+    init(window: UIWindow?) {
+        guard let window = window else { fatalError("Window object not created") }
         self.window = window
         self.dataSource = BaseMediaControllerDataSource(store: store)
         self.window.rootViewController = self.rootViewController
@@ -70,6 +71,7 @@ extension AppCoordinator: StartViewControllerDelegate {
     
     func createAccountSelected() {
         let createAccountViewController = CreateAccountViewController()
+        createAccountViewController.delegate = self
         navigationController.pushViewController(createAccountViewController, animated: false)
     }
 }
@@ -81,4 +83,10 @@ extension AppCoordinator: LoginViewControllerDelegate {
     }
 }
 
+extension AppCoordinator: CreateAccountViewControllerDelegate {
+    
+    func submitButtonTapped() {
+        delegate?.transitionCoordinator(type: .tabbar)
+    }
+}
 

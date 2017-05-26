@@ -68,6 +68,7 @@
 		A75EAE361ED855AA009F6FC2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE351ED855AA009F6FC2 /* Service.swift */; };
 		A75EAE381ED8649A009F6FC2 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE371ED8649A009F6FC2 /* CoordinatorType.swift */; };
 		A75EAE3A1ED864B3009F6FC2 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE391ED864B3009F6FC2 /* CoordinatorDelegate.swift */; };
+		A75EAE3C1ED867C8009F6FC2 /* PlayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE3B1ED867C8009F6FC2 /* PlayState.swift */; };
 		A76B06581ED254DE0006476F /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06571ED254DE0006476F /* Resuable.swift */; };
 		A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06591ED254E40006476F /* CellRepresentable.swift */; };
 		A76B065C1ED254EA0006476F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B065B1ED254EA0006476F /* BaseView.swift */; };
@@ -212,6 +213,7 @@
 		A75EAE351ED855AA009F6FC2 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		A75EAE371ED8649A009F6FC2 /* CoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		A75EAE391ED864B3009F6FC2 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
+		A75EAE3B1ED867C8009F6FC2 /* PlayState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayState.swift; sourceTree = "<group>"; };
 		A76B06571ED254DE0006476F /* Resuable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resuable.swift; path = MediaPlayer/UI/Protocol/Resuable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06591ED254E40006476F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = MediaPlayer/UI/Protocol/CellRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		A76B065B1ED254EA0006476F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = MediaPlayer/UI/Protocol/BaseView.swift; sourceTree = SOURCE_ROOT; };
@@ -464,6 +466,7 @@
 			children = (
 				A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */,
 				A799BEB11ED4FF5300F6C4A9 /* PlayerViewControllerModel.swift */,
+				A75EAE3B1ED867C8009F6FC2 /* PlayState.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1065,6 +1068,7 @@
 				A7A081191ECF18140035EE1A /* NewPlaylistView.swift in Sources */,
 				A76B066E1ED2586D0006476F /* TrackItemsFlowLayout.swift in Sources */,
 				A7A0811C1ECF18AA0035EE1A /* ImageLoadOperation.swift in Sources */,
+				A75EAE3C1ED867C8009F6FC2 /* PlayState.swift in Sources */,
 				A76B065C1ED254EA0006476F /* BaseView.swift in Sources */,
 				A7A080FC1ECF15520035EE1A /* BaseOperation.swift in Sources */,
 				A7A080D71ECF11740035EE1A /* ButtonMaker.swift in Sources */,

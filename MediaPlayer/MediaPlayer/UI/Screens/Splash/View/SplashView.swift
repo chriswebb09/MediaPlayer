@@ -34,7 +34,6 @@ final class SplashView: UIView {
         logoImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
     
-    
     private func setupConstraints(logoImageView: UIImageView) {
         addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false

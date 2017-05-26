@@ -6,19 +6,11 @@ class SettingsView: UIView {
     
     var settingOneView: SettingsOptionView = {
         let settingOne = SettingsOptionView()
-        settingOne.backgroundColor = UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
-        settingOne.layer.borderColor = UIColor.white.cgColor
-        settingOne.layer.borderWidth = 1
-        settingOne.isUserInteractionEnabled = true
         return settingOne
     }()
     
     var settingTwoView: SettingsOptionView = {
         let settingTwo = SettingsOptionView()
-        settingTwo.backgroundColor = UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
-        settingTwo.layer.borderColor = UIColor.white.cgColor
-        settingTwo.layer.borderWidth = 1
-        settingTwo.isUserInteractionEnabled = true
         return settingTwo
     }()
     

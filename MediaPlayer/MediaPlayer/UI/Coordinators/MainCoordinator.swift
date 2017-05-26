@@ -6,7 +6,8 @@ class MainCoordinator {
     var window: UIWindow!
     
     @discardableResult
-    init(coordinator: Coordinator, window: UIWindow) {
+    init(coordinator: Coordinator, window: UIWindow?) {
+        guard let window = window else { fatalError("Window object could not be found") }
         self.appCoordinator = coordinator
         self.window = window
         let splashView = SplashView()

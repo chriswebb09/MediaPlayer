@@ -68,7 +68,7 @@ class CoordinatorTests: XCTestCase {
         appCoordinator.splashViewFinishedAnimation(finished: true)
         let startVC = appCoordinator.navigationController.viewControllers[0] as! StartViewController
         startVC.createAccountTapped()
-        XCTAssert(appCoordinator.navigationController.viewControllers[1].view.tag == 3, "View is of type startView / tag == 0")
+        XCTAssert(appCoordinator.navigationController.viewControllers[1].view.tag == 3, "View is of type createAccountView / tag == 3")
         XCTAssert(appCoordinator.navigationController.isNavigationBarHidden == true, "Navigation bar is visible")
     }
 }

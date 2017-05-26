@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol CreateAccountViewDelegate {
-    
+protocol CreateAccountViewDelegate: class {
+    func submitButtonTapped() 
 }

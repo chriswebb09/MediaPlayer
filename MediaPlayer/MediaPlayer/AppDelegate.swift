@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let mpMusic = MPUserMediaPlayer()
         mpMusic.getPlaylists()
-        self.appCoordinator = AppCoordinator(window: self.window!)
-        self.mainCoordinator = MainCoordinator(coordinator: appCoordinator, window: window!)
+        self.appCoordinator = AppCoordinator(window: self.window)
+        self.mainCoordinator = MainCoordinator(coordinator: appCoordinator, window: window)
         return true
     }
     

@@ -1,9 +1,5 @@
 import UIKit
 
-enum PlayState {
-    case queued, playing, paused, done
-}
-
 final class PlayerViewController: UIViewController {
     
     weak var delegate: PlayerViewControllerDelegate?

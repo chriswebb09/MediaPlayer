@@ -17,7 +17,6 @@ class LoginViewController: UIViewController {
     }
 }
 
-
 extension LoginViewController: LoginViewDelegate {
     
     func usernameFieldDidAddText(text: String?) {

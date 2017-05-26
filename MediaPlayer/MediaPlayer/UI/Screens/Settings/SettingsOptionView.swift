@@ -24,6 +24,11 @@ class SettingsOptionView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         setup(nameLabel: settingNameLabel)
+        backgroundColor = UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
+        layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 1
+        isUserInteractionEnabled = true
+
     }
     
     func setup(nameLabel: UILabel) {
