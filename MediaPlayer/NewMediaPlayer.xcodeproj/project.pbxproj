@@ -60,6 +60,7 @@
 		A73E5E321ED8201200349C01 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E5E311ED8201200349C01 /* SettingsView.swift */; };
 		A73E5E341ED8202700349C01 /* SettingsOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E5E331ED8202700349C01 /* SettingsOptionView.swift */; };
 		A73E5E361ED8299100349C01 /* SettingsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E5E351ED8299100349C01 /* SettingsViewDelegate.swift */; };
+		A73E5E381ED847D500349C01 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73E5E371ED847D500349C01 /* NetworkTests.swift */; };
 		A76B06581ED254DE0006476F /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06571ED254DE0006476F /* Resuable.swift */; };
 		A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06591ED254E40006476F /* CellRepresentable.swift */; };
 		A76B065C1ED254EA0006476F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B065B1ED254EA0006476F /* BaseView.swift */; };
@@ -196,6 +197,7 @@
 		A73E5E311ED8201200349C01 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Settings/SettingsView.swift; sourceTree = "<group>"; };
 		A73E5E331ED8202700349C01 /* SettingsOptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsOptionView.swift; path = Settings/SettingsOptionView.swift; sourceTree = "<group>"; };
 		A73E5E351ED8299100349C01 /* SettingsViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewDelegate.swift; path = Settings/SettingsViewDelegate.swift; sourceTree = "<group>"; };
+		A73E5E371ED847D500349C01 /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		A76B06571ED254DE0006476F /* Resuable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resuable.swift; path = MediaPlayer/UI/Protocol/Resuable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06591ED254E40006476F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = MediaPlayer/UI/Protocol/CellRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		A76B065B1ED254EA0006476F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = MediaPlayer/UI/Protocol/BaseView.swift; sourceTree = SOURCE_ROOT; };
@@ -573,6 +575,7 @@
 			children = (
 				A721B2C81ECECB43003E0D12 /* Info.plist */,
 				A721B2C61ECECB43003E0D12 /* NewMediaPlayerTests.swift */,
+				A73E5E371ED847D500349C01 /* NetworkTests.swift */,
 			);
 			name = NewMediaPlayerTests;
 			path = MediaPlayerTests;
@@ -1057,6 +1060,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A73E5E381ED847D500349C01 /* NetworkTests.swift in Sources */,
 				A721B2C71ECECB43003E0D12 /* NewMediaPlayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,6 +18,7 @@ final class PlayerViewController: UIViewController {
     init(playerView: PlayerView = PlayerView()) {
         self.playerView = playerView
         super.init(nibName: nil, bundle: nil)
+        playerState = .queued
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -58,14 +59,15 @@ extension PlayerViewController: PlayerViewDelegate {
     func backButtonTapped() {
         guard let previous = playlistItem.previous else { return }
         self.playlistItem = previous
+        playerState = .queued 
         guard let trackName = playlistItem.track?.trackName, let imageUrl = playlistItem.track?.artworkUrl else { return }
         setModel(model: PlayerViewModel(title: trackName, timer: nil, progressIncrementer: 0, time: 0, progress: 0, imageUrl: imageUrl))
     }
 
     func skipButtonTapped() {
         guard let item = playlistItem, let next = item.next else { return }
-        //guard let next = playlistItem.next else { return }
         self.playlistItem = next
+        playerState = .queued
         guard let trackName = playlistItem.track?.trackName, let imageUrl = playlistItem.track?.artworkUrl else { return }
         setModel(model: PlayerViewModel(title: trackName, timer: nil, progressIncrementer: 0, time: 0, progress: 0, imageUrl: imageUrl))
     }
