@@ -55,4 +55,21 @@ class NetworkTests: XCTestCase {
             }
         }
     }
+    
+    func testNoInput() {
+        let client = MediaAPIClient()
+        let networkService = NetworkService(provider: client)
+        let dataSource = MediaDataStore(service: networkService)
+        dataSource.setSearch(string: "")
+        let expect = expectation(description: "API Client returns proper number of items from search")
+        dataSource.searchForTracks { playlist, error in
+            XCTAssert(playlist?.itemCount == 0)
+            expect.fulfill()
+        }
+        waitForExpectations(timeout: 6) { error in
+            if let error = error {
+                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
+            }
+        }
+    }
 }
