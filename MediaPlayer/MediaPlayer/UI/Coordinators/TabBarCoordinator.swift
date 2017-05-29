@@ -65,8 +65,7 @@ extension TabbarCoordinator: TabControllerDelegate {
     
     func didSelectTrack(at index: Int, with playlist: Playlist) {
         let playerView = PlayerView()
-        let playerViewController = PlayerViewController(playerView: playerView)
-        playerViewController.index = index
+        let playerViewController = PlayerViewController(playerView: playerView, index: index, playlist: playlist)
         playerViewController.playlist = playlist
         tabbarController.tabBar.alpha = 0
         mediaCollectionController.navigationController?.pushViewController(playerViewController, animated: false)

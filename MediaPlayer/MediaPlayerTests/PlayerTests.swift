@@ -17,15 +17,15 @@ class PlayerTests: XCTestCase {
         let dataSource = MediaDataStore(service: networkService)
         dataSource.setSearch(string: "new")
         let playerView = PlayerView()
-        let controller = PlayerViewController(playerView: playerView)
+        var controller: PlayerViewController!
         dataSource.searchForTracks { playlist, error in
-            controller.playlist = playlist
-            controller.index = 1
+            guard let playlist = playlist else { return }
+            controller = PlayerViewController(playerView: playerView, index: 1, playlist: playlist)
             controller.viewDidLoad()
-            XCTAssert(controller.playlistItem == playlist?.playlistItem(at: 1), "PlaylistItem is first track" )
+            XCTAssert(controller.playlistItem == playlist.playlistItem(at: 1), "PlaylistItem is first track" )
+            controller.playButtonTapped()
+            XCTAssert(controller.playerState == .playing, "Player state is playing")
         }
-        controller.playButtonTapped()
-        XCTAssert(controller.playerState == .playing, "Player state is playing")
     }
     
     func testPause() {
@@ -34,16 +34,16 @@ class PlayerTests: XCTestCase {
         let dataSource = MediaDataStore(service: networkService)
         dataSource.setSearch(string: "new")
         let playerView = PlayerView()
-        let controller = PlayerViewController(playerView: playerView)
+        var controller: PlayerViewController!
         dataSource.searchForTracks { playlist, error in
-            controller.playlist = playlist
-            controller.index = 1
+            guard let playlist = playlist else { return }
+            controller = PlayerViewController(playerView: playerView, index: 1, playlist: playlist)
             controller.viewDidLoad()
-            XCTAssert(controller.playlistItem == playlist?.playlistItem(at: 1), "PlaylistItem is first track" )
+            XCTAssert(controller.playlistItem == playlist.playlistItem(at: 1), "PlaylistItem is first track" )
+            controller.playButtonTapped()
+            controller.pauseButtonTapped()
+            XCTAssert(controller.playerState == .paused, "Player state is paused")
         }
-        controller.playButtonTapped()
-        controller.pauseButtonTapped()
-        XCTAssert(controller.playerState == .paused, "Player state is paused")
     }
     
     func testSkip() {
@@ -52,18 +52,18 @@ class PlayerTests: XCTestCase {
         let dataSource = MediaDataStore(service: networkService)
         dataSource.setSearch(string: "new")
         let playerView = PlayerView()
-        let controller = PlayerViewController(playerView: playerView)
+        var controller: PlayerViewController!
         var playerlist: Playlist!
         dataSource.searchForTracks { playlist, error in
-            controller.playlist = playlist
+            guard let playlist = playlist else { return }
+            controller = PlayerViewController(playerView: playerView, index: 1, playlist: playlist)
             playerlist = playlist
-            controller.index = 1
             controller.viewDidLoad()
-            XCTAssert(controller.playlistItem == playlist?.playlistItem(at: 1), "PlaylistItem is first track" )
+            XCTAssert(controller.playlistItem == playlist.playlistItem(at: 1), "PlaylistItem is first track" )
+            controller.skipButtonTapped()
+            XCTAssert(controller.playlistItem == playerlist?.playlistItem(at: 2), "PlaylistItem is second track" )
+            XCTAssert(controller.playerState == .queued, "Track is queued")
         }
-        controller.skipButtonTapped()
-        XCTAssert(controller.playlistItem == playerlist?.playlistItem(at: 2), "PlaylistItem is second track" )
-        XCTAssert(controller.playerState == .queued, "Track is queued")
     }
     
 }

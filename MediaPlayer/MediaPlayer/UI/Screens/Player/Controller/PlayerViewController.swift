@@ -1,20 +1,29 @@
 import UIKit
 
-final class PlayerViewController: UIViewController {
+protocol Playable {
+    var playlist: Playlist { get set }
+    var index: Int { get set }
+    var playlistItem: PlaylistItem! { get set }
+}
+
+final class PlayerViewController: UIViewController, Playable {
     
     weak var delegate: PlayerViewControllerDelegate?
     
     private var playerView: PlayerView!
     var playerState: PlayState!
-    var playlist: Playlist!
-    var index: Int!
+    var playlist: Playlist
+    var index: Int
     var playerViewModel: PlayerViewModel!
     var playlistItem: PlaylistItem!
     
-    init(playerView: PlayerView = PlayerView()) {
+    init(playerView: PlayerView = PlayerView(), index: Int, playlist: Playlist) {
         self.playerView = playerView
+        self.index = index
+        self.playlist = playlist
         super.init(nibName: nil, bundle: nil)
         playerState = .queued
+        self.playlistItem = playlist.playlistItem(at: index)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -24,8 +33,6 @@ final class PlayerViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         playerView.delegate = self
-        guard let playlist = playlist else { return }
-        playlistItem = playlist.playlistItem(at: index)
         edgesForExtendedLayout = []
         title = playlistItem.track?.artistName
         guard let trackName = playlistItem.track?.trackName, let imageUrl = playlistItem.track?.artworkUrl else { return }

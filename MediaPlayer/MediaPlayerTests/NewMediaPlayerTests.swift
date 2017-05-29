@@ -28,7 +28,7 @@ class MediaPlayerTests: XCTestCase {
     func testPlayerView() {
         let model = PlayerViewModel(title: "Test", timer: nil, progressIncrementer: 0, time: 0, progress: 0, imageUrl: "http://i.imgur.com/5gBiQe0.jpg")
         let playerView = PlayerView()
-        let controller = PlayerViewController(playerView: playerView)
+        let controller = PlayerViewController(playerView: playerView, index: 0, playlist: Playlist())
         controller.setModel(model: model)
         XCTAssert(controller.title == "Test", "Title is set to track")
     }
