@@ -8,7 +8,8 @@
 
 import UIKit
 
-public class PlaylistItem {
+protocol DataItem { }
+public class PlaylistItem: DataItem {
     var track: Track?
     var next: PlaylistItem?
     weak var previous: PlaylistItem?

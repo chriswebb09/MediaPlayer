@@ -40,9 +40,7 @@ class NetworkTests: XCTestCase {
     }
     
     func testSearch() {
-        let client = MediaAPIClient()
-        let networkService = NetworkService(provider: client)
-        let dataSource = MediaDataStore(service: networkService)
+        let dataSource = MediaDataStore()
         dataSource.setSearch(string: "new")
         let expect = expectation(description: "API Client returns proper number of items from search")
         dataSource.searchForTracks { playlist, error in
@@ -57,9 +55,7 @@ class NetworkTests: XCTestCase {
     }
     
     func testNoInput() {
-        let client = MediaAPIClient()
-        let networkService = NetworkService(provider: client)
-        let dataSource = MediaDataStore(service: networkService)
+        let dataSource = MediaDataStore()
         dataSource.setSearch(string: "")
         let expect = expectation(description: "API Client returns proper number of items from search")
         dataSource.searchForTracks { playlist, error in

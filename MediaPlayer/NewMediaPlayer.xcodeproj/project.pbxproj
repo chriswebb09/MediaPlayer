@@ -16,7 +16,6 @@
 		A714AD121ECEDEFC00C99C55 /* PlayerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD111ECEDEFC00C99C55 /* PlayerViewControllerDelegate.swift */; };
 		A714AD141ECEDF1E00C99C55 /* MediaCollectionControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD131ECEDF1E00C99C55 /* MediaCollectionControllerDelegate.swift */; };
 		A714AD161ECEDF4100C99C55 /* MediaViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD151ECEDF4100C99C55 /* MediaViewControllerDelegate.swift */; };
-		A714AD1C1ECEDFAE00C99C55 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD1B1ECEDFAE00C99C55 /* DataService.swift */; };
 		A714AD1E1ECEDFC700C99C55 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD1D1ECEDFC700C99C55 /* Track.swift */; };
 		A714AD201ECEE05A00C99C55 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD1F1ECEE05A00C99C55 /* SplashView.swift */; };
 		A714AD291ECEE93800C99C55 /* MediaDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714AD281ECEE93800C99C55 /* MediaDataStore.swift */; };
@@ -45,7 +44,6 @@
 		A721B2D41ECECB74003E0D12 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2D31ECECB74003E0D12 /* TabBarController.swift */; };
 		A721B2DA1ECECC4D003E0D12 /* SplashViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2D91ECECC4D003E0D12 /* SplashViewControllerDelegate.swift */; };
 		A721B2DC1ECECC60003E0D12 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2DB1ECECC5F003E0D12 /* SplashViewController.swift */; };
-		A721B2E01ECECD98003E0D12 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2DF1ECECD98003E0D12 /* Services.swift */; };
 		A721B2E21ECECE16003E0D12 /* MediaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2E11ECECE16003E0D12 /* MediaCollectionViewController.swift */; };
 		A721B2E41ECECE3D003E0D12 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */; };
 		A725B0801ED57DEA00CAC00E /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B07F1ED57DEA00CAC00E /* TabBarCoordinator.swift */; };
@@ -64,11 +62,10 @@
 		A75EAE2E1ED84D8F009F6FC2 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE2D1ED84D8F009F6FC2 /* CoordinatorTests.swift */; };
 		A75EAE301ED84D9C009F6FC2 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE2F1ED84D9C009F6FC2 /* PlayerTests.swift */; };
 		A75EAE321ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE311ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift */; };
-		A75EAE341ED85596009F6FC2 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE331ED85596009F6FC2 /* ServiceProtocol.swift */; };
-		A75EAE361ED855AA009F6FC2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE351ED855AA009F6FC2 /* Service.swift */; };
 		A75EAE381ED8649A009F6FC2 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE371ED8649A009F6FC2 /* CoordinatorType.swift */; };
 		A75EAE3A1ED864B3009F6FC2 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE391ED864B3009F6FC2 /* CoordinatorDelegate.swift */; };
 		A75EAE3C1ED867C8009F6FC2 /* PlayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE3B1ED867C8009F6FC2 /* PlayState.swift */; };
+		A75EFCD41EDC179500B3F829 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EFCD31EDC179400B3F829 /* Parser.swift */; };
 		A76B06581ED254DE0006476F /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06571ED254DE0006476F /* Resuable.swift */; };
 		A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06591ED254E40006476F /* CellRepresentable.swift */; };
 		A76B065C1ED254EA0006476F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B065B1ED254EA0006476F /* BaseView.swift */; };
@@ -157,7 +154,6 @@
 		A714AD111ECEDEFC00C99C55 /* PlayerViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewControllerDelegate.swift; sourceTree = "<group>"; };
 		A714AD131ECEDF1E00C99C55 /* MediaCollectionControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCollectionControllerDelegate.swift; sourceTree = "<group>"; };
 		A714AD151ECEDF4100C99C55 /* MediaViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewControllerDelegate.swift; sourceTree = "<group>"; };
-		A714AD1B1ECEDFAE00C99C55 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		A714AD1D1ECEDFC700C99C55 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		A714AD1F1ECEE05A00C99C55 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		A714AD281ECEE93800C99C55 /* MediaDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaDataStore.swift; sourceTree = "<group>"; };
@@ -190,7 +186,6 @@
 		A721B2D31ECECB74003E0D12 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A721B2D91ECECC4D003E0D12 /* SplashViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewControllerDelegate.swift; sourceTree = "<group>"; };
 		A721B2DB1ECECC5F003E0D12 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		A721B2DF1ECECD98003E0D12 /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		A721B2E11ECECE16003E0D12 /* MediaCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewController.swift; sourceTree = "<group>"; };
 		A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		A725B07F1ED57DEA00CAC00E /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -209,11 +204,10 @@
 		A75EAE2D1ED84D8F009F6FC2 /* CoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		A75EAE2F1ED84D9C009F6FC2 /* PlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
 		A75EAE311ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMenuPopoverAlert.swift; sourceTree = "<group>"; };
-		A75EAE331ED85596009F6FC2 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
-		A75EAE351ED855AA009F6FC2 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		A75EAE371ED8649A009F6FC2 /* CoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		A75EAE391ED864B3009F6FC2 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		A75EAE3B1ED867C8009F6FC2 /* PlayState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayState.swift; sourceTree = "<group>"; };
+		A75EFCD31EDC179400B3F829 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = MediaPlayer/ApplicationServices/Data/Store/Parser.swift; sourceTree = SOURCE_ROOT; };
 		A76B06571ED254DE0006476F /* Resuable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resuable.swift; path = MediaPlayer/UI/Protocol/Resuable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06591ED254E40006476F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = MediaPlayer/UI/Protocol/CellRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		A76B065B1ED254EA0006476F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = MediaPlayer/UI/Protocol/BaseView.swift; sourceTree = SOURCE_ROOT; };
@@ -758,20 +752,8 @@
 			children = (
 				A7A080F21ECF14AF0035EE1A /* LocalStorage */,
 				A7A080F81ECF14E60035EE1A /* MediaPlayer */,
-				A7A080F11ECF14A70035EE1A /* Services */,
 			);
 			path = Local;
-			sourceTree = "<group>";
-		};
-		A7A080F11ECF14A70035EE1A /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				A714AD1B1ECEDFAE00C99C55 /* DataService.swift */,
-				A721B2DF1ECECD98003E0D12 /* Services.swift */,
-				A75EAE331ED85596009F6FC2 /* ServiceProtocol.swift */,
-				A75EAE351ED855AA009F6FC2 /* Service.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		A7A080F21ECF14AF0035EE1A /* LocalStorage */ = {
@@ -785,6 +767,7 @@
 		A7A080F31ECF14B80035EE1A /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				A75EFCD31EDC179400B3F829 /* Parser.swift */,
 				A714AD281ECEE93800C99C55 /* MediaDataStore.swift */,
 			);
 			path = Store;
@@ -995,7 +978,6 @@
 				A797EC771ED78F7A00898C09 /* TabbarConstants.swift in Sources */,
 				A721B2DA1ECECC4D003E0D12 /* SplashViewControllerDelegate.swift in Sources */,
 				A714AD3C1ECEECB000C99C55 /* BaseMediaControllerDataSource.swift in Sources */,
-				A721B2E01ECECD98003E0D12 /* Services.swift in Sources */,
 				A76B06621ED254F80006476F /* Configurable.swift in Sources */,
 				A76B06661ED255B10006476F /* PlayerViewConstants.swift in Sources */,
 				A7A081001ECF160C0035EE1A /* Notification+Extension.swift in Sources */,
@@ -1008,10 +990,8 @@
 				A711F0501ED25300005437C8 /* CollectionViewAttributes.swift in Sources */,
 				A7A080C61ECF0FD90035EE1A /* BasePopoverAlert.swift in Sources */,
 				A7A081271ECF1BE40035EE1A /* CALayer+Constants.swift in Sources */,
-				A75EAE341ED85596009F6FC2 /* ServiceProtocol.swift in Sources */,
 				A711F0561ED253B3005437C8 /* MediaCellConstants.swift in Sources */,
 				A725B0801ED57DEA00CAC00E /* TabBarCoordinator.swift in Sources */,
-				A714AD1C1ECEDFAE00C99C55 /* DataService.swift in Sources */,
 				A714AD681ECF09A200C99C55 /* UIViewController+Extension.swift in Sources */,
 				A7A080B91ECF0E580035EE1A /* TextFieldExtension.swift in Sources */,
 				A76B06721ED25C480006476F /* PlayerViewDelegate.swift in Sources */,
@@ -1053,6 +1033,7 @@
 				A76B06681ED255CA0006476F /* PlayerViewModel.swift in Sources */,
 				A7A0810D1ECF17580035EE1A /* LoginView.swift in Sources */,
 				A714AD381ECEEC4400C99C55 /* UICollectionView+Extension.swift in Sources */,
+				A75EFCD41EDC179500B3F829 /* Parser.swift in Sources */,
 				A7A080E21ECF12560035EE1A /* MenuActive.swift in Sources */,
 				A714AD581ECF06BB00C99C55 /* PlaylistItem.swift in Sources */,
 				A7A081071ECF16AC0035EE1A /* AnimationDelegate.swift in Sources */,
@@ -1077,7 +1058,6 @@
 				A714AD141ECEDF1E00C99C55 /* MediaCollectionControllerDelegate.swift in Sources */,
 				A721B2D41ECECB74003E0D12 /* TabBarController.swift in Sources */,
 				A76B065E1ED254F00006476F /* TermSearcher.swift in Sources */,
-				A75EAE361ED855AA009F6FC2 /* Service.swift in Sources */,
 				A721B2AF1ECECB43003E0D12 /* AppDelegate.swift in Sources */,
 				A714AD201ECEE05A00C99C55 /* SplashView.swift in Sources */,
 				A711F05A1ED253EB005437C8 /* MediaCellViewModel.swift in Sources */,

@@ -8,7 +8,9 @@
 
 import Foundation
 
-public class Playlist {
+protocol DataCollection { }
+
+public class Playlist: DataCollection {
     
     private var head: PlaylistItem?
     

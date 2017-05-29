@@ -12,9 +12,7 @@ class MediaPlayerTests: XCTestCase {
     }
     
     func testSetStoreSearchTerm() {
-        let client = MediaAPIClient()
-        let service = NetworkService(provider: client)
-        let mediaStore = MediaDataStore(service: service)
+        let mediaStore = MediaDataStore()
         mediaStore.setSearch(string: "New")
         XCTAssert(mediaStore.searchTerm == "New", "Sets search term to new")
     }

@@ -8,7 +8,7 @@ class AppCoordinator: Coordinator {
     
     // MARK: - Properties
     
-    var store = MediaDataStore(service: NetworkService(provider: MediaAPIClient()))
+    var store = MediaDataStore()
     let dataSource: BaseMediaControllerDataSource
     
     var rootViewController: UIViewController {

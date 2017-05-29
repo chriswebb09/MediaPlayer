@@ -12,14 +12,12 @@ class PlayerTests: XCTestCase {
     }
     
     func testPlay() {
-        let client = MediaAPIClient()
-        let networkService = NetworkService(provider: client)
-        let dataSource = MediaDataStore(service: networkService)
+        let dataSource = MediaDataStore()
         dataSource.setSearch(string: "new")
         let playerView = PlayerView()
         var controller: PlayerViewController!
         dataSource.searchForTracks { playlist, error in
-            guard let playlist = playlist else { return }
+            guard let playlist = playlist else { assertionFailure(); return }
             controller = PlayerViewController(playerView: playerView, index: 1, playlist: playlist)
             controller.viewDidLoad()
             XCTAssert(controller.playlistItem == playlist.playlistItem(at: 1), "PlaylistItem is first track" )
@@ -29,14 +27,12 @@ class PlayerTests: XCTestCase {
     }
     
     func testPause() {
-        let client = MediaAPIClient()
-        let networkService = NetworkService(provider: client)
-        let dataSource = MediaDataStore(service: networkService)
+        let dataSource = MediaDataStore()
         dataSource.setSearch(string: "new")
         let playerView = PlayerView()
         var controller: PlayerViewController!
         dataSource.searchForTracks { playlist, error in
-            guard let playlist = playlist else { return }
+            guard let playlist = playlist else { assertionFailure(); return }
             controller = PlayerViewController(playerView: playerView, index: 1, playlist: playlist)
             controller.viewDidLoad()
             XCTAssert(controller.playlistItem == playlist.playlistItem(at: 1), "PlaylistItem is first track" )
@@ -47,15 +43,14 @@ class PlayerTests: XCTestCase {
     }
     
     func testSkip() {
-        let client = MediaAPIClient()
-        let networkService = NetworkService(provider: client)
-        let dataSource = MediaDataStore(service: networkService)
+
+        let dataSource = MediaDataStore()
         dataSource.setSearch(string: "new")
         let playerView = PlayerView()
         var controller: PlayerViewController!
         var playerlist: Playlist!
         dataSource.searchForTracks { playlist, error in
-            guard let playlist = playlist else { return }
+            guard let playlist = playlist else { assertionFailure(); return }
             controller = PlayerViewController(playerView: playerView, index: 1, playlist: playlist)
             playerlist = playlist
             controller.viewDidLoad()

@@ -46,8 +46,7 @@ class TabbarCoordinator: Coordinator {
     }
     
     func setStore(from client: MediaAPIClient) {
-        let networkService = NetworkService(provider: client)
-        let store = MediaDataStore(service: networkService)
+        let store = MediaDataStore()
         self.dataSource = BaseMediaControllerDataSource(store: store)
         let collectionView = MediaCollectionViewController(dataSource: dataSource)
         self.mediaCollectionController = collectionView
