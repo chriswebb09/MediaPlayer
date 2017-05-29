@@ -43,7 +43,6 @@ class PlayerTests: XCTestCase {
     }
     
     func testSkip() {
-
         let dataSource = MediaDataStore()
         dataSource.setSearch(string: "new")
         let playerView = PlayerView()

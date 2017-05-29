@@ -20,7 +20,7 @@ public class Playlist: DataCollection {
         return head == nil
     }
     
-    private var last: PlaylistItem? {
+    var last: PlaylistItem? {
         if var track = head {
             while case let next? = track.next {
                 track = next

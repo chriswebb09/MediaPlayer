@@ -18,6 +18,7 @@ class BaseMediaControllerDataSource {
             print(store)
         }
     }
+    
     var playlist: Playlist? {
         didSet {
             dump(resultsStatus)
@@ -25,9 +26,16 @@ class BaseMediaControllerDataSource {
     }
     
     var tracks: [Track]?
+    
     var resultsStatus: MediaResultsStatus! {
         didSet {
             print(resultsStatus)
+        }
+    }
+    
+    var searchTerm: String? {
+        didSet {
+            store.setSearch(string: searchTerm)
         }
     }
     
@@ -42,5 +50,10 @@ class BaseMediaControllerDataSource {
     init(store: MediaDataStore) {
         self.store = store
         self.resultsStatus = .none
+    }
+    
+    func resetData() {
+        playlist?.removeAll()
+        searchTerm = "" 
     }
 }

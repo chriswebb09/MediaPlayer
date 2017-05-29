@@ -19,6 +19,28 @@ class NetworkTests: XCTestCase {
         super.tearDown()
     }
     
+    func testParser() {
+        let expect = expectation(description: "API Client returns proper number of items from search")
+        let searchTerm = "new"
+        var parser = TrackParser()
+        MediaAPIClient.search(for: searchTerm) { response in
+            switch response {
+            case .success(let json):
+                var tracks = parser.parse(json) as! Playlist
+                XCTAssert(tracks.itemCount == 50)
+                expect.fulfill()
+            case .failed(let error):
+                print(error.localizedDescription)
+                assertionFailure()
+            }
+        }
+        waitForExpectations(timeout: 6) { error in
+            if let error = error {
+                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
+            }
+        }
+    }
+    
     func testNetworkRequest() {
         let expect = expectation(description: "API Client returns proper number of items from search")
         let searchTerm = "new"

@@ -61,6 +61,7 @@ extension PlayerViewController: PlayerViewDelegate {
     
     func backButtonTapped() {
         guard let previous = playlistItem.previous else { return }
+        if index > 0 { index -= 1 }
         self.playlistItem = previous
         playerState = .queued 
         guard let trackName = playlistItem.track?.trackName, let imageUrl = playlistItem.track?.artworkUrl else { return }
@@ -69,6 +70,7 @@ extension PlayerViewController: PlayerViewDelegate {
 
     func skipButtonTapped() {
         guard let item = playlistItem, let next = item.next else { return }
+        index += 1
         self.playlistItem = next
         playerState = .queued
         guard let trackName = playlistItem.track?.trackName, let imageUrl = playlistItem.track?.artworkUrl else { return }

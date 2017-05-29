@@ -39,6 +39,16 @@ public struct Track {
             return nil
         }
     }
+    
+    init(trackName: String, artistName: String, artistId: Int, previewUrl: String, artworkUrl: String, collectionName: String) {
+        self.artistId = artistId
+        self.artistName = artistName
+        self.trackName = trackName
+        self.previewUrl = previewUrl
+        self.artworkUrl = artworkUrl
+        self.collectionName = collectionName
+        self.downloaded = false
+    }
 }
 
 // MARK: - Hashable

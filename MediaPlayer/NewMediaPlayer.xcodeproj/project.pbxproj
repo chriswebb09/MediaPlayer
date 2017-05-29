@@ -63,6 +63,8 @@
 		A75EAE3A1ED864B3009F6FC2 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE391ED864B3009F6FC2 /* CoordinatorDelegate.swift */; };
 		A75EAE3C1ED867C8009F6FC2 /* PlayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EAE3B1ED867C8009F6FC2 /* PlayState.swift */; };
 		A75EFCD41EDC179500B3F829 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EFCD31EDC179400B3F829 /* Parser.swift */; };
+		A75EFCDD1EDC59BD00B3F829 /* MediaViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EFCDC1EDC59BD00B3F829 /* MediaViewControllerTests.swift */; };
+		A75EFCDF1EDC5A9700B3F829 /* PlayerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EFCDE1EDC5A9700B3F829 /* PlayerViewControllerTests.swift */; };
 		A76B06581ED254DE0006476F /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06571ED254DE0006476F /* Resuable.swift */; };
 		A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06591ED254E40006476F /* CellRepresentable.swift */; };
 		A76B065C1ED254EA0006476F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B065B1ED254EA0006476F /* BaseView.swift */; };
@@ -200,6 +202,8 @@
 		A75EAE391ED864B3009F6FC2 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		A75EAE3B1ED867C8009F6FC2 /* PlayState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayState.swift; sourceTree = "<group>"; };
 		A75EFCD31EDC179400B3F829 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = MediaPlayer/ApplicationServices/Data/Store/Parser.swift; sourceTree = SOURCE_ROOT; };
+		A75EFCDC1EDC59BD00B3F829 /* MediaViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewControllerTests.swift; sourceTree = "<group>"; };
+		A75EFCDE1EDC5A9700B3F829 /* PlayerViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewControllerTests.swift; sourceTree = "<group>"; };
 		A76B06571ED254DE0006476F /* Resuable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resuable.swift; path = MediaPlayer/UI/Protocol/Resuable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06591ED254E40006476F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = MediaPlayer/UI/Protocol/CellRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		A76B065B1ED254EA0006476F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = MediaPlayer/UI/Protocol/BaseView.swift; sourceTree = SOURCE_ROOT; };
@@ -568,10 +572,12 @@
 			isa = PBXGroup;
 			children = (
 				A721B2C81ECECB43003E0D12 /* Info.plist */,
+				A75EFCDC1EDC59BD00B3F829 /* MediaViewControllerTests.swift */,
 				A721B2C61ECECB43003E0D12 /* NewMediaPlayerTests.swift */,
 				A73E5E371ED847D500349C01 /* NetworkTests.swift */,
 				A75EAE2D1ED84D8F009F6FC2 /* CoordinatorTests.swift */,
 				A75EAE2F1ED84D9C009F6FC2 /* PlayerTests.swift */,
+				A75EFCDE1EDC5A9700B3F829 /* PlayerViewControllerTests.swift */,
 			);
 			name = NewMediaPlayerTests;
 			path = MediaPlayerTests;
@@ -1091,8 +1097,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A75EAE301ED84D9C009F6FC2 /* PlayerTests.swift in Sources */,
+				A75EFCDF1EDC5A9700B3F829 /* PlayerViewControllerTests.swift in Sources */,
 				A73E5E381ED847D500349C01 /* NetworkTests.swift in Sources */,
 				A721B2C71ECECB43003E0D12 /* NewMediaPlayerTests.swift in Sources */,
+				A75EFCDD1EDC59BD00B3F829 /* MediaViewControllerTests.swift in Sources */,
 				A75EAE2E1ED84D8F009F6FC2 /* CoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -4,10 +4,11 @@ class MediaCollectionViewController: BaseMediaViewController {
     
     var buttonItem: UIBarButtonItem!
     
-    let searchController = UISearchController(searchResultsController: nil)
+    var searchController = UISearchController(searchResultsController: nil)
     
-    fileprivate var searchBar = UISearchBar() {
+    var searchBar = UISearchBar() {
         didSet {
+            searchBar.delegate = self
             searchBar.returnKeyType = .done
         }
     }
@@ -22,6 +23,12 @@ class MediaCollectionViewController: BaseMediaViewController {
                 }
             }
         }
+    }
+    
+    convenience init(collectionView: UICollectionView, dataSource: BaseMediaControllerDataSource, searchController: UISearchController) {
+        self.init(dataSource: dataSource)
+        self.collectionView = collectionView
+        self.searchController = searchController
     }
     
     override func viewDidLoad() {
@@ -116,7 +123,7 @@ extension MediaCollectionViewController: UISearchBarDelegate {
     }
     
     func searchOnTextChange(text: String, store: MediaDataStore, navController: UINavigationController) {
-        dataSource.store.setSearch(string: text)
+        dataSource.searchTerm = text
         searchBarActive = true
         if text != "" { searchBarHasInput() }
         navController.navigationBar.topItem?.title = "Search: \(text)"
@@ -141,12 +148,16 @@ extension MediaCollectionViewController: UISearchBarDelegate {
         searchOnTextChange(text: barText, store: dataSource.store, navController: navcontroller)
     }
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        dataSource.playlist?.removeAll()
+    func onCancel(collectionView: UICollectionView, dataSource: BaseMediaControllerDataSource, store: MediaDataStore) {
+        dataSource.resetData()
         collectionView.reloadData()
         navigationItem.setRightBarButton(buttonItem, animated: false)
         searchBarActive = false
         viewShown = .empty
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        onCancel(collectionView: collectionView, dataSource: dataSource, store: dataSource.store)
     }
 }
 
@@ -157,7 +168,7 @@ extension MediaCollectionViewController: UISearchResultsUpdating {
         if searchString != nil {
             dataSource.playlist?.removeAll()
             if let searchString = searchString {
-                self.dataSource.store.setSearch(string: searchString)
+                self.dataSource.searchTerm = searchString
                 self.dataSource.store.searchForTracks { [weak self] tracks, error in
                     guard let strongSelf = self, let tracks = tracks else { return }
                     strongSelf.dataSource.playlist = tracks
