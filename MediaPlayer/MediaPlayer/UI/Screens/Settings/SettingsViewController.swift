@@ -41,5 +41,4 @@ extension SettingsViewController: SettingsViewDelegate {
     func settingTwoTapped() {
         print("settings two tappped")
     }
-
 }

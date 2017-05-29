@@ -1,16 +1,12 @@
 import UIKit
 
-class MediaDataStore: MediaCollectionHandler {
+class MediaDataStore {
     var searchTerm: String = ""
     
     func setSearch(string: String?) {
         searchTerm = string!
     }
-    
-    func didSearchForTrack(with term: String) {
-        print(term)
-    }
-    
+
     func searchForTracks(completion: @escaping (_ playlist: Playlist? , _ error: Error?) -> Void) {
         MediaAPIClient.search(for: searchTerm) { response in
             switch response {

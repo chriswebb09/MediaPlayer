@@ -3,6 +3,7 @@ import UIKit
 class TabbarCoordinator: Coordinator {
     
     var type: CoordinatorType = .tabbar
+    
     weak var delegate: CoordinatorDelegate?
     
     // MARK: - Properties
@@ -35,7 +36,6 @@ class TabbarCoordinator: Coordinator {
     }
     
     func start(viewController: UIViewController) {
-        mediaCollectionController.delegate = self
         setupTabController(tabController: tabbarController)
     }
     
@@ -50,13 +50,6 @@ class TabbarCoordinator: Coordinator {
         self.dataSource = BaseMediaControllerDataSource(store: store)
         let collectionView = MediaCollectionViewController(dataSource: dataSource)
         self.mediaCollectionController = collectionView
-    }
-}
-
-extension TabbarCoordinator: MediaControllerDelegate {
-    
-    func didSelectTrackAt(at index: Int, with playlist: Playlist) {
-        print(index)
     }
 }
 
