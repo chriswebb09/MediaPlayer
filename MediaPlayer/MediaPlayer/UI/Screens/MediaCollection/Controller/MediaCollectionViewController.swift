@@ -59,13 +59,15 @@ extension MediaCollectionViewController: UISearchControllerDelegate {
     }
     
     func setupNavigationBar(navController: UINavigationController, searchController: UISearchController) {
-        navController.navigationBar.barTintColor = NavigationBarAttributes.navBarTint
+        navController.navigationBar.barTintColor = UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
         searchController.hidesNavigationBarDuringPresentation = false
         searchBar = searchController.searchBar
+        searchBar.barTintColor = .darkGray
+  
         navigationItem.titleView = searchBar
         let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
-        textFieldInsideSearchBar?.textColor = .white
-        navigationItem.rightBarButtonItem?.tintColor = .white
+        textFieldInsideSearchBar?.textColor = .darkGray
+        navigationItem.rightBarButtonItem?.tintColor = .darkGray
     }
 }
 
@@ -98,7 +100,9 @@ extension MediaCollectionViewController: UISearchBarDelegate {
         dataSource.store.searchForTracks { [weak self] playlist, error in
             guard let playlist = playlist, let strongSelf = self else { return }
             strongSelf.dataSource.playlist = playlist
-            print(playlist.itemCount)
+            if playlist.itemCount <= 0 {
+                strongSelf.viewShown = .empty
+            }
             strongSelf.collectionView.reloadData()
             strongSelf.collectionView.performBatchUpdates ({
                 DispatchQueue.main.async {
@@ -142,6 +146,7 @@ extension MediaCollectionViewController: UISearchBarDelegate {
         collectionView.reloadData()
         navigationItem.setRightBarButton(buttonItem, animated: false)
         searchBarActive = false
+        viewShown = .empty
     }
 }
 

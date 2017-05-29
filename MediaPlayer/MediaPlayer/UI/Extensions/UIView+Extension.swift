@@ -21,4 +21,8 @@ extension UIView {
             view.layoutSubviews()
         }
     }
+    
+    func emptyViewSetup(emptyView: EmptyView) {
+        self.addView(view: emptyView, type: .full)
+    }
 }

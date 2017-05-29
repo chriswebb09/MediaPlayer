@@ -8,6 +8,6 @@
 
 import UIKit
 
-struct NavigationBarAttributes {
-    static let navBarTint = UIColor.white
-}
+//struct NavigationBarAttributes {
+//    static let navBarTint = UIColor.white
+//}
