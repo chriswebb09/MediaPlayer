@@ -7,12 +7,12 @@ class BasicButtonFactory: ButtonMaker {
     var buttonBorderColor: CGColor
     var buttonBackgroundColor: UIColor
     
-    init(text: String, textColor: UIColor, buttonBorderWidth: CGFloat, buttonBorderColor: CGColor, buttonBackgroundColor: UIColor) {
+    init(text: String, textColor: UIColor, borderWidth: CGFloat, borderColor: CGColor, backgroundColor: UIColor) {
         self.text = text
         self.textColor = textColor
-        self.buttonBorderWidth = buttonBorderWidth
-        self.buttonBorderColor = buttonBorderColor
-        self.buttonBackgroundColor = buttonBackgroundColor
+        self.buttonBorderWidth = borderWidth
+        self.buttonBorderColor = borderColor
+        self.buttonBackgroundColor = backgroundColor
     }
     
     func createButton() -> UIButton {

@@ -42,7 +42,7 @@ class CreateAccountView: UIView {
     }()
     
     private var submitButton: UIButton = {
-        let submitButton = BasicButtonFactory(text: "Create Account", textColor: .white, buttonBorderWidth: 2, buttonBorderColor: UIColor.blue.cgColor, buttonBackgroundColor: .lightGray)
+        let submitButton = BasicButtonFactory(text: "Create Account", textColor: .white, borderWidth: 2, borderColor: UIColor.blue.cgColor, backgroundColor: .lightGray)
         return submitButton.createButton()
     }()
     

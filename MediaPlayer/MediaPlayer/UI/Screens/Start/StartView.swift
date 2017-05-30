@@ -13,7 +13,7 @@ final class StartView: UIView {
     }()
     
     private var guestUserButton: UIButton = {
-        let guestUser = BasicButtonFactory(text: "Continue As Guest", textColor: .white, buttonBorderWidth: 2, buttonBorderColor:UIColor.blue.cgColor, buttonBackgroundColor: .lightGray)
+        let guestUser = BasicButtonFactory(text: "Continue As Guest", textColor: .white, borderWidth: 2, borderColor:UIColor.blue.cgColor, backgroundColor: .lightGray)
         return guestUser.createButton()
     }()
     

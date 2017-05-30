@@ -30,11 +30,8 @@ final class LoginView: UIView {
     }()
     
     fileprivate var submitButton: UIButton = {
-        let submitButton = BasicButtonFactory(text: "Login",
-                                              textColor: .white,
-                                              buttonBorderWidth: 2,
-                                              buttonBorderColor: UIColor.lightText.cgColor,
-                                              buttonBackgroundColor: UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0))
+        var borderColor = UIColor.lightText.cgColor
+        let submitButton = BasicButtonFactory(text: "Login", textColor: .white, borderWidth: 2, borderColor: borderColor, backgroundColor: .mainColor)
         return submitButton.createButton()
     }()
     
