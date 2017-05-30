@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 final class PlayerView: UIView {
     
     weak var delegate: PlayerViewDelegate?
@@ -55,7 +54,6 @@ final class PlayerView: UIView {
         let albumImage = UIImageView()
         return albumImage
     }()
-    
     
     private var playtimeSliderView: UIView = {
         let preferences = UIView()
@@ -136,6 +134,8 @@ final class PlayerView: UIView {
         slider.isUserInteractionEnabled = true
         return slider
     }()
+    
+    // MARK: - Configuration Methods
     
     func configure(with model: PlayerViewModel) {
         self.model = model
