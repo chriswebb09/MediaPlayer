@@ -1,35 +1,44 @@
 import UIKit
 
+struct LoginViewModel {
+    var username: String = ""
+    var password: String = ""
+    var submitEnabled: Bool = false
+}
+
 final class LoginView: UIView {
     
     weak var delegate: LoginViewDelegate?
     
+    var model: LoginViewModel! {
+        didSet {
+            model.submitEnabled = model.username.isValidEmail() ? true : false
+        }
+    }
+    
     private var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.text = "Login"
+        titleLabel.font = UIFont(name:"Avenir", size: 22)!
         titleLabel.textColor = .black
         titleLabel.textAlignment = .center
         return titleLabel
     }()
     
     fileprivate var usernameField: TextFieldExtension = {
-        let usernameField = TextFieldExtension()
-        usernameField.placeholder = "Username"
-        usernameField.layer.borderColor = UIColor.lightGray.cgColor
-        usernameField.layer.borderWidth = 1
-        return usernameField
+        return TextFieldExtension.emailField("Email")
     }()
     
     private var passwordField: TextFieldExtension = {
-        let passwordField = TextFieldExtension()
-        passwordField.placeholder = "Password"
-        passwordField.layer.borderColor = UIColor.lightGray.cgColor
-        passwordField.layer.borderWidth = 1
-        return passwordField
+        return TextFieldExtension.passwordField()
     }()
     
-    private var submitButton: UIButton = {
-        let submitButton = BasicButtonFactory(text: "Login", textColor: .white, buttonBorderWidth: 2, buttonBorderColor: UIColor.blue.cgColor, buttonBackgroundColor: .lightGray)
+    fileprivate var submitButton: UIButton = {
+        let submitButton = BasicButtonFactory(text: "Login",
+                                              textColor: .white,
+                                              buttonBorderWidth: 2,
+                                              buttonBorderColor: UIColor.lightText.cgColor,
+                                              buttonBackgroundColor: UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0))
         return submitButton.createButton()
     }()
     
@@ -37,11 +46,17 @@ final class LoginView: UIView {
         tag = 1
         super.layoutSubviews()
         backgroundColor = .white
+        usernameField.delegate = self
         setup(titleLabel: titleLabel)
         setup(usernamefield: usernameField)
         setup(passwordField: passwordField)
         setup(submitButton: submitButton)
         submitButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+    }
+    
+    func configure(model: LoginViewModel) {
+        self.model = model
+        submitButton.isEnabled = model.submitEnabled
     }
     
     private func sharedLayout(view: UIView) {
@@ -79,7 +94,9 @@ final class LoginView: UIView {
 
 extension LoginView: UITextFieldDelegate {
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let text = textField.text else { return }
+        model.username = text
         delegate?.usernameFieldDidAddText(text: usernameField.text)
     }
 }

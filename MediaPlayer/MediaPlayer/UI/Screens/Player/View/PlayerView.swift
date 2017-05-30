@@ -64,7 +64,7 @@ final class PlayerView: UIView {
     private var playtimeSlider: UISlider = {
         let slider = UISlider()
         slider.thumbTintColor = .white
-        let thumbImage = #imageLiteral(resourceName: "arrow2").scaleToSize(newSize: CGSize(width: 20, height: 20))
+        let thumbImage = #imageLiteral(resourceName: "arrow2").scaleToSize(CGSize(width: 20, height: 20))
         slider.setThumbImage(thumbImage, for: .normal)
         slider.tintColor = .white
         slider.isUserInteractionEnabled = true
@@ -124,13 +124,12 @@ final class PlayerView: UIView {
     
     private var volumeControlsView: UIView = {
         let volume = UIView()
-        volume.backgroundColor = .white
         return volume
     }()
     
     private var volumeSlider: UISlider = {
         let slider = UISlider()
-        slider.thumbTintColor = .black
+        slider.thumbTintColor = .white
         slider.tintColor = .white
         slider.isUserInteractionEnabled = true
         return slider
@@ -185,13 +184,13 @@ final class PlayerView: UIView {
         sliderView.topAnchor.constraint(equalTo: albumView.bottomAnchor).isActive = true
     }
     
-    private func setup(slider: UISlider) {
-        playtimeSliderView.addSubview(slider)
-        slider.translatesAutoresizingMaskIntoConstraints = false
-        slider.centerXAnchor.constraint(equalTo: playtimeSliderView.centerXAnchor).isActive = true
-        slider.centerYAnchor.constraint(equalTo: playtimeSliderView.centerYAnchor).isActive = true
-        slider.heightAnchor.constraint(equalTo: playtimeSliderView.heightAnchor, multiplier: 0.5).isActive = true
-        slider.widthAnchor.constraint(equalTo: playtimeSliderView.widthAnchor).isActive = true
+    private func setup(playtimeSlider: UISlider) {
+        playtimeSliderView.addSubview(playtimeSlider)
+        playtimeSlider.translatesAutoresizingMaskIntoConstraints = false
+        playtimeSlider.centerXAnchor.constraint(equalTo: playtimeSliderView.centerXAnchor).isActive = true
+        playtimeSlider.centerYAnchor.constraint(equalTo: playtimeSliderView.centerYAnchor).isActive = true
+        playtimeSlider.heightAnchor.constraint(equalTo: playtimeSliderView.heightAnchor, multiplier: 0.5).isActive = true
+        playtimeSlider.widthAnchor.constraint(equalTo: playtimeSliderView.widthAnchor).isActive = true
     }
     
     private func setup(controlsView: UIView) {
@@ -204,7 +203,7 @@ final class PlayerView: UIView {
         controlsView.addSubview(trackButton)
         trackButton.translatesAutoresizingMaskIntoConstraints = false
         trackButton.heightAnchor.constraint(equalTo: controlsView.heightAnchor, multiplier: 0.27).isActive = true
-        trackButton.centerYAnchor.constraint(equalTo: controlsView.centerYAnchor, constant: UIScreen.main.bounds.height * -0.03).isActive = true
+        trackButton.centerYAnchor.constraint(equalTo: controlsView.centerYAnchor, constant: UIScreen.main.bounds.height * -0.1).isActive = true
         trackButton.centerXAnchor.constraint(equalTo: controlsView.centerXAnchor).isActive = true
     }
     
@@ -225,10 +224,10 @@ final class PlayerView: UIView {
     private func setup(skipButton: UIButton, backButton: UIButton) {
         skipButtonsSharedLayout(controlsView: controlsView, button: skipButton)
         skipButton.rightAnchor.constraint(equalTo: controlsView.rightAnchor, constant: UIScreen.main.bounds.width * -0.16).isActive = true
-        skipButton.centerYAnchor.constraint(equalTo: controlsView.centerYAnchor, constant: UIScreen.main.bounds.height * -0.03).isActive = true
+        skipButton.centerYAnchor.constraint(equalTo: controlsView.centerYAnchor, constant: UIScreen.main.bounds.height * -0.1).isActive = true
         skipButtonsSharedLayout(controlsView: controlsView, button: backButton)
         backButton.leftAnchor.constraint(equalTo: controlsView.leftAnchor, constant: UIScreen.main.bounds.width * 0.15).isActive = true
-        backButton.centerYAnchor.constraint(equalTo: controlsView.centerYAnchor, constant: UIScreen.main.bounds.height * -0.03).isActive = true
+        backButton.centerYAnchor.constraint(equalTo: controlsView.centerYAnchor, constant: UIScreen.main.bounds.height * -0.1).isActive = true
     }
     
     
@@ -241,6 +240,15 @@ final class PlayerView: UIView {
         volumeControlsView.widthAnchor.constraint(equalTo: controlsView.widthAnchor).isActive = true
     }
     
+    private func setup(volumeSlider: UISlider) {
+        volumeControlsView.addSubview(volumeSlider)
+        volumeSlider.translatesAutoresizingMaskIntoConstraints = false
+        volumeSlider.centerXAnchor.constraint(equalTo: volumeControlsView.centerXAnchor).isActive = true
+        volumeSlider.centerYAnchor.constraint(equalTo: volumeControlsView.topAnchor).isActive = true
+        volumeSlider.heightAnchor.constraint(equalTo: volumeControlsView.heightAnchor, multiplier: 0.5).isActive = true
+        volumeSlider.widthAnchor.constraint(equalTo: volumeControlsView.widthAnchor, multiplier: 0.7).isActive = true
+    }
+    
     private func setupViews() {
         layoutSubviews()
         setup(titleView: titleView)
@@ -250,9 +258,10 @@ final class PlayerView: UIView {
         setup(sliderView: playtimeSliderView)
         setup(controlsView: controlsView)
         setup(playButton: playButton, pauseButton: pauseButton)
-        setup(slider: playtimeSlider)
+        setup(playtimeSlider: playtimeSlider)
         setup(skipButton: skipButton, backButton: backButton)
         setup(volumeControlsView: volumeControlsView)
+        setup(volumeSlider: volumeSlider)
         addSelectors()
     }
     

@@ -60,7 +60,10 @@ extension AppCoordinator: SplashViewControllerDelegate {
 extension AppCoordinator: StartViewControllerDelegate {
     
     func loginSelected() {
-        let loginViewController = LoginViewController()
+        let loginView = LoginView()
+        let loginModel = LoginViewModel()
+        loginView.configure(model: loginModel)
+        let loginViewController = LoginViewController(loginView: loginView)
         loginViewController.delegate = self
         navigationController.pushViewController(loginViewController, animated: false)
     }

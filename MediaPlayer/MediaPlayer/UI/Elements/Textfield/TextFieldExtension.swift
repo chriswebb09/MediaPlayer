@@ -18,3 +18,37 @@ class TextFieldExtension: UITextField {
                       height: bounds.height)
     }
 }
+
+extension TextFieldExtension {
+    
+    static func configureField(field: UITextField) {
+        field.font = UIFont(name: "Avenir-Book", size: 18)!
+        field.layer.borderColor = UIColor.mainColor.cgColor
+        field.layer.borderWidth = 2
+        field.layer.cornerRadius = 3
+    }
+    
+    static func returnTextField(_ placeholder: String) -> TextFieldExtension {
+        let returnTextField = TextFieldExtension()
+        returnTextField.placeholder = placeholder
+        configureField(field: returnTextField)
+        returnTextField.keyboardType = .default
+        return returnTextField
+    }
+    
+    static func emailField(_ placeholder: String) -> TextFieldExtension {
+        let confirmEmailField = TextFieldExtension()
+        confirmEmailField.placeholder = placeholder
+        configureField(field: confirmEmailField)
+        confirmEmailField.keyboardType = .emailAddress
+        return confirmEmailField
+    }
+    
+    static func passwordField() -> TextFieldExtension {
+        let passwordField = TextFieldExtension()
+        passwordField.placeholder = "Enter password"
+        configureField(field: passwordField)
+        passwordField.isSecureTextEntry = true
+        return passwordField
+    }
+}

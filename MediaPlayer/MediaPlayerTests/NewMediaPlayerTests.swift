@@ -38,6 +38,7 @@ class MediaPlayerTests: XCTestCase {
         dataSource.playlist = playlist
         dataSource.resetData()
         XCTAssert(playlist.itemCount == 0)
+        XCTAssert(dataSource.playlist?.itemCount == 0)
     }
     
     func testDataSourceSetsSearchTerm() {
@@ -49,5 +50,12 @@ class MediaPlayerTests: XCTestCase {
         let testTerm = "hello"
         guard let url = URLConstructor().build(searchTerm: testTerm) else { return }
         XCTAssert(url.absoluteString == "https://itunes.apple.com/search?media=music&entity=song&term=hello" , "URL is properly constructed")
+    }
+    
+    func testEmailFormat() {
+        var email = "chris@gmail.com"
+        XCTAssert(email.isValidEmail() == true, "Email is properly formatted")
+        email = "chris.com"
+        XCTAssert(email.isValidEmail() == false, "Email is properly formatted")
     }
 }

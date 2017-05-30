@@ -43,7 +43,7 @@ final class PlayerViewController: UIViewController, Playable {
     
     func setModel(model: PlayerViewModel) {
         playerView.configure(with: model)
-        title = model.title
+//        title = model.title
     }
     
     override func viewWillAppear(_ animated: Bool) {
