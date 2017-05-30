@@ -10,6 +10,8 @@ final class MediaCell: UICollectionViewCell {
         }
     }
     
+    // MARK: - UI Element Properties
+    
     fileprivate var trackNameLabel: UILabel = {
         var trackName = UILabel()
         trackName.backgroundColor = .white
@@ -25,8 +27,10 @@ final class MediaCell: UICollectionViewCell {
     }()
 }
 
-extension MediaCell: Reusable {
+// MARK: - Resusable
 
+extension MediaCell: Reusable {
+    
     private func setShadow() {
         layer.setCellShadow(contentView: contentView)
         let path =  UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius)

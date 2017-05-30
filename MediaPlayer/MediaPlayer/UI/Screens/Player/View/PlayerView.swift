@@ -24,6 +24,8 @@ final class PlayerView: UIView {
     
     private var timer: Timer?
     
+    // MARK: - UI Element Properties
+    
     private var titleView: UIView = {
         let top = UIView()
         top.backgroundColor = UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
@@ -91,7 +93,7 @@ final class PlayerView: UIView {
         controls.backgroundColor = UIColor(red:0.10, green:0.09, blue:0.12, alpha:1.0)
         return controls
     }()
-  
+    
     private var playButton: UIButton = {
         var playButton = UIButton()
         playButton.setImage(#imageLiteral(resourceName: "bordered-white-play"), for: .normal)
@@ -115,7 +117,7 @@ final class PlayerView: UIView {
         backButton.setImage(#imageLiteral(resourceName: "back-white-hollow"), for: .normal)
         return backButton
     }()
- 
+    
     private var moreButton: UIButton = {
         var moreButton = UIButton()
         moreButton.setImage(#imageLiteral(resourceName: "morebutton"), for: .normal)
@@ -229,7 +231,6 @@ final class PlayerView: UIView {
         backButton.leftAnchor.constraint(equalTo: controlsView.leftAnchor, constant: UIScreen.main.bounds.width * 0.15).isActive = true
         backButton.centerYAnchor.constraint(equalTo: controlsView.centerYAnchor, constant: UIScreen.main.bounds.height * -0.1).isActive = true
     }
-    
     
     private func setup(volumeControlsView: UIView) {
         controlsView.addSubview(volumeControlsView)

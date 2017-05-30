@@ -4,6 +4,8 @@ class CreateAccountView: UIView {
     
     weak var delegate: CreateAccountViewDelegate?
     
+    // MARK: - UI Element Properties
+    
     var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.text = "Create Your Account"

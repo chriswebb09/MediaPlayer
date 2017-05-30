@@ -4,6 +4,8 @@ class SettingsView: UIView {
     
     weak var delegate: SettingsViewDelegate?
     
+    // MARK: - UI Element Properties
+    
     var settingOneView: SettingsOptionView = {
         let settingOne = SettingsOptionView()
         return settingOne

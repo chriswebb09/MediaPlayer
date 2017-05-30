@@ -16,6 +16,8 @@ final class LoginView: UIView {
         }
     }
     
+    // MARK: - UI Elements
+    
     private var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.text = "Login"
@@ -91,6 +93,8 @@ final class LoginView: UIView {
         delegate?.submitButtonTapped()
     }
 }
+
+// MARK: - UITextFieldDelegate
 
 extension LoginView: UITextFieldDelegate {
     

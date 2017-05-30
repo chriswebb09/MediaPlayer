@@ -4,6 +4,8 @@ final class StartView: UIView {
     
     weak var delegate: StartViewDelegate?
     
+    // MARK: - UI Element Properties
+    
     private var titleLabel: UILabel = {
         let title = UILabel()
         title.textAlignment = .center

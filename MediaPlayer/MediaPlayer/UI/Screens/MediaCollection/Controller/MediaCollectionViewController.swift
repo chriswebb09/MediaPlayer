@@ -2,6 +2,8 @@ import UIKit
 
 class MediaCollectionViewController: BaseMediaViewController {
     
+    // MARK: - Properties
+    
     var buttonItem: UIBarButtonItem!
     
     var searchController = UISearchController(searchResultsController: nil)
@@ -42,6 +44,8 @@ class MediaCollectionViewController: BaseMediaViewController {
     }
 }
 
+// MARK: - UISearchControllerDelegate
+
 extension MediaCollectionViewController: UISearchControllerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,6 +81,8 @@ extension MediaCollectionViewController: UISearchControllerDelegate {
         navigationItem.rightBarButtonItem?.tintColor = .darkGray
     }
 }
+
+// MARK: - UISearchBarDelegate
 
 extension MediaCollectionViewController: UISearchBarDelegate {
     
@@ -160,6 +166,8 @@ extension MediaCollectionViewController: UISearchBarDelegate {
         onCancel(collectionView: collectionView, dataSource: dataSource, store: dataSource.store)
     }
 }
+
+// MARK: - UISearchResultsUpdating
 
 extension MediaCollectionViewController: UISearchResultsUpdating {
     
