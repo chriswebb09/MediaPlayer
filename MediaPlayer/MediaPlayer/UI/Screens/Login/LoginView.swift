@@ -35,6 +35,8 @@ final class LoginView: UIView {
         return submitButton.createButton()
     }()
     
+    // MARK: - Configuration Methods
+    
     override func layoutSubviews() {
         tag = 1
         super.layoutSubviews()
