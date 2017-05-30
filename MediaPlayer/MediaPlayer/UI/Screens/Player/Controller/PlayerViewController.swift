@@ -1,14 +1,10 @@
 import UIKit
 
-protocol Playable {
-    var playlist: Playlist { get set }
-    var index: Int { get set }
-    var playlistItem: PlaylistItem! { get set }
-}
-
 final class PlayerViewController: UIViewController, Playable {
     
     weak var delegate: PlayerViewControllerDelegate?
+    
+    // MARK: - Properties
     
     private var playerView: PlayerView!
     var playerState: PlayState!
@@ -43,12 +39,12 @@ final class PlayerViewController: UIViewController, Playable {
     
     func setModel(model: PlayerViewModel) {
         playerView.configure(with: model)
-//        title = model.title
+        //        title = model.title
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-         self.tabBarController?.tabBar.alpha = 0
+        self.tabBarController?.tabBar.alpha = 0
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -57,17 +53,19 @@ final class PlayerViewController: UIViewController, Playable {
     }
 }
 
+// MARK: - PlayerViewDelegate
+
 extension PlayerViewController: PlayerViewDelegate {
     
     func backButtonTapped() {
         guard let previous = playlistItem.previous else { return }
         if index > 0 { index -= 1 }
         self.playlistItem = previous
-        playerState = .queued 
+        playerState = .queued
         guard let trackName = playlistItem.track?.trackName, let imageUrl = playlistItem.track?.artworkUrl else { return }
         setModel(model: PlayerViewModel(title: trackName, timer: nil, progressIncrementer: 0, time: 0, progress: 0, imageUrl: imageUrl))
     }
-
+    
     func skipButtonTapped() {
         guard let item = playlistItem, let next = item.next else { return }
         index += 1
@@ -76,12 +74,12 @@ extension PlayerViewController: PlayerViewDelegate {
         guard let trackName = playlistItem.track?.trackName, let imageUrl = playlistItem.track?.artworkUrl else { return }
         setModel(model: PlayerViewModel(title: trackName, timer: nil, progressIncrementer: 0, time: 0, progress: 0, imageUrl: imageUrl))
     }
-
+    
     func pauseButtonTapped() {
-        playerState = .paused 
+        playerState = .paused
         print("pause")
     }
-
+    
     func playButtonTapped() {
         playerState = .playing
         print("play")

@@ -1,11 +1,5 @@
 import UIKit
 
-struct LoginViewModel {
-    var username: String = ""
-    var password: String = ""
-    var submitEnabled: Bool = false
-}
-
 final class LoginView: UIView {
     
     weak var delegate: LoginViewDelegate?
@@ -101,6 +95,7 @@ extension LoginView: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let text = textField.text else { return }
         model.username = text
+        submitButton.isEnabled = model.submitEnabled
         delegate?.usernameFieldDidAddText(text: usernameField.text)
     }
 }

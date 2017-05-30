@@ -12,6 +12,8 @@ final class PlayerView: UIView {
     
     weak var delegate: PlayerViewDelegate?
     
+    // MARK: - Data Properties
+    
     private var model: PlayerViewModel! {
         didSet {
             titleLabel.text = model.title
@@ -266,16 +268,18 @@ final class PlayerView: UIView {
         addSelectors()
     }
     
-    @objc private func sliderValueChanged() {
-        print(playtimeSlider.value)
-    }
-    
     private func addSelectors() {
         playButton.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside)
         pauseButton.addTarget(self, action: #selector(pauseButtonTapped), for: .touchUpInside)
         skipButton.addTarget(self, action: #selector(skipButtonTapped), for: .touchUpInside)
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         playtimeSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
+    }
+    
+    // MARK: - Methods
+    
+    @objc private func sliderValueChanged() {
+        print(playtimeSlider.value)
     }
     
     @objc private func playButtonTapped() {
