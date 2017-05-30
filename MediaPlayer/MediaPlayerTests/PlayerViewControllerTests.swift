@@ -20,9 +20,24 @@ class PlayerViewControllerTests: XCTestCase {
     
     override func setUp() {
         self.playlist = Playlist()
-        model = PlayerViewModel(title: "Test", timer: nil, progressIncrementer: 0, time: 0, progress: 0, imageUrl: "http://i.imgur.com/5gBiQe0.jpg")
-        self.trackOne = Track(trackName: "Test track one", artistName: "Test Artist One", artistId: 01, previewUrl: "http://i.imgur.com/5gBiQe0.jpg", artworkUrl: "http://i.imgur.com/5gBiQe0.jpg", collectionName: "test collection one")
-        self.trackTwo = Track(trackName: "Test track two", artistName: "Test Artist two", artistId: 02, previewUrl: "http://i.imgur.com/5gBiQe0.jpg", artworkUrl: "http://i.imgur.com/5gBiQe0.jpg", collectionName: "test collection two")
+        model = PlayerViewModel(title: "Test",
+                                timer: nil,
+                                progressIncrementer: 0,
+                                time: 0,
+                                progress: 0,
+                                imageUrl: "http://i.imgur.com/5gBiQe0.jpg")
+        self.trackOne = Track(trackName: "Test track one",
+                              artistName: "Test Artist One",
+                              artistId: 01,
+                              previewUrl: "http://i.imgur.com/5gBiQe0.jpg",
+                              artworkUrl: "http://i.imgur.com/5gBiQe0.jpg",
+                              collectionName: "test collection one")
+        self.trackTwo = Track(trackName: "Test track two",
+                              artistName: "Test Artist two",
+                              artistId: 02,
+                              previewUrl: "http://i.imgur.com/5gBiQe0.jpg",
+                              artworkUrl: "http://i.imgur.com/5gBiQe0.jpg",
+                              collectionName: "test collection two")
         let itemOne = PlaylistItem()
         itemOne.track = trackOne
         let itemTwo = PlaylistItem()

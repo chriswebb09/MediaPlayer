@@ -67,7 +67,7 @@ class BaseMediaViewController: UIViewController, UICollectionViewDelegate, UICol
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let playlist = dataSource.playlist else { return }
-        delegate?.didSelectTrackAt(at: indexPath.row, with: dataSource.playlist!)
+        delegate?.didSelectTrackAt(at: indexPath.row, with: playlist)
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

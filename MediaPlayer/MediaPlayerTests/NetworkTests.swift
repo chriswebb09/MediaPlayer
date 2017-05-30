@@ -22,11 +22,11 @@ class NetworkTests: XCTestCase {
     func testParser() {
         let expect = expectation(description: "API Client returns proper number of items from search")
         let searchTerm = "new"
-        var parser = TrackParser()
+        let parser = TrackParser()
         MediaAPIClient.search(for: searchTerm) { response in
             switch response {
             case .success(let json):
-                var tracks = parser.parse(json) as! Playlist
+                let tracks = parser.parse(json) as! Playlist
                 XCTAssert(tracks.itemCount == 50)
                 expect.fulfill()
             case .failed(let error):

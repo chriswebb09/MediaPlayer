@@ -3,29 +3,33 @@ import XCTest
 @testable import NewMediaPlayer
 class CoordinatorTests: XCTestCase {
     
+    var appCoordinator: AppCoordinator!
+    var splashView: SplashView!
+    var splashViewController: SplashViewController!
+    
     override func setUp() {
+        self.splashView = SplashView()
+        self.splashViewController = SplashViewController(splashView: splashView)
+        self.appCoordinator = AppCoordinator(window: UIWindow())
         super.setUp()
     }
     
     override func tearDown() {
+        splashView = nil
+        splashViewController = nil
+        appCoordinator = nil
         super.tearDown()
     }
     
     func testSplashCoordinator() {
-        let appCoordinator = AppCoordinator(window: UIWindow())
-        let splashView = SplashView()
-        let splashViewController =  SplashViewController(splashView: splashView)
-        appCoordinator.start(viewController:splashViewController)
+        appCoordinator.start(viewController: splashViewController)
         XCTAssert(appCoordinator.navigationController.viewControllers[0] == splashViewController, "Navigation viewcontrollers is StartViewController")
         XCTAssert(appCoordinator.navigationController.isNavigationBarHidden == true, "Navigation bar is hidden")
     }
     
     func testStartCoordinator() {
-        let appCoordinator = AppCoordinator(window: UIWindow())
         let mainCoordinator = MainCoordinator(coordinator: appCoordinator, window: appCoordinator.window)
-        let splashView = SplashView()
-        let splashViewController = SplashViewController(splashView: splashView)
-        appCoordinator.start(viewController:splashViewController)
+        appCoordinator.start(viewController: splashViewController)
         appCoordinator.splashViewFinishedAnimation(finished: true)
         XCTAssert(appCoordinator.navigationController.viewControllers[0].view.tag == 0, "View is of type startView / tag == 0")
         XCTAssert(appCoordinator.navigationController.isNavigationBarHidden == true, "Navigation bar is hidden")
@@ -33,11 +37,7 @@ class CoordinatorTests: XCTestCase {
     }
     
     func testGoToLogin() {
-        let appCoordinator = AppCoordinator(window: UIWindow())
-        let mainCoordinator = MainCoordinator(coordinator: appCoordinator, window: appCoordinator.window)
-        let splashView = SplashView()
-        let splashViewController = SplashViewController(splashView: splashView)
-        appCoordinator.start(viewController:splashViewController)
+        appCoordinator.start(viewController: splashViewController)
         appCoordinator.splashViewFinishedAnimation(finished: true)
         let startVC = appCoordinator.navigationController.viewControllers[0] as! StartViewController
         startVC.loginTapped()
@@ -47,10 +47,7 @@ class CoordinatorTests: XCTestCase {
     }
     
     func testGoFromLogin() {
-        let appCoordinator = AppCoordinator(window: UIWindow())
         let mainCoordinator = MainCoordinator(coordinator: appCoordinator, window: appCoordinator.window)
-        let splashView = SplashView()
-        let splashViewController = SplashViewController(splashView: splashView)
         mainCoordinator.appCoordinator.start(viewController: splashViewController)
         appCoordinator.splashViewFinishedAnimation(finished: true)
         let startVC = appCoordinator.navigationController.viewControllers[0] as! StartViewController
@@ -61,10 +58,7 @@ class CoordinatorTests: XCTestCase {
     }
     
     func testGoToCreateAccount() {
-        let appCoordinator = AppCoordinator(window: UIWindow())
-        let splashView = SplashView()
-        let splashViewController = SplashViewController(splashView: splashView)
-        appCoordinator.start(viewController:splashViewController)
+        appCoordinator.start(viewController: splashViewController)
         appCoordinator.splashViewFinishedAnimation(finished: true)
         let startVC = appCoordinator.navigationController.viewControllers[0] as! StartViewController
         startVC.createAccountTapped()

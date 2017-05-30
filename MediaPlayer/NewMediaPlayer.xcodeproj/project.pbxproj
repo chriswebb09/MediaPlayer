@@ -65,6 +65,7 @@
 		A75EFCD41EDC179500B3F829 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EFCD31EDC179400B3F829 /* Parser.swift */; };
 		A75EFCDD1EDC59BD00B3F829 /* MediaViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EFCDC1EDC59BD00B3F829 /* MediaViewControllerTests.swift */; };
 		A75EFCDF1EDC5A9700B3F829 /* PlayerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EFCDE1EDC5A9700B3F829 /* PlayerViewControllerTests.swift */; };
+		A75EFD201EDCF59900B3F829 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EFD1F1EDCF59900B3F829 /* NavigationCoordinator.swift */; };
 		A76B06581ED254DE0006476F /* Resuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06571ED254DE0006476F /* Resuable.swift */; };
 		A76B065A1ED254E40006476F /* CellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B06591ED254E40006476F /* CellRepresentable.swift */; };
 		A76B065C1ED254EA0006476F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B065B1ED254EA0006476F /* BaseView.swift */; };
@@ -204,6 +205,7 @@
 		A75EFCD31EDC179400B3F829 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = MediaPlayer/ApplicationServices/Data/Store/Parser.swift; sourceTree = SOURCE_ROOT; };
 		A75EFCDC1EDC59BD00B3F829 /* MediaViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaViewControllerTests.swift; sourceTree = "<group>"; };
 		A75EFCDE1EDC5A9700B3F829 /* PlayerViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewControllerTests.swift; sourceTree = "<group>"; };
+		A75EFD1F1EDCF59900B3F829 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 		A76B06571ED254DE0006476F /* Resuable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resuable.swift; path = MediaPlayer/UI/Protocol/Resuable.swift; sourceTree = SOURCE_ROOT; };
 		A76B06591ED254E40006476F /* CellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellRepresentable.swift; path = MediaPlayer/UI/Protocol/CellRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		A76B065B1ED254EA0006476F /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = MediaPlayer/UI/Protocol/BaseView.swift; sourceTree = SOURCE_ROOT; };
@@ -326,6 +328,7 @@
 				A75EFCD91EDC1C4300B3F829 /* Tabbar */,
 				A75EAE371ED8649A009F6FC2 /* CoordinatorType.swift */,
 				A75EFCD71EDC1C1800B3F829 /* Protocols */,
+				A75EFD1F1EDCF59900B3F829 /* NavigationCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -998,6 +1001,7 @@
 				A7A080DA1ECF11970035EE1A /* BasicButtonFactory.swift in Sources */,
 				A714AD491ECEF16900C99C55 /* URLRoutable.swift in Sources */,
 				A75EAE3A1ED864B3009F6FC2 /* CoordinatorDelegate.swift in Sources */,
+				A75EFD201EDCF59900B3F829 /* NavigationCoordinator.swift in Sources */,
 				A714AD321ECEEB9200C99C55 /* MediaCell.swift in Sources */,
 				A75EAE321ED8517D009F6FC2 /* BaseMenuPopoverAlert.swift in Sources */,
 				A721B2B71ECECB43003E0D12 /* MediaPlayer.xcdatamodeld in Sources */,

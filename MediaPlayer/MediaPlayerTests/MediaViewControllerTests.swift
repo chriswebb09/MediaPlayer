@@ -28,7 +28,7 @@ class MediaViewControllerTests: XCTestCase {
     }
     
     func testMediaCollectionSetsCancel() {
-        var term = "new"
+        let term = "new"
         let searchController = UISearchController(searchResultsController: nil)
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
         var searchBar = UISearchBar()
@@ -43,12 +43,9 @@ class MediaViewControllerTests: XCTestCase {
     }
     
     func testMediaControllerNavItemOnActive() {
-        var term = "new"
         let searchController = UISearchController(searchResultsController: nil)
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
-        var searchBar = UISearchBar()
         mediaCollectionController = MediaCollectionViewController(collectionView: collectionView, dataSource: dataSource, searchController: searchController)
-        let navigationController = UINavigationController(rootViewController: mediaCollectionController)
         mediaCollectionController.setSearchBarActive()
         XCTAssert(mediaCollectionController.navigationItem.rightBarButtonItems?.count == 0)
     }
