@@ -1,11 +1,8 @@
 import UIKit
 
-import UIKit
-
 class AppCoordinator: NavigationCoordinator {
     
     weak var delegate: CoordinatorDelegate?
-    
     var window: UIWindow!
     var navigationController: UINavigationController
     var childViewControllers: [UIViewController] = []

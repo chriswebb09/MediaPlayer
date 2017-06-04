@@ -3,7 +3,6 @@ import UIKit
 final class StartViewController: UIViewController {
     
     var startView: StartView = StartView()
-    
     weak var delegate: StartViewControllerDelegate?
     
     init(startView: StartView = StartView()) {

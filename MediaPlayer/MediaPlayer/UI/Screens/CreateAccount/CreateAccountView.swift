@@ -96,5 +96,4 @@ final class CreateAccountView: UIView {
     func submitButtonTapped() {
         delegate?.submitButtonTapped()
     }
-    
 }
