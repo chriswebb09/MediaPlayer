@@ -1,11 +1,3 @@
-//
-//  MediaCollectionCoordinator.swift
-//  NewMediaPlayer
-//
-//  Created by Christopher Webb-Orenstein on 6/4/17.
-//  Copyright © 2017 Christopher Webb-Orenstein. All rights reserved.
-//
-
 import UIKit
 
 dynamic class MediaCollectionCoordinator: NavigationCoordinator {
@@ -41,8 +33,7 @@ dynamic class MediaCollectionCoordinator: NavigationCoordinator {
     }
 }
 
-
-extension MediaCollectionCoordinator: MediaCollectionDelegate {
+extension MediaCollectionCoordinator: MediaControllerDelegate {
     
     func didSelectTrackAt(at index: Int, with playlist: Playlist) {
         let playerViewController = PlayerViewController(index: index, playlist: playlist)

@@ -6,7 +6,7 @@ final class MediaCollectionViewController: UIViewController {
     
     var buttonItem: UIBarButtonItem!
     
-    weak var delegate: MediaCollectionDelegate?
+    weak var delegate: MediaControllerDelegate?
     
     var searchController = UISearchController(searchResultsController: nil)
     

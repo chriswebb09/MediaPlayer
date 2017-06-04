@@ -1,9 +1,5 @@
 import UIKit
 
-protocol CreateAccountViewControllerDelegate: class {
-    func submitButtonTapped()
-}
-
 class CreateAccountViewController: UIViewController {
     
     weak var delegate: CreateAccountViewControllerDelegate?

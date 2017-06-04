@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var mainCoordinator: MainCoordinator!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
         setupUI()
         let mpMusic = MPUserMediaPlayer()
         mpMusic.getPlaylists()
@@ -28,19 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func setupUI() {
-        let placeholderAttributes: [String : AnyObject] = [
-            // NSForegroundColorAttributeName: UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0),
-            NSFontAttributeName: UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        ]
-        
+        let placeholderAttributes: [String : AnyObject] = [NSFontAttributeName: UIFont.systemFont(ofSize: UIFont.systemFontSize)]
         let attributedPlaceholder: NSAttributedString = NSAttributedString(string: "Search", attributes: placeholderAttributes)
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = attributedPlaceholder
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
-        // UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
-        //UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
         UINavigationBar.appearance().tintColor = UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
-        // UINavigationBar.appearance().tintColor = NavigationBarAttributes.navBarTint
-        
         UINavigationBar.appearance().titleTextAttributes = [
             NSFontAttributeName: UIFont(name:"Avenir", size:22),
             NSForegroundColorAttributeName: UIColor.darkGray

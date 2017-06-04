@@ -43,6 +43,8 @@
 		A721B2DC1ECECC60003E0D12 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2DB1ECECC5F003E0D12 /* SplashViewController.swift */; };
 		A721B2E21ECECE16003E0D12 /* MediaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2E11ECECE16003E0D12 /* MediaCollectionViewController.swift */; };
 		A721B2E41ECECE3D003E0D12 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */; };
+		A72287931EE4B45000229A31 /* SettingsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72287921EE4B45000229A31 /* SettingsViewControllerDelegate.swift */; };
+		A72287951EE4B51A00229A31 /* CreateAccountViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72287941EE4B51A00229A31 /* CreateAccountViewControllerDelegate.swift */; };
 		A725B0801ED57DEA00CAC00E /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B07F1ED57DEA00CAC00E /* TabBarCoordinator.swift */; };
 		A725B0821ED5A24500CAC00E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B0811ED5A24500CAC00E /* Coordinator.swift */; };
 		A725B0841ED5A38300CAC00E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725B0831ED5A38200CAC00E /* MenuView.swift */; };
@@ -188,6 +190,8 @@
 		A721B2DB1ECECC5F003E0D12 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		A721B2E11ECECE16003E0D12 /* MediaCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewController.swift; sourceTree = "<group>"; };
 		A721B2E31ECECE3D003E0D12 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		A72287921EE4B45000229A31 /* SettingsViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewControllerDelegate.swift; path = Settings/SettingsViewControllerDelegate.swift; sourceTree = "<group>"; };
+		A72287941EE4B51A00229A31 /* CreateAccountViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewControllerDelegate.swift; sourceTree = "<group>"; };
 		A725B07F1ED57DEA00CAC00E /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		A725B0811ED5A24500CAC00E /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A725B0831ED5A38200CAC00E /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -606,6 +610,7 @@
 				A73E5E311ED8201200349C01 /* SettingsView.swift */,
 				A73E5E331ED8202700349C01 /* SettingsOptionView.swift */,
 				A73E5E351ED8299100349C01 /* SettingsViewDelegate.swift */,
+				A72287921EE4B45000229A31 /* SettingsViewControllerDelegate.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -877,6 +882,7 @@
 				A7A081111ECF178E0035EE1A /* CreateAccountView.swift */,
 				A7A081141ECF17AE0035EE1A /* CreateAccountViewController.swift */,
 				A76B06751ED25F840006476F /* CreateAccountViewDelegate.swift */,
+				A72287941EE4B51A00229A31 /* CreateAccountViewControllerDelegate.swift */,
 			);
 			path = CreateAccount;
 			sourceTree = "<group>";
@@ -1035,6 +1041,7 @@
 				A7A0811E1ECF18DA0035EE1A /* UIImage+Extension.swift in Sources */,
 				A714AD471ECEF15000C99C55 /* URLConstructable.swift in Sources */,
 				A711F0501ED25300005437C8 /* CollectionViewAttributes.swift in Sources */,
+				A72287931EE4B45000229A31 /* SettingsViewControllerDelegate.swift in Sources */,
 				A7A080C61ECF0FD90035EE1A /* BasePopoverAlert.swift in Sources */,
 				A7A081271ECF1BE40035EE1A /* CALayer+Constants.swift in Sources */,
 				A711F0561ED253B3005437C8 /* MediaCellConstants.swift in Sources */,
@@ -1067,6 +1074,7 @@
 				A7A081021ECF16670035EE1A /* BallAnimation.swift in Sources */,
 				A7A080DE1ECF11FA0035EE1A /* BottomMenuPopover.swift in Sources */,
 				A7959C051ED2A9BE005B49D2 /* UIColor+Extension.swift in Sources */,
+				A72287951EE4B51A00229A31 /* CreateAccountViewControllerDelegate.swift in Sources */,
 				A73E5E2D1ED80BBF00349C01 /* ViewType.swift in Sources */,
 				A7A080F71ECF14E30035EE1A /* MPMediaPlayer.swift in Sources */,
 				A7A081051ECF16970035EE1A /* BallIndicatorView.swift in Sources */,

@@ -1,10 +1,5 @@
 import UIKit
 
-protocol SettingsViewControllerDelegate: class {
-    func settingOneTapped()
-    func settingTwoTapped()
-}
-
 class SettingsViewController: UIViewController {
     
     var settingsView: SettingsView!
