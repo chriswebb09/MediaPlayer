@@ -3,6 +3,7 @@ import UIKit
 import UIKit
 
 class AppCoordinator: NavigationCoordinator {
+    
     weak var delegate: CoordinatorDelegate?
     
     var window: UIWindow!
@@ -16,7 +17,6 @@ class AppCoordinator: NavigationCoordinator {
     
     convenience init(navigationController: UINavigationController, window: UIWindow?) {
         self.init(navigationController: navigationController)
-        self.window = window
         guard let window = window else { fatalError("Window object not created") }
         self.window = window
         self.window.rootViewController = navigationController
@@ -47,14 +47,36 @@ extension AppCoordinator: SplashViewControllerDelegate {
 extension AppCoordinator: StartViewControllerDelegate {
     
     func loginSelected() {
-        delegate?.transitionCoordinator(type: .tabbar)
+        let loginView = LoginView()
+        let loginModel = LoginViewModel()
+        loginView.configure(model: loginModel)
+        let loginViewController = LoginViewController(loginView: loginView)
+        loginViewController.delegate = self
+        navigationController.pushViewController(loginViewController, animated: false)
     }
     
     func createAccountSelected() {
-        delegate?.transitionCoordinator(type: .tabbar)
+        let createAccountViewController = CreateAccountViewController()
+        createAccountViewController.delegate = self
+        navigationController.pushViewController(createAccountViewController, animated: false)
     }
     
     func continueAsGuestSelected() {
         delegate?.transitionCoordinator(type: .tabbar)
     }
 }
+
+extension AppCoordinator: LoginViewControllerDelegate {
+    
+    func loginButtonTapped() {
+        delegate?.transitionCoordinator(type: .tabbar)
+    }
+}
+
+extension AppCoordinator: CreateAccountViewControllerDelegate {
+    
+    func submitButtonTapped() {
+        delegate?.transitionCoordinator(type: .tabbar)
+    }
+}
+

@@ -24,6 +24,4 @@ class LoginButtonFactory: ButtonMaker {
         button.setTitle(text, for: .normal)
         return button
     }
-    
-    
 }
