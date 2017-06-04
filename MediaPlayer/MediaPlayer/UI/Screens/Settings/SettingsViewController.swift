@@ -1,16 +1,15 @@
-//
-//  SettingsViewController.swift
-//  MediaPlayer
-//
-//  Created by Christopher Webb-Orenstein on 5/24/17.
-//  Copyright © 2017 Christopher Webb-Orenstein. All rights reserved.
-//
-
 import UIKit
+
+protocol SettingsViewControllerDelegate: class {
+    func settingOneTapped()
+    func settingTwoTapped()
+}
 
 class SettingsViewController: UIViewController {
     
     var settingsView: SettingsView!
+    
+    weak var delegate: SettingsViewControllerDelegate?
     
     init(settingsView: SettingsView) {
         self.settingsView = settingsView
@@ -35,10 +34,53 @@ class SettingsViewController: UIViewController {
 
 extension SettingsViewController: SettingsViewDelegate {
     func settingOneTapped() {
-        print("Setting one tapped")
+        print("One")
+        delegate?.settingOneTapped()
     }
     
     func settingTwoTapped() {
-        print("settings two tappped")
+        print("two")
+        delegate?.settingTwoTapped()
+    }
+}
+
+import UIKit
+
+class SettingsCoordinator: NavigationCoordinator {
+    
+    weak var delegate: CoordinatorDelegate?
+    weak var tabDelegate: TabDelegate?
+    
+    var childViewControllers: [UIViewController] = []
+    var navigationController: UINavigationController
+    
+    required init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+        self.childViewControllers = navigationController.viewControllers
+    }
+    
+    func start() {
+        let settingsView = SettingsView()
+        let settingsController = SettingsViewController(settingsView: settingsView)
+        settingsView.delegate = settingsController
+        settingsController.delegate = self
+        showMediaController(settingsController: settingsController)
+    }
+    
+    fileprivate func showMediaController(settingsController: SettingsViewController) {
+        childViewControllers = [settingsController]
+        navigationController.viewControllers = [settingsController]
+    }
+}
+
+extension SettingsCoordinator: SettingsViewControllerDelegate {
+    
+    func settingTwoTapped() {
+        print("RWO")
+        tabDelegate?.tabOneSelected(selected: true)
+    }
+    
+    func settingOneTapped() {
+        tabDelegate?.tabTwoSelected(selected: true)
     }
 }

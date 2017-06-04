@@ -24,7 +24,7 @@ class MediaViewControllerTests: XCTestCase {
     func testMediaCollectionSetsSearchTerm() {
         let navigationController = UINavigationController(rootViewController: mediaCollectionController)
         mediaCollectionController.searchOnTextChange(text: "new", store: store, navController: navigationController)
-        XCTAssert(store.searchTerm == "new")
+        XCTAssertEqual(store.searchTerm, "new")
     }
     
     func testMediaCollectionSetsCancel() {
@@ -39,7 +39,7 @@ class MediaViewControllerTests: XCTestCase {
         searchBar = searchController.searchBar
         mediaCollectionController.searchOnTextChange(text: term, store: store, navController: navigationController)
         mediaCollectionController.onCancel(collectionView: collectionView, dataSource: dataSource, store: store)
-        XCTAssert(dataSource.searchTerm == "")
+        XCTAssertEqual(dataSource.searchTerm, "")
     }
     
     func testMediaControllerNavItemOnActive() {
@@ -47,6 +47,6 @@ class MediaViewControllerTests: XCTestCase {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
         mediaCollectionController = MediaCollectionViewController(collectionView: collectionView, dataSource: dataSource, searchController: searchController)
         mediaCollectionController.setSearchBarActive()
-        XCTAssert(mediaCollectionController.navigationItem.rightBarButtonItems?.count == 0)
+        XCTAssertEqual(mediaCollectionController.navigationItem.rightBarButtonItems?.count, 0)
     }
 }

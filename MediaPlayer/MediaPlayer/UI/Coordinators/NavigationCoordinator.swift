@@ -8,29 +8,14 @@
 
 import UIKit
 
-protocol FlowCoordinator { }
+protocol TabCoordinator: FlowCoordinator {
+    var tabBarController: TabBarController { get set }
+    var childCoordinators: [NavigationCoordinator] { get set }
+    init(tabBarController: TabBarController)
+}
 
 protocol NavigationCoordinator: FlowCoordinator {
     var navigationController: UINavigationController { get set }
     var childViewControllers: [UIViewController] { get set }
     init(navigationController: UINavigationController)
 }
-
-protocol TabBarCoordinator: FlowCoordinator {
-    var tabBarController: UITabBarController { get set }
-    var childCoordinators: [NavigationCoordinator] { get set }
-    init(tabBarController: UITabBarController)
-}
-
-
-class MediaDisplayCoordinator: NavigationCoordinator {
-    
-    var navigationController: UINavigationController
-    var childViewControllers: [UIViewController] = []
-    
-    required init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-        self.navigationController.viewControllers = childViewControllers
-    }
-}
-

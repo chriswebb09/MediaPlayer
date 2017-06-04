@@ -51,7 +51,7 @@ class NetworkTests: XCTestCase {
                 expect.fulfill()
             case .failed(let error):
                 print(error.localizedDescription)
-                assertionFailure()
+                fatalError()
             }
         }
         waitForExpectations(timeout: 6) { error in

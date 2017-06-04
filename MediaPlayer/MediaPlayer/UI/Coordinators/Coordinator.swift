@@ -1,8 +1,6 @@
 import UIKit
 
-protocol Coordinator {
+protocol FlowCoordinator: class {
     weak var delegate: CoordinatorDelegate? { get set }
-    var type: CoordinatorType { get set }
-    func start(viewController: UIViewController)
+    func start()
 }
-

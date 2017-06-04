@@ -2,9 +2,6 @@ import UIKit
 
 final class TabBarController: UITabBarController {
     
-    // Accessible in Tabbar child controllers
-    weak var controllerDelegate: TabControllerDelegate?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -27,44 +24,26 @@ final class TabBarController: UITabBarController {
         tabBar.tintColor = UIColor(red:0.92, green:0.32, blue:0.33, alpha:1.0)
     }
     
-    func setControllers(mediaCollectionController: MediaCollectionViewController, settingsController: SettingsViewController) {
-        UITabBar.appearance().tintColor = UIColor.orange
-        let mediaCollectionTab = setupSearchTab(tracksViewController: mediaCollectionController)
-        let playlistTab = setupTab(settingsViewController: settingsController)
-        let controllers = [mediaCollectionTab, playlistTab]
+    func setup(with controllerOne: UIViewController, and controllerTwo: UIViewController) {
+        let tabOne = setupTab(settingsViewController: controllerOne)
+        let tabTwo = setupTab(settingsViewController: controllerTwo)
+        setTabTitles(controllers: [tabOne, tabTwo])
+    }
+    
+    func setup(with controllers: [UINavigationController]) {
         setTabTitles(controllers: controllers)
     }
     
-    private func setTabTitles(controllers: [UINavigationController]) {
+    
+    func setTabTitles(controllers: [UINavigationController]) {
         viewControllers = controllers
         tabBar.items?[0].title = "Tracks"
         tabBar.items?[1].title = "Playlist"
         selectedIndex = 0
     }
     
-    func setupSearchTab(tracksViewController: MediaCollectionViewController) -> UINavigationController {
-        let normalImage = #imageLiteral(resourceName: "blue-dj")
-        let selectedImage = #imageLiteral(resourceName: "orangedj")
-        tracksViewController.delegate = self
-        tracksViewController.tabBarItem = UITabBarItem(title: nil, image: normalImage.withRenderingMode(.alwaysOriginal), selectedImage: selectedImage.withRenderingMode(.alwaysTemplate))
-        let tracksTab = UINavigationController(rootViewController: tracksViewController)
-        
-        return tracksTab
-    }
-    
-    private func setupTab(settingsViewController: SettingsViewController) -> UINavigationController {
-        let selectedImage = #imageLiteral(resourceName: "orange-soundwave")
-        let normalImage = #imageLiteral(resourceName: "blue-soundwave")
-        settingsViewController.tabBarItem = UITabBarItem(title: nil, image: normalImage.withRenderingMode(.alwaysOriginal), selectedImage: selectedImage.withRenderingMode(.alwaysTemplate))
-        settingsViewController.tabBarItem.selectedImage = selectedImage
-        let playlistTab = UINavigationController(rootViewController: settingsViewController)
-        return playlistTab
-    }
-}
-
-extension TabBarController: MediaControllerDelegate {
-    func didSelectTrackAt(at index: Int, with playlist: Playlist) {
-        print(index)
-        controllerDelegate?.didSelectTrack(at: index, with: playlist)
+    private func setupTab(settingsViewController: UIViewController) -> UINavigationController {
+        let tab = UINavigationController(rootViewController: settingsViewController)
+        return tab
     }
 }

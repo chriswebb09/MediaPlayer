@@ -1,12 +1,12 @@
 import UIKit
 
-final class PlayerViewController: UIViewController, Playable {
+final class PlayerViewController: UIViewController {
     
     weak var delegate: PlayerViewControllerDelegate?
     
     // MARK: - Properties
     
-    private var playerView: PlayerView!
+    fileprivate var playerView: PlayerView!
     var playerState: PlayState!
     var playlist: Playlist
     var index: Int
@@ -36,10 +36,12 @@ final class PlayerViewController: UIViewController, Playable {
         view.addView(view: playerView, type: .full)
         playerState = .queued
     }
-    
+}
+
+extension PlayerViewController: Playable {
+
     func setModel(model: PlayerViewModel) {
         playerView.configure(with: model)
-        //        title = model.title
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,6 +66,7 @@ extension PlayerViewController: PlayerViewDelegate {
         playerState = .queued
         guard let trackName = playlistItem.track?.trackName, let imageUrl = playlistItem.track?.artworkUrl else { return }
         setModel(model: PlayerViewModel(title: trackName, timer: nil, progressIncrementer: 0, time: 0, progress: 0, imageUrl: imageUrl))
+        title = previous.track?.artistName
     }
     
     func skipButtonTapped() {
@@ -73,6 +76,7 @@ extension PlayerViewController: PlayerViewDelegate {
         playerState = .queued
         guard let trackName = playlistItem.track?.trackName, let imageUrl = playlistItem.track?.artworkUrl else { return }
         setModel(model: PlayerViewModel(title: trackName, timer: nil, progressIncrementer: 0, time: 0, progress: 0, imageUrl: imageUrl))
+        title = next.track?.artistName
     }
     
     func pauseButtonTapped() {

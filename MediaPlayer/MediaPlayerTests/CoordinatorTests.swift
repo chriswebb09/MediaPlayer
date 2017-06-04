@@ -21,10 +21,15 @@ class CoordinatorTests: XCTestCase {
         super.tearDown()
     }
     
+    override func invokeTest() {
+        super.invokeTest()
+        continueAfterFailure = false 
+    }
+    
     func testSplashCoordinator() {
         appCoordinator.start(viewController: splashViewController)
-        XCTAssert(appCoordinator.navigationController.viewControllers[0] == splashViewController, "Navigation viewcontrollers is StartViewController")
-        XCTAssert(appCoordinator.navigationController.isNavigationBarHidden == true, "Navigation bar is hidden")
+        XCTAssertEqual(appCoordinator.navigationController.viewControllers[0], splashViewController)
+        XCTAssertTrue(appCoordinator.navigationController.isNavigationBarHidden)
     }
     
     func testStartCoordinator() {
@@ -41,9 +46,9 @@ class CoordinatorTests: XCTestCase {
         appCoordinator.splashViewFinishedAnimation(finished: true)
         let startVC = appCoordinator.navigationController.viewControllers[0] as! StartViewController
         startVC.loginTapped()
-        XCTAssert(appCoordinator.navigationController.viewControllers[1].view.tag == 1, "View is of type LoginView / tag == 1")
-        XCTAssert(appCoordinator.navigationController.viewControllers[1].title == "Login", "Controller title is Login")
-        XCTAssert(appCoordinator.navigationController.isNavigationBarHidden == false, "Navigation bar is visible")
+        XCTAssertEqual(appCoordinator.navigationController.viewControllers[1].view.tag, 1)
+        XCTAssertEqual(appCoordinator.navigationController.viewControllers[1].title, "Login")
+        XCTAssertFalse(appCoordinator.navigationController.isNavigationBarHidden)
     }
     
     func testGoFromLogin() {
@@ -62,7 +67,7 @@ class CoordinatorTests: XCTestCase {
         appCoordinator.splashViewFinishedAnimation(finished: true)
         let startVC = appCoordinator.navigationController.viewControllers[0] as! StartViewController
         startVC.createAccountTapped()
-        XCTAssert(appCoordinator.navigationController.viewControllers[1].view.tag == 3, "View is of type createAccountView / tag == 3")
-        XCTAssert(appCoordinator.navigationController.isNavigationBarHidden == true, "Navigation bar is visible")
+        XCTAssertEqual(appCoordinator.navigationController.viewControllers[1].view.tag, 3)
+        XCTAssertTrue(appCoordinator.navigationController.isNavigationBarHidden)
     }
 }

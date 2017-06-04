@@ -190,3 +190,29 @@ extension MediaCollectionViewController: UISearchResultsUpdating {
         searchBarActive = true
     }
 }
+
+class MediaCollectionCoordinator: NavigationCoordinator {
+    
+    weak var delegate: CoordinatorDelegate?
+    weak var tabDelegate: TabDelegate?
+    
+    var childViewControllers: [UIViewController] = []
+    
+    var navigationController: UINavigationController
+    
+    required init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+        self.childViewControllers = navigationController.viewControllers
+    }
+    
+    func start() {
+        let mediaCollection = MediaCollectionViewController(dataSource: BaseMediaControllerDataSource(store: MediaDataStore()))
+        showMediaController(mediaCollectionController: mediaCollection)
+    }
+    
+    fileprivate func showMediaController(mediaCollectionController: MediaCollectionViewController) {
+        childViewControllers = [mediaCollectionController]
+        navigationController.viewControllers = [mediaCollectionController]
+    }
+}
+

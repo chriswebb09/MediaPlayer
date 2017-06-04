@@ -1,65 +1,48 @@
 import UIKit
 
-class TabbarCoordinator: Coordinator {
+import UIKit
+
+class TabBarCoordinator: TabCoordinator, TabDelegate {
     
     var type: CoordinatorType = .tabbar
     
+    var tabBarController: TabBarController
+    
     weak var delegate: CoordinatorDelegate?
     
-    // MARK: - Properties
-    
-    var mediaCollectionController: MediaCollectionViewController!
-    var settingsController: SettingsViewController!
-    var dataSource: BaseMediaControllerDataSource!
     var window: UIWindow!
-    var tabbarController: TabBarController!
-
-    // MARK: - Init
     
-    init(window: UIWindow, tabbarController: TabBarController = TabBarController()) {
-        self.setStore(from: MediaAPIClient())
-        var settingsView = SettingsView()
-        self.settingsController = SettingsViewController(settingsView: settingsView)
-        self.tabbarController = tabbarController
-        setWindow(window: window)
+    var childCoordinators: [NavigationCoordinator] = []
+    
+    required init(tabBarController: TabBarController) {
+        self.tabBarController = tabBarController
     }
     
-    func setWindow(window: UIWindow) {
+    convenience init(tabBarController: TabBarController, window: UIWindow) {
+        self.init(tabBarController: tabBarController)
         self.window = window
-        self.window.rootViewController = tabbarController
-        self.window.makeKeyAndVisible()
+        setupChildCoordinators()
     }
     
-    func setupTabController(tabController: TabBarController) {
-        tabbarController.controllerDelegate = self
-        tabbarController.setControllers(mediaCollectionController: mediaCollectionController, settingsController: settingsController)
+    func setupChildCoordinators() {
+        let settings = SettingsCoordinator(navigationController: UINavigationController())
+        settings.tabDelegate = self
+        settings.start()
+        let media = MediaCollectionCoordinator(navigationController: UINavigationController())
+        media.tabDelegate = self
+        media.start()
+        self.tabBarController.setup(with: [media.navigationController, settings.navigationController])
     }
     
-    func start(viewController: UIViewController) {
-        setupTabController(tabController: tabbarController)
+    func start() {
+        window.rootViewController = tabBarController
     }
     
-    func controllerAtIndex(index: Int) {
-        tabbarController.selectedIndex = index
-        let navController = tabbarController.viewControllers?[0] as! UINavigationController
-        navController.popViewController(animated: false)
+    func tabTwoSelected(selected: Bool) {
+        tabBarController.selectedIndex = 0
     }
     
-    func setStore(from client: MediaAPIClient) {
-        let store = MediaDataStore()
-        self.dataSource = BaseMediaControllerDataSource(store: store)
-        let collectionView = MediaCollectionViewController(dataSource: dataSource)
-        self.mediaCollectionController = collectionView
-    }
-}
-
-extension TabbarCoordinator: TabControllerDelegate {
-    
-    func didSelectTrack(at index: Int, with playlist: Playlist) {
-        let playerView = PlayerView()
-        let playerViewController = PlayerViewController(playerView: playerView, index: index, playlist: playlist)
-        playerViewController.playlist = playlist
-        tabbarController.tabBar.alpha = 0
-        mediaCollectionController.navigationController?.pushViewController(playerViewController, animated: false)
+    func tabOneSelected(selected: Bool) {
+        tabBarController.selectedIndex = 1
     }
 }

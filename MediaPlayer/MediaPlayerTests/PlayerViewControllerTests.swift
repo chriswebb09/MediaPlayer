@@ -60,30 +60,31 @@ class PlayerViewControllerTests: XCTestCase {
     
     func testPlayerViewControllerSetup() {
         playerViewController.setModel(model: model)
-        XCTAssert(playerViewController.title == "Test", "Title is set to track")
+        playerViewController.viewDidLoad()
+        XCTAssert(playerViewController.title == "Test Artist One", "Title is set to track")
     }
     
     func testSkipButton() {
         playerViewController.viewDidLoad()
-        XCTAssert(playerViewController.title == "Test track one", "Title is set to track")
+        XCTAssert(playerViewController.title == "Test Artist One", "Title is set to track")
         XCTAssert(playerViewController.index == 0, "Index is zero")
         playerViewController.skipButtonTapped()
-        XCTAssert(playerViewController.title == "Test track two", "Title is set to track")
+        XCTAssert(playerViewController.title == "Test Artist two", "Title is set to track")
         XCTAssert(playerViewController.index == 1, "Index is one")
     }
     
     func testBackButton() {
         playerViewController.viewDidLoad()
-        XCTAssert(playerViewController.title == "Test track one", "Title is set to track")
+        XCTAssert(playerViewController.title == "Test Artist One", "Title is set to track")
         XCTAssert(playerViewController.index == 0, "Index is zero")
         playerViewController.backButtonTapped()
-        XCTAssert(playerViewController.title == "Test track one", "Title is set to track")
+        XCTAssert(playerViewController.title == "Test Artist One", "Title is set to track")
         XCTAssert(playerViewController.index == 0, "Index is zero")
         playerViewController.skipButtonTapped()
-        XCTAssert(playerViewController.title == "Test track two", "Title is set to track")
+        XCTAssert(playerViewController.title == "Test Artist two", "Title is set to track")
         XCTAssert(playerViewController.index == 1, "Index is one")
         playerViewController.backButtonTapped()
-        XCTAssert(playerViewController.title == "Test track one", "Title is set to track")
+        XCTAssert(playerViewController.title == "Test Artist One", "Title is set to track")
         XCTAssert(playerViewController.index == 0, "Index is zero")
     }
 }

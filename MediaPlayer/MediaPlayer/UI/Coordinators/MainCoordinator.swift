@@ -2,31 +2,39 @@ import UIKit
 
 class MainCoordinator {
     
-    var appCoordinator: Coordinator
+    var appCoordinator: FlowCoordinator
     var window: UIWindow!
     
     @discardableResult
-    init(coordinator: Coordinator, window: UIWindow?) {
-        guard let window = window else { fatalError("Window object could not be found") }
+    init(coordinator: FlowCoordinator, window: UIWindow?) {
         self.appCoordinator = coordinator
         self.window = window
-        let splashView = SplashView()
-        let splashViewController = SplashViewController(splashView: splashView)
-        self.appCoordinator.start(viewController: splashViewController)
         appCoordinator.delegate = self
+    }
+    
+    init(window: UIWindow) {
+        self.window = window
+        appCoordinator = AppCoordinator(navigationController: UINavigationController(), window: window)
+        appCoordinator.delegate = self
+    }
+    
+    func start() {
+        self.appCoordinator.start()
     }
 }
 
 extension MainCoordinator: CoordinatorDelegate {
+    
     func transitionCoordinator(type: CoordinatorType) {
         switch type {
         case .app:
-            return
+            break
         case .tabbar:
             let tabbarController = TabBarController()
-            let tabCoordinator = TabbarCoordinator(window: window, tabbarController: tabbarController)
-            appCoordinator = tabCoordinator
-            tabCoordinator.start(viewController: tabbarController)
+            let tabbBarCoordinator = TabBarCoordinator(tabBarController: tabbarController, window: window)
+            tabbBarCoordinator.delegate = self
+            appCoordinator = tabbBarCoordinator
+            start()
         }
     }
 }
