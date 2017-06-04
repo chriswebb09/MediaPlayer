@@ -1,6 +1,6 @@
 import UIKit
 
-class CreateAccountView: UIView {
+final class CreateAccountView: UIView {
     
     weak var delegate: CreateAccountViewDelegate?
     

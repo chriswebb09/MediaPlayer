@@ -1,10 +1,12 @@
 import UIKit
 
-class MediaCollectionViewController: BaseMediaViewController {
+final class MediaCollectionViewController: UIViewController {
     
     // MARK: - Properties
     
     var buttonItem: UIBarButtonItem!
+    
+    weak var delegate: MediaCollectionDelegate?
     
     var searchController = UISearchController(searchResultsController: nil)
     
@@ -27,6 +29,42 @@ class MediaCollectionViewController: BaseMediaViewController {
         }
     }
     
+    
+    lazy var collectionView : UICollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
+    
+    var emptyView = EmptyView()
+    
+    var viewShown: ShowView = .empty {
+        didSet {
+            switch viewShown {
+            case .empty:
+                changeView(forView: emptyView, withView: collectionView)
+            case .collection:
+                changeView(forView: collectionView, withView: emptyView)
+            }
+        }
+    }
+    
+    var dataSource: BaseMediaControllerDataSource {
+        didSet {
+            print("did set")
+            if let count = dataSource.playlist?.itemCount, count > 0 {
+                viewShown = .collection
+            } else {
+                viewShown = .empty
+            }
+        }
+    }
+    
+    init(dataSource: BaseMediaControllerDataSource) {
+        self.dataSource = dataSource
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required public init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     convenience init(collectionView: UICollectionView, dataSource: BaseMediaControllerDataSource, searchController: UISearchController) {
         self.init(dataSource: dataSource)
         self.collectionView = collectionView
@@ -35,6 +73,14 @@ class MediaCollectionViewController: BaseMediaViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = []
+        view.addSubview(collectionView)
+        collectionView.setupCollectionView(view: view, newLayout: TrackItemsFlowLayout())
+        collectionView.collectionViewRegister(viewController: self)
+        view.emptyViewSetup(emptyView: emptyView)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        getData()
         navigationController?.isNavigationBarHidden = false
         searchController.delegate = self
         title = "Music.ly"
@@ -42,6 +88,55 @@ class MediaCollectionViewController: BaseMediaViewController {
         navigationItem.setRightBarButton(buttonItem, animated: false)
         setupSearchController()
     }
+    
+    func changeView(forView: UIView, withView: UIView) {
+        view.sendSubview(toBack: withView)
+        view.bringSubview(toFront: forView)
+    }
+    
+    func getData() {
+        dataSource.store.searchTerm = "new"
+        dataSource.store.searchForTracks { playlist, error in
+            self.dataSource.playlist = playlist
+            DispatchQueue.main.async {
+                self.collectionView.isHidden = false
+                self.collectionView.reloadData()
+            }
+        }
+    }
+}
+
+extension MediaCollectionViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let playlist = dataSource.playlist else { print("data"); return }
+        let playerViewController = PlayerViewController(index: indexPath.row, playlist: playlist)
+        navigationController?.pushViewController(playerViewController, animated: false)
+    }
+    
+}
+
+extension MediaCollectionViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataSource.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        viewShown = .collection
+        let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as MediaCell
+        if let playlistItem = dataSource.playlist?.playlistItem(at: indexPath.row),
+            let track = playlistItem.track,
+            let name = track.trackName,
+            let urlString = track.artworkUrl,
+            let url = URL(string: urlString) {
+            let model = MediaCellViewModel(trackName: name, albumImageURL: url)
+            cell.configureCell(with: model, withTime: 0)
+            cell.alpha = 1
+        }
+        return cell
+    }
+    
 }
 
 // MARK: - UISearchControllerDelegate
@@ -74,7 +169,7 @@ extension MediaCollectionViewController: UISearchControllerDelegate {
         searchController.hidesNavigationBarDuringPresentation = false
         searchBar = searchController.searchBar
         searchBar.barTintColor = .darkGray
-  
+        
         navigationItem.titleView = searchBar
         let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
         textFieldInsideSearchBar?.textColor = .darkGray
@@ -190,29 +285,3 @@ extension MediaCollectionViewController: UISearchResultsUpdating {
         searchBarActive = true
     }
 }
-
-class MediaCollectionCoordinator: NavigationCoordinator {
-    
-    weak var delegate: CoordinatorDelegate?
-    weak var tabDelegate: TabDelegate?
-    
-    var childViewControllers: [UIViewController] = []
-    
-    var navigationController: UINavigationController
-    
-    required init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-        self.childViewControllers = navigationController.viewControllers
-    }
-    
-    func start() {
-        let mediaCollection = MediaCollectionViewController(dataSource: BaseMediaControllerDataSource(store: MediaDataStore()))
-        showMediaController(mediaCollectionController: mediaCollection)
-    }
-    
-    fileprivate func showMediaController(mediaCollectionController: MediaCollectionViewController) {
-        childViewControllers = [mediaCollectionController]
-        navigationController.viewControllers = [mediaCollectionController]
-    }
-}
-

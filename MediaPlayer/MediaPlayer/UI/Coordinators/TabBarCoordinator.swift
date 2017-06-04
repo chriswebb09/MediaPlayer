@@ -1,10 +1,11 @@
 import UIKit
 
-class TabBarCoordinator: TabCoordinator, TabDelegate {
+final class TabBarCoordinator: TabCoordinator, TabDelegate {
     
     var type: CoordinatorType = .tabbar
     var tabBarController: TabBarController
     weak var delegate: CoordinatorDelegate?
+    var dataSource: BaseMediaControllerDataSource!
     var window: UIWindow!
     var childCoordinators: [NavigationCoordinator] = []
     
@@ -15,6 +16,7 @@ class TabBarCoordinator: TabCoordinator, TabDelegate {
     convenience init(tabBarController: TabBarController, window: UIWindow) {
         self.init(tabBarController: tabBarController)
         self.window = window
+        self.dataSource = BaseMediaControllerDataSource(store: MediaDataStore())
         setupChildCoordinators()
     }
     
@@ -22,10 +24,12 @@ class TabBarCoordinator: TabCoordinator, TabDelegate {
         let settings = SettingsCoordinator(navigationController: UINavigationController())
         settings.tabDelegate = self
         settings.start()
-        let media = MediaCollectionCoordinator(navigationController: UINavigationController())
-        media.tabDelegate = self
-        media.start()
+        var controller = MediaCollectionViewController(dataSource: dataSource)
+       
+        var media = MediaCollectionCoordinator(navigationController: UINavigationController(), mediaCollectionController: controller)
         self.tabBarController.setup(with: [media.navigationController, settings.navigationController])
+       // media.mediaController.delegate = media
+        media.start()
     }
     
     func start() {
@@ -40,3 +44,4 @@ class TabBarCoordinator: TabCoordinator, TabDelegate {
         tabBarController.selectedIndex = 1
     }
 }
+

@@ -1,10 +1,10 @@
 import UIKit
 
-class BaseMediaViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class BaseMediaViewController: UIViewController, UICollectionViewDataSource {
     
     lazy var collectionView : UICollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    weak var delegate: MediaControllerDelegate?
+  //  weak var delegate: MediaControllerDelegate?
     
     var emptyView = EmptyView()
     
@@ -65,16 +65,11 @@ class BaseMediaViewController: UIViewController, UICollectionViewDelegate, UICol
         }
     }
     
-    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let playlist = dataSource.playlist else { return }
-        delegate?.didSelectTrackAt(at: indexPath.row, with: playlist)
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource.count
     }
     
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         viewShown = .collection
         let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as MediaCell
         if let playlistItem = dataSource.playlist?.playlistItem(at: indexPath.row),

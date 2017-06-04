@@ -132,6 +132,8 @@
 		A7A081271ECF1BE40035EE1A /* CALayer+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A081261ECF1BE40035EE1A /* CALayer+Constants.swift */; };
 		A7A3DB0A1EE424DB00F286F5 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3DB091EE424DB00F286F5 /* LoginViewDelegate.swift */; };
 		A7A3DB0C1EE4252100F286F5 /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3DB0B1EE4252100F286F5 /* TabCoordinator.swift */; };
+		A7A3DB0E1EE425A100F286F5 /* TabDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3DB0D1EE425A100F286F5 /* TabDelegate.swift */; };
+		A7A3DB101EE4262300F286F5 /* MediaCollectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A3DB0F1EE4262300F286F5 /* MediaCollectionCoordinator.swift */; };
 		A7BD932B1EDDBC2B008BD6A5 /* Playable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BD932A1EDDBC2B008BD6A5 /* Playable.swift */; };
 		A7BD932D1EDDBEAA008BD6A5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BD932C1EDDBEAA008BD6A5 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -276,6 +278,8 @@
 		A7A081261ECF1BE40035EE1A /* CALayer+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Constants.swift"; sourceTree = "<group>"; };
 		A7A3DB091EE424DB00F286F5 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
 		A7A3DB0B1EE4252100F286F5 /* TabCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
+		A7A3DB0D1EE425A100F286F5 /* TabDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabDelegate.swift; sourceTree = "<group>"; };
+		A7A3DB0F1EE4262300F286F5 /* MediaCollectionCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCollectionCoordinator.swift; sourceTree = "<group>"; };
 		A7BD932A1EDDBC2B008BD6A5 /* Playable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Playable.swift; path = MediaPlayer/UI/Protocol/Playable.swift; sourceTree = SOURCE_ROOT; };
 		A7BD932C1EDDBEAA008BD6A5 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,6 +318,7 @@
 				A714AD511ECF066700C99C55 /* Cell */,
 				A714AD4F1ECF065800C99C55 /* Controller */,
 				A714AD501ECF065E00C99C55 /* Delegate */,
+				A7A3DB0F1EE4262300F286F5 /* MediaCollectionCoordinator.swift */,
 			);
 			path = MediaCollection;
 			sourceTree = "<group>";
@@ -632,6 +637,7 @@
 			children = (
 				A725B0811ED5A24500CAC00E /* Coordinator.swift */,
 				A75EAE391ED864B3009F6FC2 /* CoordinatorDelegate.swift */,
+				A7A3DB0D1EE425A100F286F5 /* TabDelegate.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -1052,6 +1058,8 @@
 				A799BEB21ED4FF5300F6C4A9 /* PlayerViewControllerModel.swift in Sources */,
 				A7A080E41ECF126C0035EE1A /* MenuDelegate.swift in Sources */,
 				A711F0521ED2535B005437C8 /* NavigationBarAttributes.swift in Sources */,
+				A7A3DB101EE4262300F286F5 /* MediaCollectionCoordinator.swift in Sources */,
+				A7A3DB0E1EE425A100F286F5 /* TabDelegate.swift in Sources */,
 				A721B2DC1ECECC60003E0D12 /* SplashViewController.swift in Sources */,
 				A7BD932B1EDDBC2B008BD6A5 /* Playable.swift in Sources */,
 				A714AD1E1ECEDFC700C99C55 /* Track.swift in Sources */,

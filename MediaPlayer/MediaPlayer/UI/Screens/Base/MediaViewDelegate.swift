@@ -11,3 +11,7 @@ import UIKit
 protocol MediaControllerDelegate: class {
     func didSelectTrackAt(at index: Int, with playlist: Playlist)
 }
+
+protocol MediaCollectionDelegate: class {
+    func didSelectTrackAt(at: Int, with: Playlist)
+}
