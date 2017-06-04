@@ -1,17 +1,11 @@
 import UIKit
 
-import UIKit
-
 class TabBarCoordinator: TabCoordinator, TabDelegate {
     
     var type: CoordinatorType = .tabbar
-    
     var tabBarController: TabBarController
-    
     weak var delegate: CoordinatorDelegate?
-    
     var window: UIWindow!
-    
     var childCoordinators: [NavigationCoordinator] = []
     
     required init(tabBarController: TabBarController) {
