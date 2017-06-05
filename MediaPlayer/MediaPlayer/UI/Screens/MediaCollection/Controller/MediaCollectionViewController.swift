@@ -5,9 +5,7 @@ final class MediaCollectionViewController: UIViewController {
     // MARK: - Properties
     
     var buttonItem: UIBarButtonItem!
-    
     weak var delegate: MediaControllerDelegate?
-    
     var searchController = UISearchController(searchResultsController: nil)
     
     var searchBar = UISearchBar() {
@@ -29,9 +27,7 @@ final class MediaCollectionViewController: UIViewController {
         }
     }
     
-    
     lazy var collectionView : UICollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
-    
     var emptyView = EmptyView()
     
     var viewShown: ShowView = .empty {
@@ -80,29 +76,21 @@ final class MediaCollectionViewController: UIViewController {
         view.emptyViewSetup(emptyView: emptyView)
         collectionView.delegate = self
         collectionView.dataSource = self
-        getData()
         navigationController?.isNavigationBarHidden = false
         searchController.delegate = self
-        title = "Music.ly"
         buttonItem = UIBarButtonItem(image: dataSource.image, style: .plain, target: self, action: #selector(navigationBarSetup))
         navigationItem.setRightBarButton(buttonItem, animated: false)
         setupSearchController()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let searchBarText = searchBar.text, searchBarText.characters.count > 0 { searchBarActive = true }
+    }
+    
     func changeView(forView: UIView, withView: UIView) {
         view.sendSubview(toBack: withView)
         view.bringSubview(toFront: forView)
-    }
-    
-    func getData() {
-        dataSource.store.searchTerm = "new"
-        dataSource.store.searchForTracks { playlist, error in
-            self.dataSource.playlist = playlist
-            DispatchQueue.main.async {
-                self.collectionView.isHidden = false
-                self.collectionView.reloadData()
-            }
-        }
     }
 }
 
@@ -143,11 +131,6 @@ extension MediaCollectionViewController: UICollectionViewDataSource {
 
 extension MediaCollectionViewController: UISearchControllerDelegate {
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if let searchBarText = searchBar.text, searchBarText.characters.count > 0 { searchBarActive = true }
-    }
-    
     func setupSearchController() {
         setSearchBarColor(searchBar: searchBar)
         searchController.dimsBackgroundDuringPresentation = false
@@ -169,7 +152,6 @@ extension MediaCollectionViewController: UISearchControllerDelegate {
         searchController.hidesNavigationBarDuringPresentation = false
         searchBar = searchController.searchBar
         searchBar.barTintColor = .darkGray
-        
         navigationItem.titleView = searchBar
         let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
         textFieldInsideSearchBar?.textColor = .darkGray
