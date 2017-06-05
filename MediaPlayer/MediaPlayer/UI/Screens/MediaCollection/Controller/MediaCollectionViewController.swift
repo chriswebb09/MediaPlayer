@@ -101,7 +101,6 @@ extension MediaCollectionViewController: UICollectionViewDelegate {
         let playerViewController = PlayerViewController(index: indexPath.row, playlist: playlist)
         navigationController?.pushViewController(playerViewController, animated: false)
     }
-    
 }
 
 extension MediaCollectionViewController: UICollectionViewDataSource {
@@ -124,7 +123,6 @@ extension MediaCollectionViewController: UICollectionViewDataSource {
         }
         return cell
     }
-    
 }
 
 // MARK: - UISearchControllerDelegate
@@ -216,13 +214,10 @@ extension MediaCollectionViewController: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("searchBarSearchButtonClicked")
         DispatchQueue.main.async {
             self.navigationItem.rightBarButtonItems = []
         }
-        if !searchBarActive {
-            collectionView.reloadData()
-        }
+        if !searchBarActive { collectionView.reloadData() }
         searchController.searchBar.resignFirstResponder()
     }
     
